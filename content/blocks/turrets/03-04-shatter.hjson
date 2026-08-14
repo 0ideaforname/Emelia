@@ -1,0 +1,158 @@
+# I copied Exoprosopa's "Shellcore" (calamity) turret, Sorry, but atleast tutorial ig
+type: ItemTurret
+# Does this turret have liquids
+hasLiquids: true
+# MinWarmup : how much warmup animation is required to fire. maximum is 0.99, DO NOT SET TO 1!
+# Example, really long recoil New Horizons turret takes 20 sec to fire, with minWarmup 0.1 so you just hold the target for 2 sec and it will automatically fires in the next 18 seconds.
+# While on that 18 seconds, the turret's position is usually locked. Just like Corvus.
+minWarmup: 0.99
+# How much warmup time before going back to neutral position.
+# Just like Smite, Malign.
+warmupMaintainTime: 90
+# Warmup speed
+shootWarmupSpeed: 0.1
+# Size Blocks
+size: 3
+# Health Blocks
+health: 2050
+# Sound created when firing, i used Precept's.
+shootSound: explosionDull
+# Block Cost
+requirements: [
+  01-03-liton/240
+  01-05-cerebrium/220
+  01-06-reinforced-glass/210
+  tungsten/200
+]
+# Block's tab category
+category: turret
+# Outline color for this turret, use hexadecimal
+outlineColor: 313131
+# Targets, Set targetGround: false to make it anti air turrets
+targetAir: true
+targetGround: true
+# Turret rotation speed
+rotateSpeed: 1.25
+# Reload time, in ticks
+reload: 105
+# Turret range, calculated with 8 = 1 tile. Or js multiply your main bullet lifetime by speed.
+range: 320
+# Position of starting bullets, does not affect range.
+shootY: 6
+# block consumption, 1=60 liquid or power units ingame. Dont set to consume items..?
+consumes: {
+  liquid: 02-01-tralian-liquid/0.2
+}
+# First delay, in ticks where 60=1s
+shoot: {
+  firstShotDelay: 48
+}
+# Coolant, 1=60 units ingame, also you can set it as item? idk
+coolant: {
+  type: ConsumeLiquid
+  liquid: cryofluid
+  amount: 0.2
+}
+# Max ammo capacity
+maxAmmo: 20
+# How much/fast the turret firing with coolant applied. Always test!
+coolantMultiplier: 3
+# Charging sound
+chargeSound: chargeVela
+# Ammo types
+ammoTypes: {
+  # Name of items
+  01-06-reinforced-glass: {
+    type: ArtilleryBulletType
+    damage: 180
+    ammoMultiplier: 1
+    lifetime: 80
+    speed: 4
+    width: 18
+    height: 23
+    fragLifeMin: 0.4
+    fragVelocityMin: 0.5
+    fragBullets: 6
+    hitEffect: blastExplosion
+    hitShake: 1.5
+    collidesTiles: true
+    collides: true
+    fragBullet: {
+      speed: 3.5
+      damage: 35.5
+      lifetime: 10
+      width: 11
+      height: 14
+      splashDamage: 20
+      splashDamageRadius: 16
+      collidesAir: false
+      shrinkY: 0
+      hitEffect: explosion
+      hitSound: explosion
+      fragBullets: 4
+      fragBullet: {
+        type: LiquidBulletType
+        liquid: 02-01-tralian-liquid
+        status: cancerous
+        statusDuration: 180
+        damage: 15.5
+        puddleSize: 36
+        despawnHit: true
+        despawnSound: shootRetusa
+        speed: 0
+        lifetime: 0
+        splashDamage: 10
+        splashDamageRadius: 4
+        hitEffect: none
+        collidesAir: false
+      }
+    }
+  }
+  01-08c-detonite: {
+    type: ArtilleryBulletType
+    damage: 350
+    ammoMultiplier: 2
+    reloadMultiplier: 0.8
+    lifetime: 80
+    speed: 4
+    width: 18
+    height: 23
+    fragLifeMin: 0.4
+    fragVelocityMin: 0.5
+    fragBullets: 6
+    hitEffect: blastExplosion
+    hitShake: 1.5
+    collidesTiles: true
+    collides: true
+    fragBullet: {
+      speed: 3.5
+      damage: 50
+      lifetime: 10
+      width: 11
+      height: 14
+      splashDamage: 31
+      splashDamageRadius: 18
+      collidesAir: false
+      shrinkY: 0
+      hitEffect: explosion
+      hitSound: explosion
+      fragBullets: 4
+      fragBullet: {
+        type: LiquidBulletType
+        liquid: slag
+        status: melting
+        statusDuration: 180
+        damage: 20
+        puddleSize: 48
+        despawnHit: true
+        despawnSound: shootRetusa
+        speed: 0
+        lifetime: 0
+        splashDamage: 15
+        splashDamageRadius: 4
+        hitEffect: none
+        collidesAir: false
+      }
+    }
+  }
+}

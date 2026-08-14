@@ -1,0 +1,53 @@
+type: UnitFactory
+name: Tank Factory
+description: Produces tank units. Output units can be used directly, or moved into reconstructors for upgrading. Requires power and nitrogen.
+size: 3
+health: 780
+category: units
+itemCapacity: 120
+researchCostMultiplier: 0.8
+
+requirements: [
+    01-03-liton/120
+    01-02-cryogen/100
+    01-05-cerebrium/200
+]
+
+consumes: {
+power: 2
+liquids: [
+  nitrogen/0.2
+]
+}
+
+plans: [
+{
+unit: 08-01-01-splinter
+time: 2760
+requirements: [
+  01-05-cerebrium/50
+  01-03-liton/45
+]
+}
+{
+unit: 08-01-02-fracture
+time: 3720
+requirements: [
+  tungsten/40
+  01-05-cerebrium/90
+  01-04-liton-nitride/40
+]
+}
+]
+
+category: units
+research: {
+  parent: 11-01-core-vertex
+  objectives: [
+    {
+      type: OnSector
+      preset: 03-basaltTrench
+    }
+  ]
+}
+shownPlanets: ["emelia"]

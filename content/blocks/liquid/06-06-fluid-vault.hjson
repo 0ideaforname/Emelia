@@ -1,0 +1,18 @@
+type: LiquidRouter
+name: Fluid Vault
+description: Stores fluids in great amounts in armoured vault.
+size: 2
+health: 960
+armor: 10
+hasLiquids: true
+liquidCapacity: 850
+liquidPadding: 2
+requirements: [
+  01-02-cryogen/20
+  01-05-cerebrium/20
+  01-06-reinforced-glass/40
+]
+research: 06-04-pressurized-router
+researchCostMultiplier: 0.6
+category: liquid
+shownPlanets: ["emelia"]

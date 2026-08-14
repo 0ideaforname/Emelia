@@ -1,0 +1,20 @@
+type: LiquidJunction
+name: Pressurized Junction
+description: Acts as a bridge for two crossing conduits.
+health: 420
+armor: 8
+size: 1
+
+solid: false
+squareSprite: false
+underBullets: true
+category: liquid
+requirements: [
+    01-02-cryogen/4
+    01-05-cerebrium/2
+    01-06-reinforced-glass/2
+]
+
+research: 06-02-pressurized-conduit
+researchCostMultiplier: 0.5
+shownPlanets: ["emelia"]

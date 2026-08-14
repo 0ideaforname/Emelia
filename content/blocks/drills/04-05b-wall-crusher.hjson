@@ -1,0 +1,21 @@
+type: WallCrafter
+health: 310
+size: 2
+itemCapacity: 20
+consumes: {
+    power: 0.25
+}
+output: 01-03c-vitracite-sand
+drillTime: 140
+ambientSound: loopDrill
+ambientSoundVolume: 0.1
+requirements: [
+    01-02-cryogen/25
+    01-03-liton/20
+    01-05-cerebrium/20
+]
+attribute: vitracite
+category: production
+research: 04-04-wall-blaster
+researchCostMultiplier: 0.5
+shownPlanets: ["emelia"]

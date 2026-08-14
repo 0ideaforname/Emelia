@@ -1,0 +1,39 @@
+type: Reconstructor
+name: Apex Reconstructor
+description: Upgrades inputted units to the third tier. Armored.
+size: 5
+health: 3400
+armor: 15
+category: units
+itemCapacity: 140
+shownPlanets: [emelia]
+requirements: [
+  01-10-thanite/250
+  01-05-cerebrium/480
+  01-04-liton-nitride/200
+  01-09-nano-alloy/250
+]
+
+consumes: {
+  power: 11.66
+  items: [
+    01-09-nano-alloy/80
+    01-05-cerebrium/120
+    01-06-reinforced-glass/90
+   ]
+  liquids: [
+    02-03-calyx/0.3
+  ]
+}
+constructTime: 3000,
+upgrades: [
+ [ "08-01-02-fracture", "08-01-03-rupture"],
+ [ "08-02-02-pulse", "08-02-03-surge" ],
+ [ "08-04-02-smth", "08-04-03-incandescent"]
+]
+category: units
+research: {
+parent: 10-01-unit-factory
+objectives: [01-10-thanite, 01-09-nano-alloy]
+}
+shownPlanets: ["emelia"]

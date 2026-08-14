@@ -1,0 +1,21 @@
+type: Conduit
+name: Pipe
+description: Transports fluids forward.
+health: 75
+size: 1
+leaks: true
+underBullets: true
+liquidPressure: 1.2
+liquidCapacity: 20
+category: liquid
+junctionReplacement: pipe-junction
+bridgeReplacement: bridge-pipe
+rotBridgeReplacement: bridge-pipe
+requirements: [
+    silicon/2
+    iron/1
+]
+
+research: core-anchor
+researchCostMultiplier: 0.5
+shownPlanets: ["wevai"]

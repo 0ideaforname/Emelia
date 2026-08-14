@@ -1,0 +1,17 @@
+type: LightBlock
+name: Quartz Flashlight
+description: Emits light for player units to see.
+health: 200
+armor: 3
+size: 1
+consumes: {
+    power: 0.25
+}
+requirements: [
+    01-05-cerebrium/10
+    01-04c-quartz/8
+]
+category: effect
+research: 09-03-calyx-condenser
+researchCostMultiplier: 0.5
+shownPlanets: ["emelia"]

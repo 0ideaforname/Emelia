@@ -1,0 +1,15 @@
+type: PayloadConveyor
+name: Payload Track
+description: Transports heavy payloads forward. Magnetic.
+health: 840
+armor: 10
+size: 3
+category: units
+payloadLimit: 4
+canOverdrive: false
+requirements: [
+    tungsten/15
+    01-05-cerebrium/30
+]
+research: 05-02-reinforced-track
+researchCostMultiplier: 0.5

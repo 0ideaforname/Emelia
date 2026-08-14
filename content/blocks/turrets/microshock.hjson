@@ -1,0 +1,46 @@
+type: PowerTurret
+name: Microshock
+description: Fires arcs at enemy ground target.
+size: 1
+health: 110
+targetAir: false
+targetGround: true
+outlineColor: 2b2b2e
+
+coolant: {
+    type: ConsumeCoolant
+    allowGas: false
+    allowLiquid: true
+    amount: 0.1
+}
+
+inaccuracy: 5
+reload: 15
+range: 110
+category: turret
+shootSound: shootArc
+consumes: {
+    power: 1.5
+}
+
+shootType: {
+    type: LightningBulletType
+    damage: 4
+    lightningLength: 20
+    collidesAir: false
+    ammoMultiplier: 1
+    buildingDamageMultiplier: 0.25
+}
+
+requirements: [
+    selite/20
+    lunar-basalt/35
+    silicon/20
+]
+drawer: {
+    type: DrawTurret
+    suffix: -base
+}
+research: pebble
+researchCostMultiplier: 0.2
+shownPlanets: [wevai]

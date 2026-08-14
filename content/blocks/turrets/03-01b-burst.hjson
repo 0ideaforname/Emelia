@@ -1,0 +1,84 @@
+type: ItemTurret
+size: 2
+health: 830
+armor: 2
+category: turret
+research: 03-01-needle
+outlineColor: 313131
+squareSprite: false
+requirements: [
+    01-02-cryogen/65
+    01-05-cerebrium/60
+]
+range: 160
+coolant: {
+    type: ConsumeLiquid
+    liquid: cryofluid
+    amount: 0.15
+}
+coolantMultiplier: 4
+shoot: {
+  type: ShootAlternate
+  spread: 4
+  shotDelay: 6
+}
+reload: 15
+shootSound: shootScatter
+researchCostMultiplier: 0.3
+inaccuracy: 2
+recoils: 2
+shootY: 6
+drawer: {
+  type: DrawTurret
+  suffix: -base
+  parts: [
+      {
+        type: RegionPart
+        suffix: -barrel-l
+        mirror: false
+        under: true
+        progress: recoil
+        moveY: -2
+        recoilIndex: 0
+      }    
+      {
+        type: RegionPart
+        suffix: -barrel-r
+        mirror: false
+        under: true
+        progress: recoil
+        moveY: -2
+        recoilIndex: 1
+      }  
+   ]
+}
+ammoTypes: {
+    01-03-liton: {
+        type: BasicBulletType
+        damage: 13
+        splashDamage: 28
+        splashDamageRadius: 15
+        speed: 7
+        lifetime: 25
+        height: 8
+        width: 6
+        frontColor: ffffff
+        backColor: d8deff
+        hitEffect: hitBulletColor
+        despawnEffect: hitBulletColor
+    }
+    01-04c-quartz: {
+        type: BasicBulletType
+        damage: 18
+        splashDamage: 40
+        splashDamageRadius: 19
+        speed: 7
+        lifetime: 25
+        height: 8
+        width: 6
+        frontColor: ffffff
+        backColor: dcc6c6
+        hitEffect: hitBulletColor
+        despawnEffect: hitBulletColor
+    }
+}

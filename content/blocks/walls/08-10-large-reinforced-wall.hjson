@@ -1,0 +1,30 @@
+type: ShieldWall
+name: Large Reinforced Wall
+description: Protects structures from incoming damage, fighting back with arcs. Projects one-time shield. Absorbs lasers and electric arcs.
+category: defense
+health: 8560
+armor: 40
+
+chanceDeflect: 10
+absorbLasers: true
+insulated: true
+conductivePower: true
+shieldHealth: 2600
+breakCooldown: 999999
+regenSpeed: 2.5
+
+lightningChance: 1
+lightningDamage: 60
+lightningLength: 8
+LightningColor: f3e979ff
+
+size: 2
+rotate: false
+lockRotation: true
+research: 08-09-reinforced-wall
+researchCostMultiplier: 1.5
+requirements: [
+    01-13-vantorium/8
+    01-11-vonitte/56
+]
+shownPlanets: ["emelia"]

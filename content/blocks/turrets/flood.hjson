@@ -1,0 +1,64 @@
+type: LiquidTurret
+name: Flood
+description: Fires orbs of slag, arkycite or neoplasm that inflict various effects. Scrapped
+health: 1500
+size: 3
+requirements: [
+    beryllium/200
+    graphite/200
+    silicon/150
+    tungsten/50
+]
+reload: 40
+liquidCapacity: 240
+extinguish: false
+ammoPerShot: 80
+inaccuracy: 20
+shootSound: shootAfflict
+ammoTypes: {
+    slag: {
+        type: LiquidBulletType
+        liquid: slag
+        damage: 60
+        speed: 6
+        lifetime: 30
+        splashDamage: 80
+        splashDamageRadius: 14
+        status: melting
+        orbSize: 4
+        puddleSize: 8
+        incendAmount: 3
+        puddleLiquid: slag
+    }
+    arkycite: {
+        type: LiquidBulletType
+        liquid: arkycite
+        damage: 45
+        speed: 6
+        lifetime: 30
+        status: wet
+        orbSize: 5
+        puddleSize: 10
+        puddleLiquid: arkycite
+    }
+    neoplasm: {
+        type: LiquidBulletType
+        liquid: neoplasm
+        damage: 90
+        speed: 7
+        lifetime: 30
+        splashDamage: 160
+        splashDamageRadius: 14
+        status: melting
+        orbSize: 4
+        puddleSize: 8
+        rangeOverride: 16
+        puddleLiquid: neoplasm
+    }
+}
+drawer: {
+    type: DrawTurret
+    prefix: base-
+}
+research: diffuse
+researchCostMultiplier: 0.6

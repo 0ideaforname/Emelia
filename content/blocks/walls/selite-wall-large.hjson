@@ -1,0 +1,14 @@
+name: Large Selite Wall
+description: Protects structures from incoming damage.
+type: wall
+category: defense
+health: 1400
+size: 2
+rotate: false
+lockRotation: true
+research: selite-wall
+researchCostMultiplier: 0.5
+requirements: [
+    selite/24
+]
+shownPlanets: [wevai]

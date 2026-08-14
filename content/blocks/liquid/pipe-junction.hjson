@@ -1,0 +1,18 @@
+type: LiquidJunction
+name: Pipe Junction
+description: Acts as a bridge for two crossing conduits.
+health: 75
+size: 1
+
+solid: false
+squareSprite: false
+underBullets: true
+category: liquid
+requirements: [
+    silicon/10
+    iron/5
+]
+
+research: bridge-pipe
+researchCostMultiplier: 0.5
+shownPlanets: ["wevai"]

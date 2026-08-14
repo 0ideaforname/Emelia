@@ -1,0 +1,44 @@
+type: MendProjector
+name: Repair Unit
+description: Slowly repairs nearby blocks. Optionally uses Cerebrium to increase range and efficiency.
+health: 320
+size: 1
+consumes: {
+    power: 0.65
+    items: {
+    items: [
+        01-05-cerebrium/1
+    ]
+    optional: true
+    booster: true
+    }
+}
+useTime: 300
+healPercent: 4
+phaseBoost: 6
+phaseRangeBoost: 25
+range: 40
+reload: 200
+requirements: [
+    01-01-lenite/35
+    01-03-liton/25
+    01-05-cerebrium/20
+]
+drawer: {
+    type: DrawMulti
+    drawers: [
+        {
+            type: DrawDefault
+        }
+        {
+            type: DrawPulseShape
+            square: true
+            color: 85c278
+        }
+    ]
+}
+
+category: effect
+research: 07-01-liton-node
+researchCostMultiplier: 0.5
+shownPlanets: ["emelia"]

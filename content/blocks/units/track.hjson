@@ -1,0 +1,14 @@
+type: Junction
+name: Track
+description: Reliable track required in tank assembly.
+size: 3
+customShadow: true
+placeablePlayer: false
+requirements: [
+    tungsten/200
+    01-09-nano-alloy/105
+    01-13-vantorium/90
+]
+databaseTag: unitpart
+research: 10-08-component-fabricator
+researchCostMultiplier: 1

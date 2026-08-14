@@ -1,0 +1,29 @@
+type: beamDrill
+health: 410
+size: 2
+hasLiquids: true
+liquidCapacity: 30
+itemCapacity: 20
+tier: 3
+range: 4
+drillTime: 160
+optionalBoostIntensity: 1.6
+consumes: {
+    power: 0.45
+    liquid: {
+        liquid: nitrogen
+        amount: 0.04
+        optional: true
+        booster: true
+    }
+}
+
+requirements: [
+01-01-lenite/20
+01-03-liton/15
+]
+
+category: production
+research: 04-01-small
+researchCostMultiplier: 0.2
+shownPlanets: ["emelia"]

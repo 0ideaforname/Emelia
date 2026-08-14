@@ -1,0 +1,16 @@
+type: Pump
+name: Pneumatic Pump
+description: Pumps and outputs liquids slowly.
+category: liquid
+health: 80
+size: 1
+requirements: [
+  iron/20
+  lunar-basalt/20
+  silicon/18
+]
+liquidCapacity: 20
+pumpAmount: 0.15
+research: pipe
+researchCostMultiplier: 0.5
+shownPlanets: ["wevai"]

@@ -1,0 +1,17 @@
+name: Nano Wall
+description: Protects structures from incoming damage. Capable of conduiting power and blocking lasers.
+type: wall
+category: defense
+health: 1180
+armor: 20
+conductivePower: true
+absorbLasers: true
+size: 1
+rotate: false
+lockRotation: true
+research: 08-04-large-cerebrium-wall
+researchCostMultiplier: 0.65
+requirements: [
+    01-09-nano-alloy/8
+]
+shownPlanets: ["emelia"]

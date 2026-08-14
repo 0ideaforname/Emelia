@@ -1,0 +1,20 @@
+type: LiquidRouter
+name: Pressurized Router
+description: Distributes liquid input to 3 outputs equally. Stores some liquids.
+health: 420
+armor: 8
+size: 1
+solid: false
+underBullets: true
+liquidPadding: 1
+liquidCapacity: 120
+category: liquid
+requirements: [
+    01-02-cryogen/6
+    01-05-cerebrium/4
+    01-06-reinforced-glass/4
+]
+
+research: 06-03-pressurized-junction
+researchCostMultiplier: 0.5
+shownPlanets: ["emelia"]

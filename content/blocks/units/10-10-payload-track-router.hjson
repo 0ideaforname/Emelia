@@ -1,0 +1,15 @@
+type: PayloadRouter
+name: Payload Track Router
+description: Distributes heavy payloads up to 3 output directions. Magnetic.
+health: 840
+armor: 10
+size: 3
+category: units
+payloadLimit: 4
+canOverdrive: false
+requirements: [
+    tungsten/30
+    01-05-cerebrium/50
+]
+research: 10-09-payload-track
+researchCostMultiplier: 0.5

@@ -1,0 +1,14 @@
+type: AutoDoor
+name: Armored Auto-Door
+description: Protects structures from incoming damage, and opens when allied units are in range. Moderately armored.
+category: defense
+health: 3400
+armor: 18
+size: 2
+research: 08-06-large-reinforced-erbidium-wall
+researchCostMultiplier: 0.8
+requirements: [
+    01-07-erbidium/24
+    01-05-cerebrium/20
+]
+shownPlanets: ["emelia"]

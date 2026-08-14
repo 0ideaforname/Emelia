@@ -1,0 +1,22 @@
+type: wall
+name: Large Thanite Wall
+description: Protects structures from incoming damage, periodically releasing electric arcs, and reflecting bullets upon contact.
+category: defense
+health: 6320
+armor: 35
+chanceDeflect: 8
+lightningChance: 0.1
+lightningDamage: 105
+lightningLength: 7
+LightningColor: f3e979ff
+lightningSound: shootArc
+size: 2
+rotate: false
+lockRotation: true
+research: 08-07-thanite-wall
+researchCostMultiplier: 1.15
+requirements: [
+    01-10-thanite/32
+    01-09-nano-alloy/16
+]
+shownPlanets: ["emelia"]

@@ -1,0 +1,167 @@
+type: ItemTurret
+health: 1410
+armor: 10
+size: 3
+outlineColor: 313131
+squareSprite: false
+targetAir: true
+targetGround: false
+category: turret
+requirements: [
+  01-02-cryogen/140
+  graphite/120
+  01-05-cerebrium/200
+]
+coolant: {
+    type: ConsumeLiquid
+    liquid: cryofluid
+    amount: 0.2
+}
+coolantMultiplier: 3
+reload: 11
+range: 240
+consumeAmmoOnce: true
+category: turret
+shootSound: shootDisperse
+inaccuracy: 5
+shootY: 11
+shoot: {
+    type: shootAlternate
+    shots: 2
+    barrels: 2
+    spread: 6
+}
+ammoTypes: {
+    graphite: {
+      type: BasicBulletType
+      damage: 21
+      splashDamage: 48
+      splashDamageRadius: 18
+      speed: 6.5
+      width: 16
+      height: 16
+      collidesGround: false
+      collidesTiles: false
+      shootEffect: shootBig2
+      smokeEffect: shootSmokeDisperse
+      ammoMultiplier: 2
+      frontColor: 95acd8
+      backColor: 95acd880
+      trailColor: 95acd880
+      hitColor: 95acd880
+      trailChance: 0.44
+      trailRotation: true
+      trailEffect: disperseTrail
+      hitEffect: blastExplosion
+      hitColor: 95acd8
+      rotationOffset: 90
+  }
+    01-06-reinforced-glass: {
+        type: BasicBulletType
+        sprite: mine-bullet
+        backSprite: large-bomb-back
+        damage: 26
+        splashDamage: 56
+        splashDamageRadius: 25
+        speed: 6.5
+        width: 16
+        height: 16
+        collidesGround: false
+        collidesTiles: false
+        shootEffect: shootBig2
+        smokeEffect: shootSmokeDisperse
+        frontColor: ffffff
+        backColor: ffffff80
+        trailColor: ffffff80
+        hitColor: ffffff
+        trailChance: 0.44
+        ammoMultiplier: 2
+        hitEffect: blastExplosion
+        hitColor: 95acd8
+        fragBullets: 3
+        fragRandomSpread: 360
+        fragVelocityMin: 0.3
+        fragVelocityMax: 1.1
+        fragLifeMin: 0.9
+        fragLifeMax: 1.1
+        fragBullet: {
+          type: BasicBulletType
+          damage: 10
+          speed: 6
+          lifetime: 15
+          width: 6
+          height: 6
+          collidesGround: false
+          collidesTiles: false
+          frontColor: ffffff
+          backColor: ffffff80
+          trailColor: ffffff80
+          hitColor: ffffff
+          trailChance: 0.44
+          trailRotation: true
+          trailEffect: disperseTrail
+          hitEffect: blastExplosion
+          hitColor: 95acd8
+          rotationOffset: 90
+        }
+    }
+    tungsten: {
+        type: BasicBulletType
+        sprite: mine-bullet
+        backSprite: large-bomb-back
+        damage: 85
+        reloadMultiplier: 1.25
+        armorMultiplier: 0.7
+        pierce: true
+        pierceCap: 2
+        speed: 8
+        width: 16
+        height: 16
+        rangeChange: 50
+        ammoMultiplier: 3
+        collidesGround: false
+        collidesTiles: false
+        shootEffect: shootBig2
+        smokeEffect: shootSmokeDisperse
+        frontColor: ffffff
+        backColor: ffffff80
+        trailColor: ffffff80
+        hitColor: ffffff
+        trailChance: 0.44
+        trailRotation: true
+        trailEffect: disperseTrail
+        rotationOffset: 90
+    }
+}
+drawer: {
+  type: DrawTurret
+parts: [
+  {
+    type: RegionPart
+    suffix: -side
+    progress: warmup
+    heatProgress: warmup
+    moveY: 0
+    moveX: 2.3
+    heatColor: 665c9f
+    turretHeatLayer: 50.2
+    mirror: true
+    outline: true
+    moveRot: 10
+    x: 3.2
+    y: 2
+    layerOffset: 0.1
+  }
+]
+}
+research: {
+  parent: 03-01-needle
+  objectives: [
+    {
+      type: OnSector
+      preset: 03-basaltTrench
+    }
+  ]
+}
+researchCostMultiplier: 0.65
+shownPlanets: [emelia]

@@ -1,0 +1,50 @@
+type: AttributeCrafter
+attribute: steam
+size: 3
+hasLiquids: true
+squareSprite: false
+outputLiquid: nitrogen/0.5
+displayEfficiencyScale: 1
+baseEfficiency: 0
+minEfficiency: 8
+category: production
+consumes: {
+  power: 0.4
+}
+shownPlanets: ["emelia"]
+liquidCapacity: 180
+research: 04-01-small
+researchCostMultiplier: 0.65
+requirements: [
+    01-03-liton/25
+    graphite/30
+    01-05-cerebrium/40
+]
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawRegion
+      suffix: -bottom
+    }
+    {
+      type: DrawLiquidTile
+      padding: 3
+      drawLiquid: nitrogen
+      alpha: 0.7
+    }
+    {
+      type: DrawRegion
+      suffix: -rotator
+      rotateSpeed: 6
+      spinSprite: true
+    }
+    {
+      type: DrawDefault
+    }
+    {
+      type: DrawRegion
+      suffix: -top
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+name: Quartz Wall
+description: WIP
+type: wall
+category: defense
+health: 1520
+conductivePower: true
+size: 2
+rotate: false
+lockRotation: true
+research: 08-04c-quartz-wall
+researchCostMultiplier: 0.5
+requirements: [
+    01-04c-quartz/28
+]
+destroyBullet: {
+    instantDissapear: true
+    damage: 0
+    speed: 0
+    fragBullets: 16
+    fragBullet: {
+        type: BasicBulletType
+        damage: 26
+        lifetime: 20
+        speed: 5
+        width: 6
+        height: 7
+        pierce: true
+        pierceCap: 1
+        homingPower: 0.1
+        mixColorFrom: ffffff
+        mixColorTo: dcc6c6
+    }
+}
+planet: emelia

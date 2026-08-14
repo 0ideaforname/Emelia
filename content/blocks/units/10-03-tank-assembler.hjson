@@ -1,0 +1,59 @@
+type: UnitAssembler
+name: Tank Assembler
+description: Assembles powerful tanks from inputted payloads. Output tier may be increased with modules.
+areaSize: 10
+size: 5
+health: 5400
+armor: 20
+droneType: fosor
+dronesCreated: 4
+droneConstructTime: 240.0
+requirements: [
+  01-10-thanite/140
+  01-09-nano-alloy/480
+  01-05-cerebrium/540
+  01-04-liton-nitride/180
+  01-07c-obsidian/840
+]
+
+consumes: {
+  power: 16
+  liquids: [
+    {
+      liquid: 02-02-noxinal-liquid
+      amount: 0.15
+    }
+    {
+      liquid: cryofluid
+      amount: 0.6
+    }
+  ]
+}
+
+plans: [
+  {
+    type: UnitAssemblerPlan
+    unit: 08-01-04-collapse
+    requirements: [
+      emelia-08-08-large-thanite-wall/10
+      emelia-08-06-large-reinforced-erbidium-wall/10
+      emelia-08-01-01-splinter/4
+    ]
+    time: 5900
+  }
+  {
+    type: UnitAssemblerPlan
+    unit: 08-01-05-oblivion
+    requirements: [
+      emelia-08-10-large-reinforced-wall/10
+      emelia-08-06d-large-nano-wall/15
+      emelia-08-01-02-fracture/6
+    ]
+    time: 13500
+  }
+]
+
+category: units
+research: 10-02-apex-reconstructor
+researchCostMultiplier: 1
+shownPlanets: ["emelia"]

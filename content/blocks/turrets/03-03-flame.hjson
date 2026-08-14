@@ -1,0 +1,126 @@
+type: ContinuousLiquidTurret
+health: 2140
+size: 3
+squareSprite: false
+targetAir: false
+targetGround: true
+range: 140
+heatColor: d8deff
+outlineColor: 313131
+consumes: {
+    power: 11.5
+}
+liquidCapacity: 60
+liquidConsumed: 0.36
+reload: 58
+category: turret
+shootSound: none
+loopSound: shootSublimate
+loopSoundVolume: 1
+shootY: 2
+ammoTypes: {
+    cryofluid: {
+        type: ContinuousFlameBulletType
+        damage: 59
+        length: 150
+        width: 3.5
+        knockback: 1
+        continuous: true
+        flareColor: 9e9e9e
+        flareWidth: 3.5
+        flareInnerScl: 0.5
+        flareLength: 30
+        flareInnerLenScl: 0.5
+        flareRotSpeed: 1
+        rotateFlare: true
+        pierceArmor: true
+        pierce: true
+        pierceCap: 2
+        timescaleDamage: true
+        status: freezing
+        colors: [8ca9e8, 87ceeb, c0ecff, d1efff, ffffff]
+    }
+    02-03-calyx: {
+        type: ContinuousFlameBulletType
+        damage: 68
+        length: 150
+        width: 3.5
+        knockback: 1
+        continuous: true
+        flareColor: 9e9e9e
+        flareWidth: 3.5
+        flareInnerScl: 0.5
+        flareLength: 30
+        flareInnerLenScl: 0.5
+        flareRotSpeed: 1
+        rotateFlare: true
+        pierceArmor: true
+        pierce: true
+        pierceCap: 2
+        timescaleDamage: true
+        status: slow
+        colors: [515151, 656563, bfbfbf, bfbfbf, ffffff]
+    }
+    02-02-noxinal-liquid: {
+        type: ContinuousFlameBulletType
+        damage: 120
+        length: 210
+        rangeChange: 67
+        width: 3.5
+        knockback: 1.5
+        continuous: true
+        flareColor: c0ecff
+        flareWidth: 5
+        flareInnerScl: 0.5
+        flareLength: 40
+        flareInnerLenScl: 0.5
+        flareRotSpeed: 3
+        rotateFlare: true
+        pierceArmor: true
+        pierce: true
+        pierceCap: 3
+        status: freezing
+        statusDuration: 300
+        timescaleDamage: true
+        colors: [8ca9e8, 87ceeb, c0ecff, d1efff, ffffff]
+    }
+}
+drawer: {
+  type: DrawTurret
+  parts: [
+    {
+        type: RegionPart
+        suffix: -barrel
+        mirror: true
+        under: true
+        progress: warmup
+        heatProgress: recoil
+        moveRot: -10
+        x: 3
+        y: 6.5
+        moveY: 0.5
+        moveX: 1.4
+        heatColor: d1efff
+    }
+    {
+        type: RegionPart
+        suffix: -glow
+        drawRegion: false
+        mirror: true
+        progress: warmup
+        heatProgress: recoil
+        moveY: 0.5
+        moveX: 1.4
+        heatColor: d1efff
+    }
+  ]
+}
+requirements: [
+    01-01-lenite/420
+    01-03-liton/280
+    tungsten/210
+    01-05-cerebrium/400
+]
+research: 03-02-arei
+researchCostMultiplier: 0.5
+shownPlanets: ["emelia"]

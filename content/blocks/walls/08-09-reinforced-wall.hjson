@@ -1,0 +1,31 @@
+type: ShieldWall
+name: Reinforced Wall
+description: Protects structures from incoming damage, fighting back with arcs. Projects one-time shield. Absorbs lasers and electric arcs.
+details: Shield health pretty much returns old hp.
+category: defense
+health: 2140
+armor: 40
+
+chanceDeflect: 10
+absorbLasers: true
+insulated: true
+conductivePower: true
+shieldHealth: 650
+breakCooldown: 999999
+regenSpeed: 1.5
+
+lightningChance: 1
+lightningDamage: 45
+lightningLength: 6
+LightningColor: f3e979ff
+
+size: 1
+rotate: false
+lockRotation: true
+research: 08-08-large-thanite-wall
+researchCostMultiplier: 1.5
+requirements: [
+    01-13-vantorium/2
+    01-11-vonitte/14
+]
+shownPlanets: ["emelia"]

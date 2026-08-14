@@ -1,0 +1,16 @@
+type: LiquidRouter
+name: Fluid Container
+description: Stores fluids.
+size: 2
+health: 250
+hasLiquids: true
+liquidCapacity: 1000
+requirements: [
+  silicon/80
+  iron/40
+  titanium/15
+]
+research: pipe-router
+researchCostMultiplier: 0.6
+category: liquid
+shownPlanets: ["emelia"]

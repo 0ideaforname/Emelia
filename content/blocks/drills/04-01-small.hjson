@@ -1,0 +1,29 @@
+type: BurstDrill
+health: 120
+size: 1
+hardnessDrillMultiplier: 50
+drillTime: 250
+hasPower: false
+tier: 3
+shake: 0.5
+itemCapacity: 8
+researchCostMultiplier: 0.5
+drillEffect: {
+  type: WaveEffect
+  sizeFrom: 0.1
+  sizeTo: 5.6
+  strokeFrom: 0.8
+  strokeTo: 0.1
+  colorFrom: 8f8d87
+  colorTo: 6b6a66
+  lifetime: 20
+}
+
+requirements: [
+01-01-lenite/12
+]
+
+category: production
+research: 11-01-core-vertex
+alwaysUnlocked: true
+shownPlanets: ["emelia"]

@@ -1,0 +1,16 @@
+name: Cryogen Wall
+description: Protects structures from incoming damage.
+type: wall
+category: defense
+health: 525
+armor: 4
+size: 1
+rotate: false
+lockRotation: true
+research: 11-01-core-vertex
+researchCostMultiplier: 0.5
+requirements: [
+    01-02-cryogen/6
+    01-01-lenite/4
+]
+planet: emelia

@@ -1,0 +1,18 @@
+type: LiquidRouter
+name: Pipe Router
+description: Distributes liquid input to 3 outputs equally.
+health: 75
+size: 1
+solid: false
+underBullets: true
+liquidCapacity: 60
+category: liquid
+requirements: [
+    silicon/6
+    iron/4
+    lunar-basalt/8
+]
+
+research: pipe
+researchCostMultiplier: 0.5
+shownPlanets: ["wevai"]

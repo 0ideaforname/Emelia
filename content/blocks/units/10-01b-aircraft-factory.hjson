@@ -1,0 +1,46 @@
+type: UnitFactory
+name: Aircraft Factory
+description: Produces aerial units. Output units can be used directly, or moved into reconstructors for upgrading. Requires power and nitrogen.
+size: 3
+health: 750
+category: units
+itemCapacity: 120
+researchCostMultiplier: 0.8
+
+requirements: [
+    01-03-liton/145
+    graphite/160
+    01-05-cerebrium/200
+]
+
+consumes: {
+power: 2.25
+liquids: [
+  nitrogen/0.2
+]
+}
+
+plans: [
+{
+unit: 08-02-01-flicker
+time: 2400
+requirements: [
+  01-05-cerebrium/60
+  01-02-cryogen/40
+  graphite/25
+]
+}
+{
+unit: 08-02-02-pulse
+time: 3240
+requirements: [
+  tungsten/50
+  01-05-cerebrium/110
+  01-04-liton-nitride/60
+]
+}
+]
+
+category: units
+research: 10-01-unit-factory
+shownPlanets: ["emelia"]

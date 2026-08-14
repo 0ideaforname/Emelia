@@ -1,0 +1,22 @@
+type: wall
+name: Thanite Wall
+description: Protects structures from incoming damage, periodically releasing electric arcs, and reflecting bullets upon contact.
+category: defense
+health: 1580
+armor: 35
+chanceDeflect: 6
+lightningChance: 0.05
+lightningDamage: 45
+lightningLength: 5
+LightningColor: f3e979ff
+lightningSound: shootArc
+size: 1
+rotate: false
+lockRotation: true
+research: 08-06-large-reinforced-erbidium-wall
+researchCostMultiplier: 1.15
+requirements: [
+    01-10-thanite/8
+    01-09-nano-alloy/4
+]
+shownPlanets: ["emelia"]

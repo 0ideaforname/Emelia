@@ -1,0 +1,22 @@
+type: ArmoredConduit
+name: Pressurized Conduit
+description: Transports liquids forward using pressure. Doesn't accept non-duct inputs from sides. Armored.
+health: 420
+armor: 8
+size: 1
+leaks: true
+underBullets: true
+liquidPressure: 1.2
+liquidCapacity: 40
+category: liquid
+junctionReplacement: 06-03-pressurized-junction
+bridgeReplacement: 06-05-pressurized-bridge
+rotBridgeReplacement: 06-05-pressurized-bridge
+requirements: [
+    01-02-cryogen/2
+    01-06-reinforced-glass/2
+]
+
+research: 11-01-core-vertex
+researchCostMultiplier: 0.5
+shownPlanets: ["emelia"]

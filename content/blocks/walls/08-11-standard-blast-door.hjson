@@ -1,0 +1,26 @@
+type: AutoDoor
+name: Standard Blast Door
+description: Protects structures from incoming damage and opens for allied units in range, fighting back with arcs. Absorbs lasers and electric arcs.
+category: defense
+health: 8200
+armor: 38
+
+chanceDeflect: 10
+absorbLasers: true
+insulated: true
+conductivePower: true
+
+lightningChance: 1
+lightningDamage: 60
+lightningLength: 8
+LightningColor: f3e979ff
+
+size: 2
+research: 08-10-large-reinforced-wall
+researchCostMultiplier: 0.8
+requirements: [
+    01-13-vantorium/8
+    01-11-vonitte/56
+    01-09-nano-alloy/25
+]
+shownPlanets: ["emelia"]

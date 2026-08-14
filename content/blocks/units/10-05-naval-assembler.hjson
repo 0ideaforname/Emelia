@@ -1,0 +1,55 @@
+type: UnitAssembler
+name: Naval Assembler
+description: WIPAssembles battleships from inputted payloads. Output tier may be increased with modules. Conduits power.
+areaSize: 10
+conductivePower: true
+size: 5
+health: 5300
+armor: 10
+droneType: fosor
+dronesCreated: 4
+droneConstructTime: 240.0
+requirements: [
+  01-07-erbidium/480
+  tungsten/280
+  01-05-cerebrium/540
+  01-04-liton-nitride/180
+]
+
+consumes: {
+  power: 12
+  liquids: [
+    {
+      liquid: nitrogen
+      amount: 0.25
+    }
+  ]
+}
+
+plans: [
+  {
+    type: UnitAssemblerPlan
+    unit: 08-03-01-nix
+    requirements: [
+      vasochema-08-02-large-crygon-wall/2
+      tungsten-wall/2
+      vasochema-08-03-01-solo/1
+    ]
+    time: 2100
+  }
+  {
+    type: UnitAssemblerPlan
+    unit: 08-03-02-proteus
+    requirements: [
+      vasochema-08-04-large-erbidium-wall/3
+      vasochema-08-01-01-splinter/2
+      vasochema-03-03-rail/2
+    ]
+    time: 3000
+  }
+]
+
+category: units
+research: 10-03-tank-assembler
+researchCostMultiplier: 3
+shownPlanets: ["emelia"]

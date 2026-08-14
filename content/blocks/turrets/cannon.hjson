@@ -1,0 +1,75 @@
+type: ItemTurret
+name: Cannon
+description: Fires artillery bullets at enemy ground targets.
+size: 1
+targetAir: false
+targetGround: true
+outlineColor: 2b2b2e
+
+coolant: {
+    type: ConsumeCoolant
+    allowGas: false
+    allowLiquid: true
+    amount: 0.1
+}
+
+inaccuracy: 5
+reload: 45
+range: 130
+category: turret
+shootSound: shootArtillerySmall
+ammoUseEffect: casing1
+
+ammoTypes: {
+    silicon: {
+        type: ArtilleryBulletType
+        frontColor: ffffff
+        backColor: 91939b
+        trailColor: 6d6f76
+        width: 11
+        height: 11
+        speed: 4.5
+        lifetime: 120
+        collidesTiles: false
+        ammoMultiplier: 2
+        splashDamage: 38
+        splashDamageRadius: 20
+
+        homingPower: 0.08
+        homingRange: 50
+        trailLength: 7
+        trailWidth: 3
+        despawnEffect: hitBulletColor
+        hitColor: 91939b
+        buildingDamageMultiplier: 0.25
+    }
+    raw-iron: {
+        type: ArtilleryBulletType
+        frontColor: ffffff
+        backColor: 989aa4
+        trailColor: 989aa4
+        width: 11
+        height: 11
+        speed: 4.5
+        lifetime: 120
+        collidesTiles: false
+        ammoMultiplier: 3
+        splashDamage: 52
+        splashDamageRadius: 22
+        despawnEffect: hitBulletColor
+        hitColor: 989aa4
+        buildingDamageMultiplier: 0.25
+    }
+}
+
+requirements: [
+    selite/40
+    silicon/20
+]
+drawer: {
+    type: DrawTurret
+    suffix: -base
+}
+research: pebble
+researchCostMultiplier: 0.2
+shownPlanets: [wevai]

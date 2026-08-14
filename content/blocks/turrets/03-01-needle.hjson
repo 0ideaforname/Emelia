@@ -1,0 +1,159 @@
+type: ItemTurret
+health: 910
+armor: 4
+size: 2
+squareSprite: false
+targetAir: true
+targetGround: true
+outlineColor: 313131
+requirements: [
+    01-01-lenite/100
+    01-02-cryogen/50
+]
+coolant: {
+    type: ConsumeLiquid
+    liquid: cryofluid
+    amount: 0.15
+}
+coolantMultiplier: 4
+reload: 45
+range: 190
+category: turret
+shootSound: shootBreach
+ammoTypes: {
+    01-01-lenite: {
+        type: BasicBulletType
+        damage: 52
+        buildingDamageMultiplier: 0.3
+        width: 4
+        height: 11
+        speed: 7.5
+        lifetime: 25
+        ammoMultiplier: 1
+        trailWidth: 2.1
+        trailLength: 10
+        pierceCap: 2
+        pierce: true
+        hitEffect: hitBulletColor
+        despawnEffect: hitBulletColor
+        frontColor: ffffff
+        backColor: 787878
+        trailColor: 787878
+    }
+    01-05-cerebrium: {
+        type: MissileBulletType
+        damage: 76
+        buildingDamageMultiplier: 0.3
+        width: 4
+        height: 11
+        speed: 7.5
+        lifetime: 25
+        ammoMultiplier: 1
+        trailWidth: 2.1
+        trailLength: 10
+        homingPower: 0.1
+        pierceCap: 2
+        pierce: true
+        hitEffect: hitBulletColor
+        despawnEffect: hitBulletColor
+        frontColor: ffffff
+        backColor: 787878
+        trailColor: 787878
+    }
+    tungsten: {
+        lifetime: 30
+        speed: 8
+        damage: 116.25
+        width: 8
+        hitSize: 7
+        height: 19
+        reloadMultiplier: 0.85
+        shootEffect: [shootBigColor, colorSparkBig]
+        smokeEffect: shootBigSmoke
+        ammoMultiplier: 1
+        pierceCap: 3
+        pierce: true
+        pierceBuilding: true
+        hitColor: 768a9a
+        backColor: 768a9a
+        trailColor: 768a9a
+        frontColor: ffffff
+        trailWidth: 2.2
+        trailLength: 11
+        rangeChange: 50
+        hitEffect: hitBulletColor
+        despawnEffect: hitBulletColor
+        buildingDamageMultiplier: 0.3
+    }
+    01-08c-detonite: {
+        lifetime: 30
+        speed: 8
+        damage: 120
+        splashDamage: 65
+        splashDamageRadius: 22
+        armorMultiplier: 0.8
+        width: 8
+        hitSize: 7
+        height: 19
+        reloadMultiplier: 0.75
+        status: burning
+
+        shootEffect: [shootBigColor, colorSparkBig]
+        smokeEffect: shootBigSmoke
+        shootSound: shootBreachCarbide
+        ammoMultiplier: 2
+        pierceCap: 5
+        pierce: true
+        pierceBuilding: true
+
+        hitColor: feb380
+        backColor: feb380
+        trailColor: feb380
+        frontColor: ffffff
+        trailWidth: 2.2
+        trailLength: 11
+        trailEffect: disperseTrail
+        rangeChange: 50
+        hitEffect: blastExplosion
+        despawnEffect: blastExplosion
+        buildingDamageMultiplier: 0.3
+
+        fragBullets: 3
+        fragRandomSpread: 0
+        fragSpread: 25
+        fragVelocityMin: 1
+        fragBullet: {
+          type: BasicBulletType
+          damage: 35
+          splashDamage: 28
+          splashDamageRadius: 12
+          armorMultiplier: 0.8
+          buildingDamageMultiplier: 0.35
+
+          speed: 6.5
+          lifetime: 8
+          width: 11
+          height: 14
+          hitSize: 7
+          pierceCap: 2
+          pierce: true
+          pierceBuilding: true
+
+          hitColor: feb380
+          backColor: feb380
+          trailColor: feb380
+          frontColor: ffffff
+          trailWidth: 1.8
+          trailLength: 8
+          hitEffect: hitBulletColor
+          despawnEffect: hitBulletColor
+        }
+    }
+}
+drawer: {
+    type: DrawTurret
+    suffix: -base
+}
+research: 11-01-core-vertex
+researchCostMultiplier: 0.5
+planet: emelia

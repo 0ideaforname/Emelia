@@ -1,0 +1,23 @@
+name: Component Fabricator
+description: Fabricates unit parts for assembly.
+type: Constructor
+category: units
+health: 640
+size: 3
+consumes: {
+    power: 4
+}
+filter: [
+    aiCore
+    track
+]
+research: 10-09-payload-track
+researchCostMultiplier: 0.65
+requirements: [
+    01-04c-quartz/80
+    01-07c-obsidian/75
+    graphite/85
+    01-05-cerebrium/120
+    tungsten/50
+]
+planet: emelia

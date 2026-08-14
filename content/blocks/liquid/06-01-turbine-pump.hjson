@@ -1,0 +1,20 @@
+type: Pump
+name: Turbine Pump
+description: Uses a turbine to pump liquids.
+category: liquid
+squareSprite: false
+health: 410
+size: 2
+requirements: [
+  tungsten/40
+  01-03-liton/65
+  01-05-cerebrium/80
+  01-06-reinforced-glass/40
+]
+consumes: {
+  power: 1
+}
+pumpAmount: 0.15
+research: 06-02-pressurized-conduit
+researchCostMultiplier: 0.5
+shownPlanets: ["emelia"]

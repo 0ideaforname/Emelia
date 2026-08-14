@@ -1,0 +1,15 @@
+type: Junction
+name: AI Core
+description: Contains all types of electrical components required in unit assembly.
+size: 3
+customShadow: true
+placeablePlayer: false
+requirements: [
+    01-04c-quartz/120
+    01-05-cerebrium/200
+    01-09-nano-alloy/80
+    01-13-vantorium/60
+]
+databaseTag: unitpart
+research: track
+researchCostMultiplier: 1

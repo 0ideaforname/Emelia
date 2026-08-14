@@ -1,0 +1,14 @@
+name: Selite Wall
+description: Protects structures from incoming damage.
+type: wall
+category: defense
+health: 350
+size: 1
+rotate: false
+lockRotation: true
+research: core-anchor
+researchCostMultiplier: 0.5
+requirements: [
+    selite/6
+]
+shownPlanets: [wevai]

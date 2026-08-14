@@ -1,0 +1,22 @@
+type: LiquidBridge
+name: Bridge Pipe
+description: Transports liquids over buildings or terrain with pressure.
+health: 75
+size: 1
+range: 4
+liquidCapacity: 50
+category: liquid
+arrowSpacing: 6
+fadeIn: false
+moveArrows: false
+floating: true
+hasPower: false
+requirements: [
+    silicon/15
+    iron/10
+    lunar-basalt/8
+]
+
+research: pipe-router
+researchCostMultiplier: 0.5
+shownPlanets: ["wevai"]

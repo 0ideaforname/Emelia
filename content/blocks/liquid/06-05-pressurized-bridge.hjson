@@ -1,0 +1,19 @@
+type: DirectionLiquidBridge
+name: Pressurized Bridge
+description: Transports liquids over buildings or terrain with pressure.
+health: 420
+armor: 8
+size: 1
+range: 5
+underBullets: true
+liquidCapacity: 100
+category: liquid
+requirements: [
+    graphite/5
+    01-05-cerebrium/4
+    01-06-reinforced-glass/10
+]
+
+research: 06-04-pressurized-router
+researchCostMultiplier: 0.5
+shownPlanets: ["emelia"]

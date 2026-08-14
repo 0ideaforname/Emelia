@@ -1,0 +1,17 @@
+name: Cerebrium Wall
+description: Protects structures from incoming damage. Blocks electric arcs.
+type: wall
+category: defense
+health: 600
+armor: 6
+category: defense
+size: 1
+rotate: false
+lockRotation: true
+research: 08-02-large-cryogen-wall
+researchCostMultiplier: 0.65
+requirements: [
+    01-05-cerebrium/8
+]
+shownPlanets: ["emelia"]
+insulated: true

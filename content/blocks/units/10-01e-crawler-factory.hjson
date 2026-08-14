@@ -1,0 +1,48 @@
+type: UnitFactory
+name: Crawler Factory
+description: Produces crawler units. Output units can be used directly, or moved into reconstructors for upgrading. Requires power and nitrogen.
+size: 3
+health: 780
+category: units
+itemCapacity: 100
+researchCostMultiplier: 0.8
+
+requirements: [
+    01-04-liton-nitride/85
+    graphite/80
+    01-05-cerebrium/180
+    tungsten/35
+]
+
+consumes: {
+power: 2.5
+liquids: [
+  nitrogen/0.25
+]
+}
+
+plans: [
+{
+unit: 08-05-01-nema
+time: 1970
+requirements: [
+  01-05-cerebrium/50
+  01-03-liton/60
+  01-04c-quartz/35
+]
+}
+{
+unit: 08-05-02-cesto
+time: 3500
+requirements: [
+  tungsten/45
+  01-05-cerebrium/110
+  01-04-liton-nitride/35
+  01-04c-quartz/70
+]
+}
+]
+
+category: units
+research: 10-01d-support-factory
+shownPlanets: ["emelia"]

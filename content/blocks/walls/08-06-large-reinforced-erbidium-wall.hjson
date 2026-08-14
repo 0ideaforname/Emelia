@@ -1,0 +1,17 @@
+type: wall
+name: Large Reinforced Erbidium Wall
+description: Protects structures from incoming damage. Moderately armored.
+category: defense
+health: 3400
+armor: 18
+chanceDeflect: 4
+size: 2
+rotate: false
+lockRotation: true
+research: 08-05-reinforced-erbidium-wall
+researchCostMultiplier: 0.8
+requirements: [
+    01-07-erbidium/24
+    tungsten/16
+]
+shownPlanets: ["emelia"]

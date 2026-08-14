@@ -1,0 +1,22 @@
+name: Payload Mass Driver
+description: Launches payloads to connected Payload Mass Drivers.
+type: PayloadMassDriver
+category: units
+health: 640
+size: 3
+range: 480
+reload: 120
+chargeTime: 105
+maxPayloadSize: 3
+consumes: {
+    power: 2
+}
+rotate: true
+research: 10-09-payload-track
+researchCostMultiplier: 0.5
+requirements: [
+    01-03-liton/80
+    01-05-cerebrium/65
+    tungsten/40
+]
+shownPlanets: ["emelia"]

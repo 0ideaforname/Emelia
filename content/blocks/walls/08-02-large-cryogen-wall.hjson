@@ -1,0 +1,16 @@
+name: Large Cryogen Wall
+description: Protects structures from incoming damage.
+type: wall
+category: defense
+health: 2100
+armor: 4
+size: 2
+rotate: false
+lockRotation: true
+research: 08-01-cryogen-wall
+researchCostMultiplier: 0.5
+requirements: [
+    01-02-cryogen/24
+    01-01-lenite/16
+]
+planet: emelia

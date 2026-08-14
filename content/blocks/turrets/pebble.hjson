@@ -1,0 +1,72 @@
+type: ItemTurret
+name: Pebble
+description: Fires dual bullets at enemy targets.
+size: 1
+targetAir: true
+targetGround: true
+outlineColor: 2b2b2e
+
+shoot: {
+    type: ShootAlternate
+    barrels: 2
+    spread: 2
+    shots: 2
+}
+coolant: {
+    type: ConsumeCoolant
+    allowGas: false
+    allowLiquid: true
+    amount: 0.1
+}
+
+inaccuracy: 2
+reload: 24
+range: 130
+category: turret
+shootSound: shootDuo
+ammoUseEffect: casing1
+
+ammoTypes: {
+    selite: {
+        frontColor: ffffff
+        backColor: 91939b
+        trailColor: 6d6f76
+        type: BasicBulletType
+        width: 7
+        height: 9
+        speed: 4
+        lifetime: 35
+        collidesGround: true
+        collidesAir: true
+        ammoMultiplier: 2
+        damage: 9
+        buildingDamageMultiplier: 0.25
+    }
+    lunar-basalt: {
+        frontColor: ffffff
+        backColor: 656563
+        trailColor: 656563
+        type: BasicBulletType
+        width: 7
+        height: 9
+        speed: 4
+        lifetime: 35
+        collidesGround: true
+        collidesAir: true
+        ammoMultiplier: 2
+        damage: 12
+        buildingDamageMultiplier: 0.25
+    }
+}
+
+requirements: [
+    selite/20
+    lunar-basalt/15
+]
+drawer: {
+    type: DrawTurret
+    suffix: -base
+}
+research: core-anchor
+researchCostMultiplier: 0.2
+shownPlanets: [wevai]

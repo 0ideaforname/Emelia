@@ -1,0 +1,25 @@
+name: Repair Sentry
+description: Repairs closest allied units in range. Optionally accepts coolant to increase efficiency.
+type: RepairTurret
+category: units
+health: 405
+size: 2
+length: 6
+repairSpeed: 2
+repairRadius: 145
+powerUse: 2.5
+beamWidth: 1.1
+pulseRadius: 6
+coolantUse: 0.2
+coolantMultiplier: 1.4
+acceptCoolant: true
+ambientSoundVolume: 1.15
+research: 10-01-unit-factory
+researchCostMultiplier: 0.5
+requirements: [
+    01-04c-quartz/60
+    graphite/30
+    01-05-cerebrium/80
+    tungsten/45
+]
+shownPlanets: ["emelia"]
