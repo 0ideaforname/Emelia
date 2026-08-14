@@ -1,0 +1,21 @@
+type: BeamNode
+name: Liton Node
+description: Transmits power to other blocks orthogonally.
+category: power
+health: 160
+size: 1
+shownPlanets: [emelia]
+range: 10
+hasPower: true
+conductivePower: true
+
+research: {
+parent: 11-01-core-vertex
+}
+researchCostMultiplier: 0.2
+
+requirements: [
+    01-03-liton/6
+    01-01-lenite/4
+]
+planet: emelia

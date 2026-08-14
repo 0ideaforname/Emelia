@@ -1,0 +1,56 @@
+type: ThermalGenerator
+name: Turbine Concentrator
+description: Generates power when placed on vents. Produces small amounts of nitrogen.
+health: 840
+size: 3
+squareSprite: false
+conductivePower: true
+attribute: steam
+displayEfficiencyScale: 0.11111111
+minEfficiency: 8
+powerProduction: 0.36
+displayEfficiency: false
+generateEffect: turbinegenerate
+effectChance: 0.04
+hasLiquids: true
+outputLiquid: nitrogen/0.0166667
+liquidCapacity: 20
+fogRadius: 3
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawRegion
+      suffix: -bottom
+    }
+    {
+      type: DrawLiquidTile
+      padding: 3
+      drawLiquid: nitrogen
+      alpha: 0.7
+    }
+    {
+      type: DrawRegion
+      suffix: -rotator
+      rotateSpeed: 6
+      spinSprite: true
+    }
+    {
+      type: DrawDefault
+    }
+    {
+      type: DrawRegion
+      suffix: -top
+    }
+  ]
+}
+category: power
+research: {
+parent: 07-01-liton-node
+}
+researchCostMultiplier: 0.2
+requirements: [
+    01-01-lenite/80
+    01-03-liton/40
+]
+shownPlanet: ["emelia"]

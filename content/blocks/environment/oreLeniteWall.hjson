@@ -1,0 +1,4 @@
+type: OreBlock
+name: "Lenite Ore (Wall)"
+itemDrop: 01-01-lenite
+wallOre: true

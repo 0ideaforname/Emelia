@@ -1,0 +1,21 @@
+type: PowerNode
+name: Advanced Node
+description: transmits power to connected nodes, or structures. Recieves or supplies power to adjacent blocks. Armored.
+category: power
+health: 480
+armor: 5
+size: 2
+shownPlanets: [emelia]
+laserRange: 12
+maxNodes: 10
+hasPower: true
+conductivePower: true
+laserColor1: ffffff
+laserColor2: 98f58b
+research: 07-01-liton-node
+researchCostMultiplier: 1
+requirements: [
+    01-05-cerebrium/25
+    tungsten/20
+    01-04-liton-nitride/20
+]

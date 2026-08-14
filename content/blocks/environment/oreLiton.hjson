@@ -1,0 +1,4 @@
+type: OreBlock
+name: "Liton Ore (Wall)"
+itemDrop: 01-03-liton
+wallOre: true

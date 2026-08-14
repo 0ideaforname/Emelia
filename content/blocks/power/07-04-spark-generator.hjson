@@ -1,0 +1,42 @@
+type: ConsumeGenerator
+name: Spark Generator
+description: Burns inputted items for power.
+category: power
+health: 420
+size: 2
+shownPlanets: ["emelia"]
+hasPower: true
+conductivePower: true
+research: {
+parent: 07-03-turbine-concentrator
+requirements: [
+    01-03-liton/10
+    01-01-lenite/20
+]
+}
+consumes: {
+  itemFlammable: {}
+}
+itemDuration: 140
+powerProduction: 3.5
+requirements: [
+    01-03-liton/45
+    graphite/25
+    01-06-reinforced-glass/80
+    01-05-cerebrium/20
+]
+drawer: {
+    type: DrawMulti
+    drawers: [
+        {
+            type: DrawRegion
+            suffix: -bottom
+        }
+        {
+            type: DrawCrucibleFlame
+        }
+        {
+            type: DrawDefault
+        }
+    ]
+}

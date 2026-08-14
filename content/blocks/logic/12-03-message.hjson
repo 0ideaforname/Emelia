@@ -1,0 +1,15 @@
+type: MessageBlock
+name: Message
+description: Stores a message for communication between allies.
+category: logic
+health: 350
+size: 1
+rotate: false
+lockRotation: true
+research: 12-02-button
+researchCostMultiplier: 0.5
+requirements: [
+    01-05-cerebrium/8
+    graphite/12
+]
+shownPlanets: ["emelia"]

@@ -1,0 +1,45 @@
+type: ConsumeGenerator
+name: Discharge Generator
+description: A simple structure that produces power by discharging charged materials.
+category: power
+health: 1040
+size: 3
+shownPlanets: [emelia]
+hasPower: true
+conductivePower: true
+research: 07-04-spark-generator
+researchCostMultiplier: 0.65
+consumes: {
+  itemCharged: {
+    minCharge: 0.1
+  }
+}
+itemDurationMultipliers: {
+    surge-alloy: 2.5
+    emelia-01-08-thranil: 1.15
+    emelia-01-13-vantorium: 1.5
+    emelia-01-09-nano-alloy: 4.5
+    emelia-01-10-thanite: 3
+}
+itemDuration: 70
+powerProduction: 23.5
+requirements: [
+    01-05-cerebrium/140
+    01-04c-quartz/45
+    tungsten/80
+]
+drawer: {
+    type: DrawMulti
+    drawers: [
+        {
+            type: DrawRegion
+            suffix: -bottom
+        }
+        {
+            type: DrawPlasma
+        }
+        {
+            type: DrawDefault
+        }
+    ]
+}

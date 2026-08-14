@@ -1,0 +1,5 @@
+type: StaticWall
+name: Vitracite Wall
+attributes: {
+    vitracite: 1
+}

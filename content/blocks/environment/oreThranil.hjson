@@ -1,0 +1,8 @@
+type: Floor
+name: Thranil Vein TODO
+speedMultiplier: 0.8
+variants: 0
+itemDrop: 01-08-thranil
+playerUnmineable: true
+status: cancerous
+statusDuration: 120

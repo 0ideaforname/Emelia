@@ -1,0 +1,32 @@
+type: Battery
+name: Liton Battery
+description: Stores power in times of surplus energy. Outputs power in times of deficit.
+health: 230
+size: 1
+squareSprite: false
+conductivePower: true
+hasPower: true
+outputsPower: true
+consumesPower: true
+connectedPower: true
+category: power
+consumes: {
+    powerBuffered: 8400
+}
+
+requirements: [
+    01-03-liton/20
+    01-05-cerebrium/5
+]
+emptyLightColor: d8deff
+fullLightColor: ffd281
+
+research: {
+    parent: 07-01-liton-node
+    requirements: [
+        01-03-liton/350
+        01-05-cerebrium/200
+        01-01-lenite/400
+    ]
+}
+shownPlanets: ["emelia"]

@@ -1,0 +1,9 @@
+type: SteamVent
+name: Crystal Vent
+blendGroup: crystal-floor
+parent: crystal-floor
+effect: ventSteam
+effectColor: 38293d
+attributes: {
+    steam: 1.15
+}

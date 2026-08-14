@@ -1,0 +1,6 @@
+type: Floor
+name: Vitracitic Sand TODO
+speedMultiplier: 0.95
+variants: 4
+itemDrop: 01-03c-vitracite-sand
+playerUnmineable: true

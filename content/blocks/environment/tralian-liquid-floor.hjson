@@ -1,0 +1,15 @@
+type: Floor
+speedMultiplier: 0.2
+variants: 4
+liquidDrop: 02-01-tralian-liquid
+liquidMultiplier: 1
+isLiquid: true
+status: wet
+statusDuration: 120
+drownTime: 200
+cacheLayer: water
+albedo: 0.9
+supportsOverlay: true
+attributes: {
+    heat: 1.8
+}

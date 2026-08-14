@@ -1,0 +1,7 @@
+type: Floor
+name: Infested Hot Rock
+variants: 2
+attributes: {
+    heat: 0.8
+    water: -0.75
+}

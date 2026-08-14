@@ -1,0 +1,7 @@
+type: Floor
+name: Infested Magma Rock
+variants: 2
+attributes: {
+    heat: 1.15
+    water: -1.1
+}

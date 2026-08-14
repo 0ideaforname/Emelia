@@ -1,0 +1,17 @@
+type: LogicBlock
+name: Processor
+description: Runs logic code in a loop.
+category: logic
+health: 350
+size: 1
+rotate: false
+lockRotation: true
+research: 11-01-core-vertex
+researchCostMultiplier: 0.5
+requirements: [
+    01-05-cerebrium/30
+    graphite/40
+    01-03-liton/25
+]
+instructionsPerTick: 2
+shownPlanets: ["emelia"]

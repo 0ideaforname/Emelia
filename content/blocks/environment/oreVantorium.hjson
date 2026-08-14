@@ -1,0 +1,6 @@
+type: OreBlock
+name: Vantorium Ore
+description: Heavy magnetic iron ore, reduces speed of units walked on it.
+speedMultiplier: 0.9
+itemDrop: 01-13-vantorium
+variants: 2

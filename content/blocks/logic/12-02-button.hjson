@@ -1,0 +1,15 @@
+type: SwitchBlock
+name: Button
+description: Toggleable button. State can be read and controlled with processors.
+category: logic
+health: 320
+size: 1
+rotate: false
+lockRotation: true
+research: 12-01-processor
+researchCostMultiplier: 0.5
+requirements: [
+    01-05-cerebrium/10
+    graphite/5
+]
+shownPlanets: ["emelia"]

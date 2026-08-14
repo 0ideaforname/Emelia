@@ -1,0 +1,6 @@
+type: Floor
+name: Obsidian Vein
+speedMultiplier: 0.85
+variants: 0
+itemDrop: 01-07c-obsidian
+playerUnmineable: true

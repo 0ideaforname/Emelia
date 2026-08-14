@@ -1,0 +1,16 @@
+type: LogicDisplay
+name: Processor Canvas
+description: Outputs logic data graphically.
+category: logic
+health: 580
+size: 3
+rotate: false
+lockRotation: true
+displaySize: 80
+research: 12-02-button
+researchCostMultiplier: 0.5
+requirements: [
+    01-05-cerebrium/30
+    01-03-liton/95
+]
+shownPlanets: ["emelia"]

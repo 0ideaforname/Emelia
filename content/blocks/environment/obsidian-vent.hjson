@@ -1,0 +1,9 @@
+type: SteamVent
+name: Obsidian Vent
+blendGroup: obsidian-floor
+parent: obsidian-floor
+effect: ventSteam
+effectColor: 38293d
+attributes: {
+    steam: 1
+}
