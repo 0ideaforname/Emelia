@@ -1,0 +1,96 @@
+name: Proteus
+template: ErekirUnitType
+type: naval
+flying: false
+description: WIP
+health: 3540
+hitSize: 20
+armor: 15
+speed: 0.8
+lightRadius: 8
+singleTarget: false
+fogRadius: 40
+immunities: [
+burning,
+melting,
+wet,
+freezing,
+cancerous
+]
+envEnabled: 14
+envDisabled: 2
+outlineColor: "2d2f39"
+weapons: [
+  {
+    name: 08-03-02-proteus-missileLauncher
+    x: 8
+    y: 0
+    mirror: true
+    rotate: true
+    rotateSpeed: 4.5
+    shootY: 3
+    reload: 18
+    recoil: 0.4
+    inaccuracy: 6
+    shootSound: shootMissile
+    bullet: {
+        type: MissileBulletType
+        damage: 25
+        splashDamage: 10
+        splashDamageRadius: 12
+        lifetime: 80
+        speed: 2.7
+        drag: -0.003
+        width: 8
+        height: 8
+        shrinkY: 0
+        homingRange: 60
+        weaveScale: 8
+        weaveMag: 1
+        keepVelocity: false
+        frontColor: ffd281
+        backColor: c29b62
+        trailColor: c29b62
+        smokeEffect: colorSpark
+        despawnEffect: blastExplosion
+        hitEffect: blastExplosion
+    }
+}
+{
+    name: 08-03-02-proteus-railgun
+    x: 0
+    y: -3
+    shoot: {
+        type: "ShootAlternate"
+        barrels: 2
+        spread: 4.8
+    }
+    mirror: false
+    reload: 15
+    rotate: true
+    recoil: 1
+    rotateSpeed: 2
+    layerOffset: 2
+    shootY: 6
+    shootSound: shootLocus
+    bullet: {
+        width: 5
+        type: LaserBulletType
+        colors: [c29b62, ffd281, ffffff]
+        length: 200
+        damage: 38
+        pierceBuilding: true
+        pierce: true
+        pierceCap: 2
+        pierceArmor: false
+        lifetime: 35
+        hitColor: ffd281
+        hitEffect: hitBulletColor
+        smokeEffect: shootSmallSmoke
+        shootEffect: lancerLaserShoot
+    }
+}
+]
+research: 08-03-01-nix
+researchCostMultiplier: 0.65
+shownPlanets: ["emelia"]

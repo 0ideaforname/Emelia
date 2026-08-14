@@ -1,0 +1,276 @@
+type: tank
+hitSize: 48
+speed: 0.5
+rotateSpeed: 1.4
+omniMovement: false
+health: 28650
+armor: 30
+targetGround: true
+targetAir: true
+outlineColor: 2d2f39
+shownPlanets: ["emelia"]
+crushDamage: 5.4
+floorMultiplier: 0.2
+immunities: [
+slow
+muddy
+tarred
+wet
+burning
+melting
+freezing
+spore-slowed
+shocked
+blasted
+corroded
+]
+treadPullOffset: 2
+treadRects: [
+    {
+        x: 30
+        y: -100
+        width: 40
+        height: 210
+    }
+]
+drownTimeMultiplier: 2
+parts: [
+    {
+        type: RegionPart
+        suffix: -glow
+        layer: -1
+        mirror: false
+        blending: additive
+        color: ff1a1a
+        colorTo: ff1a1a
+        outline: false
+    }
+]
+weapons: [
+  {
+    name: 08-01-05-oblivion-weapon
+    shootSound: shootConquer
+    layerOffset: 0.1
+    reload: 140
+    shootY: 32.5
+    shake: 5
+    recoil: 5
+    rotate: true
+    rotateSpeed: 0.6
+    mirror: false
+    x: 0
+    y: -2
+    shadow: 50
+    shootWarmupSpeed: 0.06
+    cooldownTime: 110
+    heatColor: f9350f
+    minWarmup: 0.9
+    drawOutline: false
+    
+    parts: [
+        {
+            type: RegionPart
+            suffix: -glow
+            layer: -1
+            mirror: false
+            blending: additive
+            color: ff1a1a
+            colorTo: ff1a1a
+            outline: false
+        }
+        {
+            type: RegionPart
+            suffix: -second-glow
+            layer: -1
+            mirror: false
+            blending: additive
+            color: ffd28165
+            colorTo: ffd28165
+            outline: false
+        }
+      {
+        type: RegionPart
+        suffix: -barrel
+        progress: warmup
+        heatColor: ff1a1a
+        mirror: true
+        moveX: 0.5
+        moveY: 1
+        moveRot: -3
+        x: 0
+        y: 0
+      }
+      {
+        type: RegionPart
+        suffix: -barrel-heat
+        blending: additive
+        progress: warmup
+        mirror: true
+        outline: false
+        colorTo: ff1a1a
+        color: ff1a1a
+        moveX: 0.5
+        moveY: 1
+        x: 0
+        y: 0
+      }
+      {
+        type: RegionPart
+        suffix: -plate
+        progress: warmup
+        heatProgress: warmup
+        heatColor: ff1a1a
+        mirror: true
+        under: true
+        moveX: -4
+        moveY: 1
+        moveRot: 15
+        x: -6.25
+        y: 14
+      }
+      {
+        type: RegionPart
+        suffix: -plate
+        progress: warmup
+        heatProgress: warmup
+        heatColor: ff1a1a
+        mirror: true
+        under: true
+        moveX: -6
+        moveY: 1
+        moveRot: 15
+        x: -9.25
+        y: 0
+      }
+      {
+        type: RegionPart
+        suffix: -plate
+        progress: warmup
+        heatProgress: warmup
+        heatColor: ff1a1a
+        mirror: true
+        under: true
+        moveX: -7
+        moveY: 1
+        moveRot: 75
+        x: -6.25
+        y: -9
+      }
+      {
+        type: RegionPart
+        suffix: -sinks
+        progress: warmup
+        mirror: true
+        under: true
+        heatColor: ff1a1a
+        moveX: 2.25
+        moveY: -1.75
+        x: 8
+        y: -8.5
+      }
+      {
+        type: RegionPart
+        suffix: -sinks-heat
+        blending: additive
+        progress: warmup
+        mirror: true
+        outline: false
+        colorTo: ff000080
+        color: ff000000
+        moveX: 4.25
+        moveY: -3.75
+        x: 8
+        y: -8.5
+      }
+    ]
+    bullet: {
+      type: BasicBulletType
+      sprite: missile-large
+      speed: 8
+      damage: 610
+      splashDamage: 390
+      splashDamageRadius: 50
+      width: 18
+      height: 26
+      lifetime: 35
+      hitSize: 8
+      reflectable: false
+
+      smokeEffect: shootSmokeTitan
+      hitColor: feb380
+      backColor: feb380
+      trailColor: feb380
+      frontColor: ffffff
+      trailWidth: 5
+      trailLength: 12
+      hitEffect: titanExplosion
+      despawnEffect: titanExplosion
+      hitSound: explosionTitan
+      despawnSound: explosionTitan
+
+      shootEffect: {
+        type: ExplosionEffect
+        lifetime: 40
+        waveStroke: 4
+        waveColor: feb380
+        sparkColor: feb380
+        waveRad: 15
+        smokeSize: 5
+        smokes: 8
+        smokeSizeBase: 0
+        smokeColor: feb380
+        sparks: 8
+        sparkRad: 40
+        sparkLen: 4
+        sparkStroke: 3
+      }
+
+      fragBullets: 10
+      fragVelocityMin: 0.45
+      fragRandomSpread: 260
+      fragBullet: {
+        type: BasicBulletType
+        speed: 2
+        damage: 28
+        splashDamage: 15
+        splashDamageRadius: 10
+        width: 14
+        height: 18
+        lifetime: 30
+        pierce: true
+        pierceCap: 2
+        hitColor: feb380
+        backColor: feb380
+        trailColor: feb380
+        frontColor: ffffff
+        trailWidth: 3
+        trailLength: 8
+        lightning: 2
+        lightningDamage: 15
+        lightningLength: 6
+        lightningColor: feb380
+        hitEffect: blastExplosion
+        hitSound: explosionDull
+        despawnEffect: blastExplosion
+      }
+      intervalBullets: 2
+      bulletInterval: 4
+      intervalBullet: {
+        type: LightningBulletType
+        damage: 0
+        lightning: 2
+        lightningLength: 6
+        lightningDamage: 35
+        lightningColor: feb380
+      }
+    }
+  }
+]
+
+category: units
+research: {
+parent: 08-01-04-collapse
+objectives: [
+    08-01-04-collapse
+]
+}

@@ -1,0 +1,26 @@
+type: status
+name: Shock Repair
+description: Placeholder
+damageMultiplier: 1.04
+speedMultiplier: 1.08
+damage: -0.3
+transitionDamage: -28
+disarm: false
+buildSpeedMultiplier: 1.1
+color: ee687e
+affinities: [
+    wet
+    overdrive
+    overclock
+]
+
+opposites: [
+    tarred
+    freezing
+    burning
+    melting
+    spore-slowed
+    electrified
+    blasted
+    shocked
+]

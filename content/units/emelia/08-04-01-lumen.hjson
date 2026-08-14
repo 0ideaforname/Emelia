@@ -1,0 +1,50 @@
+type: mech
+name: Lumen
+description: Automatically repairs allied structures with a small, non-damaging laser.
+details: Not intended for any forms combat.
+hitSize: 8
+speed: 1
+health: 360
+armor: 0
+flying: false
+controller: RepairAI
+commands: [move, enterPayload, repair, mine]
+defaultCommand: repair
+canBoost: true
+boostMultiplier: 1.4
+boostWhenMining: true
+mineRange: 150
+mineTier: 3
+mineSpeed: 3.5
+researchCostMultiplier: 0.5
+outlineColor: 313131
+weapons: [
+    {
+        x: 0
+        y: 2
+        inaccuracy: 0
+        shootSound: shootAvert
+        rotate: false
+        mirror: false
+        top: true
+        shootY: 1
+        reload: 40
+        bullet: {
+            type: LaserBulletType
+            damage: 0
+            width: 4
+            length: 80
+            healPercent: 1.5
+            collidesTeam: true
+            colors: [85c278, 9be98b, ffffff]
+            hitColor: 85c278
+            pierce: false
+            shootEffect: shootSmall
+            smokeEffect: shootSmallSmoke
+        }
+    }
+]
+
+research: 10-01d-support-factory
+researchCostMultiplier: 0.5
+shownPlanets: ["emelia"]

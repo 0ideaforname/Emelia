@@ -1,0 +1,9 @@
+type: material
+flammability: 0.0
+explosiveness: 0.0
+hardness: 4
+radioactivity: 0.0
+charge: 0.0
+color: 38293d
+shownPlanets: [emelia]
+research: 01-04c-quartz

@@ -1,0 +1,68 @@
+type: tank
+template: TankUnitType
+hitSize: 12
+speed: 0.8
+rotateSpeed: 2.6
+omniMovement: false
+health: 910
+armor: 6
+itemCapacity: 0
+targetGround: true
+targetAir: true
+shownPlanets: ["emelia"]
+outlineColor: 2d2f39
+floorMultiplier: 0.92
+tankMoveVolume: 0.4
+tankMoveSound: tankMoveSmall
+treadPullOffset: 3
+crushFragile: true
+treadRects: [
+  {
+    x: -20
+    y: -25
+    width: 14
+    height: 51
+  }
+]
+immunities: [
+  burning
+]
+weapons: [
+  {
+    name: 08-01-01-splinter-weapon
+    x: 0
+    y: 0
+    mirror: false
+    rotate: true
+    rotateSpeed: 3
+    shootY: 6
+    reload: 35
+    recoil: 0.4
+    inaccuracy: 3
+    shootSound: shootLocus
+    bullet: {
+      type: LaserBulletType
+      length: 150
+      width: 5
+      sideLength: 10
+      sideWidth: 0.6
+      smokeEffect: colorSpark
+      damage: 31
+      shieldDamageMultiplier: 1.28
+      hitColor: feb380
+      hitEffect: hitBulletColor
+      endEffect: hitBulletColor
+      pierce: true
+      pierceCap: 1
+      pierceBuilding: false
+      colors: [feb380, feb380, ffffff]
+      }
+  }
+]
+
+category: units
+research: {
+parent: 10-01-unit-factory
+}
+researchCostMultiplier: 0.5
+shownPlanets: ["emelia"]

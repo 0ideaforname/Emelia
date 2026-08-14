@@ -1,0 +1,9 @@
+type: material
+flammability: 0.0
+explosiveness: 0.0
+hardness: 3
+radioactivity: 0.0
+charge: 0.0
+color: "f5f5f5"
+shownPlanets: [emelia]
+research: 01-03c-vitracite-sand

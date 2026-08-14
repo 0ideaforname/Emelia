@@ -1,0 +1,20 @@
+{
+  "type": "CellLiquid",
+  "temperature": 0.4,
+  "flammability": 2,
+  "viscosity": 0.90,
+  "heatCapacity": 0.4,
+  "explosiveness": 0,
+  "coolant": false,
+  "color": "ff3cff",
+  "colorFrom": "ff3cff",
+  "colorTo": "cc00cc",
+  "cells": 10,
+  "maxSpread": 1,
+  "spreadConversion": 1.4,
+  "spreadDamage": 0.2,
+  "incinerable": true,
+  "research": "02-03-calyx",
+  "spreadTarget": "cryofluid",
+  "planet": "emelia"
+}

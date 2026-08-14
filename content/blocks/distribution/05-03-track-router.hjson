@@ -1,0 +1,13 @@
+name: Track Router
+description: Distributes input payloads to 3 output directions equally.
+type: Router
+category: distribution
+health: 120
+size: 1
+research: 05-01-track
+researchCostMultiplier: 0.5
+requirements: [
+  01-01-lenite/2
+  01-03-liton/1
+]
+shownPlanets: ["emelia"]

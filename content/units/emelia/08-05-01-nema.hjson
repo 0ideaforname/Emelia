@@ -1,0 +1,70 @@
+type: crawl
+omniMovement: false
+name: Nema
+description: Fires electric arcs and crushes enemy structures.
+health: 860
+armor: 6
+speed: 1
+hitSize: 10
+drawBody: false
+drawCell: false
+rotateToBuilding: false
+segments: 3
+segmentScl: 3
+segmentPhase: 5
+segmentMag: 0.5
+rotateSpeed: 4
+drag: 0.2
+outlineColor: 2d2f39
+crushDamage: 0.25
+controller: HugAI
+immunities: [
+burning
+]
+weapons: [
+    {
+        name: 08-05-01-nema-weapon
+        x: 0
+        y: -2
+        top: true
+        mirror: false
+        rotate: true
+        rotateSpeed: 3
+        recoil: 2
+        reload: 100
+        shake: 2
+        shootSound: shootArc
+        shoot: {
+            firstShotDelay: 40
+            shotDelay: 8
+            shots: 3
+        }
+        chargeSound: chargeLancer
+        bullet: {
+            type: LightningBulletType
+            damage: 18
+            lightningLength: 15
+            armorMultiplier: 2
+            lightningColor: d8deff
+            chargeEffect: {
+                type: MultiEffect
+                followParent: true
+                rotWithParent: true
+                effects: [
+                    lightningCharge
+                    lancerLaserCharge
+                    lancerLaserChargeBegin
+                ]
+            }
+            shootEffect: shootSmall
+            smokeEffect: shootSmallSmoke
+            hitColor: d8deff
+        }
+    }
+]
+researchCostMultiplier: 0.5
+category: units
+research: {
+parent: 10-01e-crawler-factory
+}
+shownPlanets: ["emelia"]

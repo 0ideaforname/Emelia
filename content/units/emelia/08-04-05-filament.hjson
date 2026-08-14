@@ -1,0 +1,358 @@
+type: legs
+name: Filament
+legCount: 8
+legMoveSpace: 0.8
+legPairOffset: 3
+legLength: 75
+legExtension: -20
+legBaseOffset: 8
+stepShake: 2
+legLengthScl: 0.93
+rippleScale: 3
+legSpeed: 0.19
+hovering: true
+description: Uses combined weapons of all previous tiers. Cannot drown.
+details: The fifth and final tier.
+health: 24850
+armor: 18
+speed: 1
+rotateSpeed: 3
+hitSize: 35
+controller: RepairAI
+commands: [move, repair, rebuild, mine, assist]
+buildSpeed: 6.5
+mineTier: 6
+mineSpeed: 20
+drownTimeMultiplier: 888723196865
+isEnemy: false
+itemCapacity: 60
+alwaysUnlocked: false
+outlineColor: 42413e
+abilities: [
+  {
+    type: EnergyFieldAbility
+    damage: 860
+    reload: 80
+    healPercent: 4
+    hitUnits: true
+    hitBuildings: true
+    maxTargets: 30
+    range: 210
+    x: 0
+    y: 0
+    effectRadius: 1
+    status: electrified
+  }
+]
+immunities: [
+  burning
+  melting
+  tarred
+  freezing
+  spore-slowed
+  shocked
+  blasted
+]
+parts: [
+  {
+    type: FlarePart
+    x: 0
+    y: 0
+    color1: 9CF6A7
+    color2: 84F491
+    spinSpeed: 2
+    radius: 20
+    followRotation: true
+  }
+  {
+    type: shapePart
+    progress: warmup
+    color: cffac8
+    circle: true
+    hollow: true
+    stroke: 3
+    strokeTo: 4
+    radius: 35
+    y: 0
+  }
+  {
+    type: shapePart
+    progress: warmup
+    color: cffac8
+    circle: true
+    hollow: true
+    stroke: 1
+    strokeTo: 2
+    radius: 28
+    y: 0
+  }
+  {
+    type: HaloPart
+    progress: warmup
+    color: cffac8
+    haloRotation: 90
+    shapes: 2
+    triLength: 0
+    triLengthTo: 40
+    haloRadius: 32
+    tri: true
+    radius: 8
+  }
+  {
+    type: HaloPart
+    color: 9cf6a7
+    haloRotation: 90
+    shapes: 2
+    triLength: 6
+    triLengthTo: 8
+    haloRadius: 32
+    tri: true
+    radius: 4
+    shapeRotation: 180
+  }
+  {
+    type: HaloPart
+    color: 84F491
+    haloRotateSpeed: 4
+    shapes: 4
+    shapeRotation: 180
+    triLength: 2
+    triLengthTo: 4
+    haloRadius: 32
+    tri: true
+    radius: 10
+  }
+  {
+    type: HaloPart
+    color: 84F491
+    haloRotateSpeed: 4
+    shapes: 4
+    shapeRotation: 180
+    triLength: 4
+    triLengthTo: 8
+    haloRadius: 45
+    tri: true
+    radius: 15
+  }
+]
+weapons: [
+  {
+    x: -24
+    y: -24
+    reload: 10
+    mirror: true
+    alternate: false
+    rotate: false
+    ejectEffect: casing2
+    shootSound: shootMissile
+    smoothReloadSpeed: 0.15
+    shootWarmupSpeed: 0.05
+    parts: [
+      {
+      type: FlarePart
+      y: -2
+      x: 0
+      followRotation: true
+      color1: 9CF6A7
+      color2: 84F491
+      stroke: 2
+      radius: 10
+      }
+      {
+        type: shapePart
+        hollow: true
+        circle: true
+        y: -2
+        x: 0
+        color: 84F491
+        stroke: 0.6
+        strokeTo: 1
+        radius: 3
+      }
+      {
+        type: HaloPart
+        y: -2
+        x: 0
+        radius: 2
+        layer: 110
+        color: 84F491
+        haloRotateSpeed: 4
+        haloRadius: 3
+        haloRadiusTo: 3
+        stroke: 2
+        strokeTo: 2
+        shapes: 5
+      }
+    ]
+    shoot: {
+      shots: 3
+      shotDelay: 3.5
+    }
+    bullet: {
+      type: MissileBulletType
+      speed: 6
+      lifetime: 30
+      damage: 42
+      splashDamage: 10
+      splashDamageRadius: 28
+      homingPower: 0.1
+      weaveMag: 0.7
+      weaveScale: 2
+      frontColor: 84F491
+      backColor: 62AE7F
+      trailColor: 84F491
+      hitSound: none
+      despawnSound: dullExplosion
+      width: 8
+      height: 12
+      trailWidth: 1.8
+      trailLength: 16
+      trailChance: -1
+      despawnEffect: none
+      healPercent: 0.5
+      collidesTeam: true
+      hitEffect: {
+        type: ExplosionEffect
+        lifetime: 20
+        waveStroke: 1
+        waveColor: 888888
+        sparkColor: 666666
+        waveRad: 8
+        smokeSize: 0
+        smokeSizeBase: 0
+        sparks: 6
+        sparkRad: 25
+        sparkLen: 3
+        sparkStroke: 1.2
+      }
+    }
+  }
+  {
+    x: 0
+    y: 11
+    reload: 140
+    mirror: false
+    alternate: false
+    rotate: false
+    recoil: 0
+    ejectEffect: none
+    smoothReloadSpeed: 0.15
+    shootWarmupSpeed: 0.05
+    continuous: true
+    top: true
+    shootSound: beamPlasma
+    chargeSound: chargeVela
+    initialShootSound: shootBeamPlasma
+    parentizeEffects: true
+    shoot: {
+      firstShotDelay: 42
+    }
+    bullet: {
+      type: ContinuousLaserBulletType
+      damage: 64
+      length: 200
+      width: 6
+      lifetime: 200
+      colors: [84f491, b6fbbe, e5fbe8, ffffff]
+      collidesTeam: true
+      healPercent: 1
+      incendChance: 0.15
+      incendSpread: 6
+      incendAmount: 2
+      chargeEffect: {
+        followParent: true
+        rotWithParent: true
+        type: multiEffect
+        lifetime: 70
+        effects: [
+          {
+            type: WaveEffect
+            lifetime: 65
+            sizeFrom: 20
+            sizeTo: 0
+            interp: pow5Out
+            strokeFrom: 0
+            strokeTo: 2
+            colorFrom: 84f491
+            colorTo: b6fbbe
+          }
+        ]
+      }
+    }
+    parts: [
+      {
+      type: FlarePart
+      y: -2
+      x: 0
+      followRotation: true
+      color1: 9CF6A7
+      color2: 84F491
+      stroke: 4
+      radius: 13
+      }
+      {
+        type: shapePart
+        hollow: true
+        circle: true
+        y: -2
+        x: 0
+        color: 84F491
+        stroke: 1
+        strokeTo: 1.5
+        radius: 6
+      }
+      {
+        type: HaloPart
+        y: -2
+        x: 0
+        radius: 2
+        layer: 110
+        color: 84F491
+        haloRotateSpeed: 6
+        haloRadius: 8
+        haloRadiusTo: 10
+        stroke: 1
+        strokeTo: 3
+        shapes: 6
+      }
+    ]
+  }
+    {
+        x: 24
+        y: 24
+        inaccuracy: 0
+        shootSound: shootAvert
+        rotate: false
+        mirror: true
+        top: true
+        shootY: 10
+        reload: 20
+        bullet: {
+            type: LaserBulletType
+            damage: 142
+            width: 8
+            length: 280
+            healPercent: 3
+            collidesTeam: true
+            colors: [85c278, 9be98b, ffffff]
+            hitColor: 85c278
+            pierce: false
+            shootEffect: shootSmall
+            smokeEffect: shootSmallSmoke
+        }
+          parts: [
+      {
+      type: FlarePart
+      y: 0
+      x: 0
+      followRotation: true
+      color1: 9CF6A7
+      color2: 84F491
+      stroke: 4
+      radius: 13
+      }
+      ]
+    }
+]
+research: 08-04-04-fluorescent
+shownPlanets: ["emelia"]

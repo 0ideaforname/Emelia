@@ -1,0 +1,10 @@
+type: material
+alwaysUnlocked: true
+flammability: 0.0
+explosiveness: 0.0
+hardness: 2
+radioactivity: 0.0
+charge: 0.0
+color: "656563"
+shownPlanets: ["emelia", "serpulo"]
+research: 11-01-core-vertex

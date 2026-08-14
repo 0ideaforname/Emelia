@@ -1,0 +1,20 @@
+type: MassDriver
+name: Kinetic Mass Driver
+description: Launches items to other Kinetic Mass Drivers in range. Requires power.
+health: 650
+squareSprite: false
+size: 2
+consumes: {
+  power: 1.4
+}
+requirements: [
+  01-05-cerebrium/65
+  01-03-liton/40
+  01-02-cryogen/50
+]
+reload: 170
+range: 250
+itemCapacity: 60
+bulletSpeed: 8
+research: 05-05-bridge-track
+researchCostMultiplier: 0.5

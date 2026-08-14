@@ -1,0 +1,75 @@
+type: tank
+name: "[orange]Turf"
+description: Should i revive this
+hitSize: 8
+health: 850
+armor: 15
+speed: 2.5
+mineSpeed: 4
+mineTier: 3
+mineHardnessScaling: true
+itemCapacity: 25
+defaultController: BuilderAI
+buildSpeed: 1.25
+canBoost: false
+faceTarget: false
+parts: [
+  {
+    type: HoverPart
+    color: edc66c
+    radius: 16
+    sides: 8
+    layerOffset: -0.0001
+    x: 0
+    y: 0
+    phase: 150
+  }
+  ]
+  abilities: [
+  {
+    type: ShieldRegenFieldAbility
+    reload: 240
+    range: 100
+    amount: 55
+    max: 160
+  }
+]
+
+weapons: [
+{
+name: 02-turf-weapon
+x: 0
+y: 0
+mirror: false
+faceTarget: false
+rotate: true
+rotateSpeed: 3
+reload: 45
+shootSound: "shootLancer"
+inaccuracy: 0
+recoil: 2
+shootY: 8
+shootCone: 6
+bullet: {
+width: 14
+type: LaserBulletType
+length: 280
+damage: 95
+buildingDamageMultiplier: 0
+pierceBuilding: true
+pierce: true
+pierceCap: 4
+pierceArmor: true
+laserAbsorb: false
+lifetime: 40
+hitColor: ffa6c9
+hitEffect: hitBulletColor
+smokeEffect: shootSmallSmoke
+shootEffect: railShoot
+}
+}
+]
+
+category: units
+research: 11-04-core-bastide
+planet: emelia

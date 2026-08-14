@@ -1,0 +1,448 @@
+type: legs
+legCount: 8
+legMoveSpace: 0.8
+legPairOffset: 3
+legLength: 75
+allowLegStep: true
+legExtension: -20
+legBaseOffset: 8
+stepShake: 2
+legLengthScl: 0.93
+rippleScale: 3
+legSpeed: 2
+legSplashDamage: 260
+legSplashRange: 20
+hovering: true
+shadowElevation: 0.95
+canDrown: false
+name: "[purple]Archangel"
+hovering: true
+health: 31500
+armor: 24
+speed: 0.8
+hitSize: 26
+lightRadius: 140
+stepSound: walkerStep
+stepSoundVolume: 1.5
+stepSoundPitch: 0.8
+strafePenalty: 0
+rotateSpeed: 2
+forceMultiTarget: true
+outlineColor: 2d2f39
+parts: [
+  {
+        type: ShapePart
+        // small one
+        color: 98f58b
+        circle: true
+        hollow: true
+        stroke: 1.2
+        strokeTo: 1.6
+        radius: 4
+        layer: 110
+        y: -25
+        rotateSpeed: 1.5
+      }
+      {
+        type: ShapePart
+        // mid one
+        color: 98f58b
+        circle: true
+        hollow: true
+        stroke: 2.5
+        strokeTo: 3
+        radius: 8
+        layer: 110
+        y: -25
+        rotateSpeed: 1.5
+      }
+      {
+        type: ShapePart
+        // big one
+        color: 98f58b
+        circle: true
+        hollow: true
+        stroke: 3.5
+        strokeTo: 4
+        radius: 15
+        layer: 110
+        y: -25
+        rotateSpeed: 1.5
+      }
+      {
+        type: HaloPart
+        color: 98f58b
+        layer: 110
+        y: -25
+        haloRotation: 90
+        shapes: 2
+        triLength: 0
+        triLengthTo: 20
+        haloRadius: 16
+        tri: true
+        radius: 4
+      }
+      {
+        type: HaloPart
+        color: 98f58b
+        layer: 110
+        y: -25
+        haloRotation: 90
+        shapes: 2
+        triLength: 4
+        triLengthTo: 5
+        haloRadius: 16
+        tri: true
+        radius: 4
+        shapeRotation: 180
+      }
+      {
+        type: HaloPart
+        color: 98f58b
+        layer: 110
+        y: -25
+        haloRotateSpeed: -1.5
+        shapes: 4
+        triLength: 4
+        triLengthTo: 5
+        haloRotation: 45
+        haloRadius: 16
+        tri: true
+        radius: 8
+      }
+      {
+        type: HaloPart
+        color: 98f58b
+        layer: 110
+        y: -25
+        haloRotateSpeed: -1.5
+        shapes: 4
+        shapeRotation: 180
+        triLength: 1.65
+        triLengthTo: 2
+        haloRotation: 45
+        haloRadius: 16
+        tri: true
+        radius: 8
+      }
+      {
+        type: HaloPart
+        color: 98f58b
+        layer: 110
+        y: -25
+        haloRotateSpeed: 1.5
+        shapes: 4
+        triLength: 2.5
+        triLengthTo: 3
+        haloRotation: 45
+        haloRadius: 10
+        tri: true
+        radius: 6
+      }
+]
+abilities: [
+  {
+    type: ShieldArcAbility
+    max: 4600
+    cooldown: 500
+    regen: 5
+    angle: 220
+    width: 10
+    x: 0
+    y: -7
+    radius: 45
+  }
+  {
+    type: MoveEffectAbility
+    minVelocity: 1.1
+    x: 0
+    y: -4
+    effect: missileTrailSmoke
+    teamColor: true
+    interval: 3
+    rotateEffect: true
+  }
+  {
+    type: SuppressionFieldAbility
+    range: 560
+    reload: 800
+    orbRadius: 5.6
+    orbSinScl: 7
+    y: 14
+    color: 98f58b
+    particleColor: 55d77d
+    effectColor: 55d77d
+  }
+  {
+    type: RegenAbility
+    percentAmount: 0.02
+  }
+]
+
+weapons: [
+    {
+        x: 0
+        y: 14
+        chargeSound: chargeCorvus
+        shootSound: shootCorvus
+        cooldownTime: 350
+        reload: 300
+        shoot: {
+            firstShotDelay: 100
+        }
+        rotate: false
+        mirror: false
+        shootStatus: slow
+        shootStatusDuration: 120
+        bullet: {
+            type: LaserBulletType
+            damage: 280
+            lifetime: 150
+            length: 280
+            width: 40
+            sideAngle: 60
+            sideLength: 120
+            sideWidth: 1
+            colors: [55d77d, 98f58b, ffffff]
+            lightningSpacing: 15
+            lightningLength: 5
+            lightningDelay: 0.6
+            lightningLengthRand: 18
+            lightningDamage: 50
+            lightningAngleRand: 40
+            largeHit: true
+            chargeEffect: {
+                type: MultiEffect
+                followParent: true
+                rotWithParent: true
+                lifetime: 100
+                effects: [
+                    {
+                        type: ParticleEffect
+                        length: 48
+                        baseLength: -48
+                        cone: 360
+                        particles: 22
+                        sizeFrom: 7
+                        sizeTo: 0
+                        lifetime: 100
+                        colorFrom: 98f58b
+                        colorTo: 55d77d
+                    }
+                    {
+                        type: ParticleEffect
+                        length: 64
+                        baseLength: -64
+                        cone: 360
+                        particles: 28
+                        sizeFrom: 8
+                        sizeTo: 0
+                        lifetime: 100
+                        colorFrom: 98f58b
+                        colorTo: 55d77d
+                    }
+                    {
+                        type: WaveEffect
+                        lifetime: 100
+                        sizeFrom: 80
+                        sizeTo: 0
+                        interp: pow5Out
+                        strokeFrom: 2
+                        strokeTo: 4
+                        colorFrom: 98f58b
+                        colorTo: 55d77d
+                        lifetime: 100
+                    }
+                ]
+            }
+        }
+    }
+    {
+        name: archangel-shotgun
+        y: -5
+        x: 14
+        mirror: true
+        shootY: 9
+        reload: 35
+        shake: 4
+        rotateSpeed: 2
+        ejectEffect: casing1
+        shootSound: shootToxopidShotgun
+        shootSoundVolume: 1
+        rotate: true
+        shadow: 12
+        recoil: 3
+        layerOffset: 1
+        shoot: {
+            type: ShootSpread
+            shots: 4
+            spread: 6
+        }
+        bullet: {
+            type: ShrapnelBulletType
+            length: 120
+            damage: 150
+            width: 25
+            serrationLenScl: 7
+            serrationSpaceOffset: 60
+            serrationFadeOffset: 0
+            serrations: 10
+            serrationWidth: 6
+            fromColor: 55d77d
+            toColor: 98f58b
+            shootEffect: sparkShoot
+            smokeEffect: sparkShoot
+        }
+    }
+    {
+        name: archangel-artillery
+        y: -14
+        x: 0
+        shootY: 22
+        mirror: false
+        reload: 150
+        shake: 10
+        rotateSpeed: 1
+        recoil: 10
+        ejectEffect: casing3
+        shootSound: shootArtillerySapBig
+        rotate: true
+        shadow: 30
+        rotationLimit: 80
+        layerOffset: 15
+        bullet: {
+            type: ArtilleryBulletType
+            damage: 210
+            trailEffect: missileTrail
+            trailInterval: 3
+            trailParam: 4
+            bulletInterval: 3
+            intervalRandomSpread: 20
+            intervalBullets: 2
+            intervalAngle: 180
+            intervalSpread: 300
+            intervalBullet: {
+                type: BasicBulletType
+                damage: 30
+                width: 9
+                hitSize: 5
+                height: 15
+                pierceCap: 2
+                lifetime: 28
+                speed: 4
+                pierceBuilding: true
+                hitColor: ffd281
+                backColor: c29b62
+                trailColor: c29b62
+                frontColor: ffd281
+                trailWidth: 2.1
+                trailLength: 5
+                hitEffect: {
+                    type: WaveEffect
+                    colorFrom: ffd281
+                    colorTo: c29b62
+                    sizeTo: 4
+                    strokeFrom: 4
+                    lfietime: 10
+                }
+                despawnEffect: {
+                    type: WaveEffect
+                    colorFrom: ffd281
+                    colorTo: c29b62
+                    sizeTo: 4
+                    strokeFrom: 4
+                    lfietime: 10
+                }
+            }
+            despawnSound: explosionArtilleryShockBig
+            hitEffect: sapExplosion
+            knockback: 1
+            lifetime: 80
+            speed: 5
+            width: 25
+            height: 25
+            collidesTiles: true
+            collides: true
+            ammoMultiplier: 4
+            splashDamageRadius: 60
+            splashDamage: 180
+            backColor: c29b62
+            frontColor: ffd281
+            lightningColor: ffd281
+            lightning: 10
+            lightningDamage: 24
+            lightningLength: 20
+            smokeEffect: shootBigSmoke2
+            hitShake: 10
+            lightRadius: 40
+            lightColor: bf92f9
+            lightOpacity: 0.6
+            status: sapped
+            statusDuration: 600
+            fragLifeMin: 0.3
+            fragBullets: 15
+            fragBullet: {
+                type: ArtilleryBulletType
+                despawnSound: explosionArtilleryShock
+                hitEffect: sapExplosion
+                lifetime: 90
+                speed: 3
+                width: 20
+                height: 20
+                collidesTiles: false
+                splashDamageRadius: 60
+                splashDamage: 40
+                backColor: c29b62
+                frontColor: ffd281
+                lightningColor: ffd281
+                lightningDamage: 20
+                lightning: 2
+                lightningLength: 5
+                smokeEffect: shootBigSmoke2
+                hitShake: 5
+                lightRadius: 30
+                lightColor: ffd281
+                lightOpacity: 0.5
+                status: sapped
+                statusDuration: 600
+            }
+        }
+    }
+    {  
+      x: 0
+      y: 0
+      display: false
+      rotate: false
+      mirror: false
+      reload: 280
+      shootCone: 5
+      shootSound: shootAfflict
+      bullet: {
+        width: 0
+        speed: 8
+        lifetime: 10
+        despawnEffect: none
+        hitEffect: none
+        height: 0
+        collides: false
+        damage: 820
+        pierce: true
+        pierceBuilding: true
+        recoil: -25
+        impact: true
+        trailRotation: true
+      }
+    }
+]
+immunities: [
+    burning
+    melting
+    unmoving
+    fast
+    slow
+    wet
+    freezing
+    sapped
+    spore-slowed
+    tarred
+]

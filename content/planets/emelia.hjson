@@ -1,0 +1,146 @@
+localizedName: "Emelia"
+description: Undone planet.
+alwaysUnlocked: true
+sectorSeed: 14513
+startSector: 15
+sectorSize: 2
+radius: 1.2
+minZoom: 1
+
+// Orbit & System
+parent: sun
+solarSystem: sun
+orbitRadius: 40
+orbitSpacing: 1
+drawOrbit: true
+tidalLock: true
+
+// Visuals
+hasAtmosphere: true
+atmosphereRadIn: 0.02
+atmosphereRadOut: 0.3
+atmosphereColor: bf92f9
+iconColor: bf92f9
+bloom: false
+updateLighting: false
+visible: true
+defaultEnv: 1
+
+mesh: [
+ {
+  // Supposed to be sea
+  type: NoiseMesh
+  planet: emelia
+  seed: 64
+  divisions: 4
+  radius: 1.1
+  color1: bf92f9
+  color2: 8a73c6
+  octaves: 3
+  persistence: 0.8
+  scale: 1
+  mag: 1.2
+ }
+ {
+  // Supposed to be ground
+  type: NoiseMesh
+  planet: emelia
+  seed: 88
+  divisions: 4
+  radius: 1.08
+  color1: 656563
+  color2: 515151
+  octaves: 4
+  persistence: 0.8
+  scale: 1.1
+  mag: 1.4
+ }
+]
+
+cloudMesh: [
+  {
+   type: HexSkyMesh
+   planet: emelia
+   speed: 1.01
+   radius: 0.11
+   divisions: 4
+   color: bf92f97e
+   octaves: 3
+   persistence: 0.4
+   scl: 0.9
+   thresh: 0.6
+  }
+  {
+   type: HexSkyMesh
+   planet: emelia
+   speed: 0.891
+   radius: 0.091
+   divisions: 5
+   color: bf92f97e
+   octaves: 3
+   persistence: 0.5
+   scl: 1.1
+   thresh: 0.6
+  }
+]
+
+generator: {
+  octaves: 3
+  persistence: 0.52
+  scale: 22
+  mag: 0.721
+  thresh: 1.152
+  min: 100
+  max: 100
+  radMin: 220
+  radMax: 600
+  iceChance: 0.51
+  carbonChance: 0.32
+  berylChance: 0
+  ferricChance: 0.26
+}
+
+// Sector & Launch Mechanics
+allowCampaignRules: true
+allowLaunchLoadout: false
+allowLaunchSchematics: false
+allowLaunchToNumbered: false
+allowLegacyLaunchPads: false
+allowSectorInvasion: true
+allowSelfSectorLaunch: false
+clearSectorOnLose: true
+prebuildBase: true
+defaultCore: emelia-11-01-core-vertex
+
+rules: {
+ waveTeam: crux
+ coreDestroyClear: true
+ enemyCoreSpawnReplace: false
+ fog: false
+ staticFog: true
+ lighting: true
+ coreDestroyClear: true
+}
+
+launchCandidates: []
+itemWhitelist: [
+  01-01-lenite
+  01-02-crygon
+  01-03-liton
+  graphite
+  01-03c-vitracite-sand
+  01-04c-quartz
+  01-04-litan-hydroxide
+  01-05-cerebrium
+  01-06-reinforced-glass
+  01-07-erbidium
+  01-07c-obsidian
+  01-08-thranil
+  01-09-nano-alloy
+  01-10-thanite
+  uranium
+  01-11-vonitte
+  01-12-aerigium
+  01-13-vantorium
+  01-14-composition
+]

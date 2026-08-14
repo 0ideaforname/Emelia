@@ -1,0 +1,9 @@
+type: Item
+flammability: 0.25
+explosiveness: 0.0
+hardness: 3
+radioactivity: 0.0
+charge: 0.0
+color: "9fb4dc"
+shownPlanets: [emelia]
+research: 01-02b-cryogenic-scrap

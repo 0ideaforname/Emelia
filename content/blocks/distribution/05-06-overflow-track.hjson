@@ -1,0 +1,14 @@
+name: Overflow Track
+description: Only outputs payloads to sides if front is blocked.
+type: OverflowDuct
+category: distribution
+health: 165
+size: 1
+research: 05-04-track-junction
+researchCostMultiplier: 0.5
+requirements: [
+  01-01-lenite/2
+  graphite/3
+  01-03-liton/2
+]
+shownPlanets: ["emelia"]

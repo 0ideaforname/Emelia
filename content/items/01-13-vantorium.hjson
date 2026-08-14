@@ -1,0 +1,8 @@
+type: material
+explosiveness: 0.1
+hardness: 8
+radioactivity: 0.3
+charge: 1
+color: "f5b987"
+shownPlanets: [emelia]
+research: 01-07c-obsidian

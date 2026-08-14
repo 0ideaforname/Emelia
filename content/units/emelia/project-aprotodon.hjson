@@ -1,0 +1,401 @@
+type: tank
+name: "[#feb380]Project: Aprotodon"
+description: Fires massive railgun-propelled charged shells over medium distances. Requires to be stationary to fire.
+details: Experimental MBT developed by Crux. Heavily armored. Reliable. Advanced engine pending.
+hitSize: 50
+speed: 0.45
+rotateSpeed: 1.2
+omniMovement: false
+health: 37850
+armor: 45
+targetGround: true
+targetAir: true
+outlineColor: 2d2f39
+shownPlanets: ["emelia"]
+crushDamage: 10
+floorMultiplier: 0.2
+tankMoveVolume: 2
+tankMoveSound: tankMoveHeavy
+immunities: [
+    burning
+    melting
+    freezing
+    shocked
+    electrified
+    blasted
+    corroded
+    shard-cut
+]
+treadPullOffset: 2
+treadRects: [
+    {
+        x: 30
+        y: -100
+        width: 40
+        height: 210
+    }
+]
+drownTimeMultiplier: 2
+parts: [
+    {
+        type: RegionPart
+        suffix: -glow
+        layer: -1
+        mirror: false
+        blending: additive
+        color: ff1a1a
+        colorTo: ff1a1a
+        outline: false
+    }
+]
+weapons: [
+  {
+    name: project-aprotodon-weapon
+    shootSound: bigLaserShoot
+    layerOffset: 0.1
+    reload: 240
+    shootY: 32.5
+    shake: 30
+    recoil: 5
+    rotate: true
+    rotateSpeed: 1.5
+    mirror: false
+    x: 0
+    y: -2
+    shadow: 50
+    cooldownTime: 110
+    heatColor: f9350f
+    drawOutline: false
+    parentizeEffects: true
+
+    # Balancing superweapon
+    shootStatus: unmoving
+    shootStatusDuration: 75
+    chargeSound: charge
+    shoot: {
+      firstShotDelay: 60
+    }
+    
+    parts: [
+      # There's absurdly many
+      # So no Halo bc alot already
+      {
+          type: RegionPart
+          suffix: -glow
+          layer: -1
+          mirror: false
+          blending: additive
+          color: ff1a1a
+          colorTo: ff1a1a
+          outline: false
+      }
+      {
+          type: RegionPart
+          suffix: -second-glow
+          layer: -1
+          mirror: false
+          blending: additive
+          color: ffd28165
+          colorTo: ffd28165
+          outline: false
+      }
+
+      # Barrel stuff
+      {
+        type: RegionPart
+        suffix: -barrel
+        progress: warmup
+        heatColor: ff1a1a
+        mirror: true
+        moveX: 0.5
+        moveY: 1
+        moveRot: -3
+        x: 0
+        y: 0
+      }
+
+      {
+        type: RegionPart
+        suffix: -barrel-heat
+        blending: additive
+        progress: warmup
+        mirror: true
+        outline: false
+        colorTo: ff1a1a
+        color: ff1a1a
+        moveX: 0.5
+        moveY: 1
+        x: 0
+        y: 0
+      }
+
+      # Mechanical plates, blades
+      # cheek
+
+      {
+        type: RegionPart
+        suffix: -plate
+        progress: warmup
+        heatProgress: warmup
+        heatColor: ff1a1a
+        mirror: true
+        under: true
+        moveX: -6
+        moveY: 1
+        moveRot: 15
+        x: -6.25
+        y: 14
+      }
+
+      # Rear
+      {
+        type: RegionPart
+        suffix: -plate
+        progress: warmup
+        heatProgress: warmup
+        heatColor: ff1a1a
+        mirror: true
+        under: true
+        heatColor: ff1a1a
+        moveX: -9
+        moveY: 1
+        moveRot: 75
+        x: -6.25
+        y: -7
+      }
+
+      # Blades
+      {
+        type: RegionPart
+        suffix: -blade
+        progress: warmup
+        heatProgress: warmup
+        heatColor: ff1a1a
+        mirror: true
+        under: true
+        moveRot: -50
+        moveX: 3
+        layerOffset: -0.002
+        x: 2.75
+        outline: true
+        // First set of mechanical mandibles
+      }
+      {
+        type: RegionPart
+        suffix: -blade
+        progress: warmup
+        heatProgress: warmup
+        heatColor: ffd28165
+        mirror: true
+        under: true
+        moveRot: -70
+        moveX: 3
+        layerOffset: -0.002
+        x: 2.75
+        outline: true
+        // Second set of mechanical mandibles
+      }
+      {
+        type: RegionPart
+        suffix: -blade
+        progress: warmup
+        heatProgress: warmup
+        heatColor: ffd28165
+        mirror: true
+        under: true
+        moveRot: -90
+        moveX: 3
+        layerOffset: -0.002
+        x: 2.75
+        outline: true
+        // Third set of mechanical mandibles
+      }
+
+      # rear Sinks
+      {
+        type: RegionPart
+        suffix: -sinks
+        progress: warmup
+        heatProgress: warmup
+        heatColor: ff1a1a
+        mirror: true
+        under: true
+        moveX: 3
+        moveY: -5
+        x: 6.5
+        y: -7
+      }
+    ]
+    # Main Shell
+    bullet: {
+      type: BasicBulletType
+      sprite: missile-large
+      speed: 32
+      damage: 2430
+      splashDamage: 690
+      splashDamageRadius: 50
+      lightning: 10
+      lightningDamage: 25
+      lightningLength: 15
+      lightningColor: feab5f
+      pierceArmor: true
+      width: 18
+      height: 26
+      lifetime: 15
+      hitSize: 8
+      reflectable: false
+
+      smokeEffect: shootSmokeTitan
+      hitColor: feb380
+      backColor: feb380
+      trailColor: feb380
+      frontColor: ffffff
+      trailWidth: 5
+      trailLength: 12
+      hitEffect: titanExplosion
+      despawnEffect: titanExplosion
+      hitSound: explosionTitan
+      despawnSound: explosionTitan
+      hitShake: 10
+
+      shootEffect: {
+        type: ExplosionEffect
+        lifetime: 40
+        waveStroke: 5
+        waveColor: feb380
+        sparkColor: feb380
+        waveRad: 35
+        smokeSize: 6
+        smokes: 12
+        smokeSizeBase: 0
+        smokeColor: feb380
+        sparks: 15
+        sparkRad: 60
+        sparkLen: 5
+        sparkStroke: 4
+      }
+
+      chargeEffect: {
+        type: MultiEffect
+        effects: [
+          {
+            type: WaveEffect
+            lifetime: 60
+            sizeFrom: 50
+            sizeTo: 5
+            strokeFrom: 0
+            strokeTo: 10
+            interp: pow5In
+            colorFrom: feab5f
+            colorTo: e89255
+          }
+          {
+            type: WaveEffect
+            lifetime: 40
+            sizeFrom: 70
+            sizeTo: 5
+            strokeFrom: 0
+            strokeTo: 10
+            interp: pow5In
+            colorFrom: feab5f
+            colorTo: e89255
+          }
+
+          # Circle largenin
+          {
+            type: ParticleEffect
+            lifetime: 60
+            particles: 1
+            sizeFrom: 0
+            sizeTo: 10
+            baseLength: 0
+            length: 0
+            colorFrom: e89255
+            colorTo: ffffff
+          }
+
+          #Smoke
+          {
+            type: ParticleEffect
+            lifetime: 50
+            particles: 28
+            sizeFrom: 8
+            sizeTo: 0
+            baseLength: -64
+            length: 64
+            colorFrom: e89255
+            colorTo: ffffff
+          }
+        ]
+      }
+
+      # Frag Stuff
+      fragBullets: 8
+      fragVelocityMin: 0.45
+      fragRandomSpread: 260
+      fragBullet: {
+        type: BasicBulletType
+        speed: 2
+        damage: 65
+        pierceArmor: true
+        splashDamage: 45
+        splashDamageRadius: 10
+        width: 14
+        height: 18
+        lifetime: 30
+        pierce: true
+        pierceCap: 2
+        hitColor: feb380
+        backColor: feb380
+        trailColor: feb380
+        frontColor: ffffff
+        trailWidth: 3
+        trailLength: 8
+        lightning: 2
+        lightningDamage: 35
+        lightningLength: 6
+        lightningColor: feb380
+        hitEffect: blastExplosion
+        hitSound: explosionDull
+        despawnEffect: blastExplosion
+      }
+
+      # Interval Bullet stuff
+      intervalBullets: 2
+      bulletInterval: 4
+      intervalBullet: {
+        type: LightningBulletType
+        damage: 0
+        pierceArmor: true
+        lightning: 2
+        lightningLength: 6
+        lightningDamage: 35
+        lightningColor: feb380
+      }
+
+      # Lightning discharge stuff
+      spawnBullets: [
+        {
+          type: LightningBulletType
+          damage: 0
+          pierceArmor: true
+          lightning: 14
+          lightningLength: 20
+          lightningDamage: 45
+          lightningColor: feb380
+          lightningCone: 160
+        }
+      ]
+    }
+  }
+]
+
+category: units
+research: {
+parent: 08-01-04-collapse
+objectives: [
+    08-01-04-collapse
+    01-12-aerigium
+    09-10-depleting-chamber
+]
+}

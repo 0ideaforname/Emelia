@@ -1,0 +1,9 @@
+type: material
+flammability: 0.0
+explosiveness: 0.0
+hardness: 5
+radioactivity: 0.0
+charge: 0.0
+color: "7887aa"
+shownPlanets: [emelia]
+research: 01-05-cerebrium

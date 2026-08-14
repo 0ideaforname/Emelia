@@ -1,0 +1,58 @@
+name: Nix
+template: ErekirUnitType
+type: naval
+flying: false
+description: Fires standard bullets at enemy targets. Can operate on any bodies of liquids.
+health: 960
+hitSize: 16
+armor: 8
+speed: 1
+itemCapacity: 0
+lightRadius: 7
+singleTarget: true
+fogRadius: 40
+immunities: [
+burning,
+melting,
+wet
+]
+envEnabled: 14
+envDisabled: 2
+outlineColor: "2d2f39"
+
+weapons: [
+  {
+    name: 08-03-01-nix-weapon
+    x: 5
+    y: -2.5
+    mirror: true
+    rotate: true
+    rotateSpeed: 4.5
+    shootY: 3
+    reload: 12
+    recoil: 0.4
+    inaccuracy: 6
+    shootSound: shootCyclone
+    bullet: {
+      type: BasicBulletType
+      damage: 24
+      speed: 5
+      lifetime: 40
+      width: 9
+      height: 15
+      bulletInterval: 4
+      trailLength: 4
+      trailWidth: 2
+      frontColor: ffd281
+      hitColor: ffd281
+      backColor: c29b62
+      trailColor: c29b62
+      smokeEffect: colorSpark
+      despawnEffect: hitBulletColor
+      hitEffect: hitBulletColor
+    }
+}
+]
+research: 10-01c-ship-factory
+researchCostMultiplier: 0.65
+shownPlanets: ["emelia"]

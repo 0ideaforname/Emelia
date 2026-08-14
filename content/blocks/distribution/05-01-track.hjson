@@ -1,0 +1,15 @@
+name: Track
+description: Transports small payloads forward.
+type: Duct
+category: distribution
+health: 105
+size: 1
+speed: 5
+junctionReplacement: 05-04-track-junction
+bridgeReplacement: 05-05-bridge-track
+research: 11-01-core-vertex
+researchCostMultiplier: 0.5
+requirements: [
+  01-01-lenite/2
+]
+shownPlanets: ["emelia"]

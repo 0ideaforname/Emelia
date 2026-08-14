@@ -1,0 +1,31 @@
+name: Heat Director
+description: Transfers heat to other Heat directors or heat consumers.
+type: HeatConductor
+category: distribution
+health: 350
+size: 1
+
+research: 05-02-sttu
+researchCostMultiplier: 0.5
+requirements: [
+graphite/10
+01-05-cerebrium/15
+]
+
+regionRotated1: 1
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawDefault
+    }
+    {
+      type: DrawHeatOutput
+    }
+    {
+      type: DrawHeatInput
+      suffix: -heat
+    }
+  ]
+}
+shownPlanets: ["emelia"]

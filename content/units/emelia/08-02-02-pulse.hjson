@@ -1,0 +1,135 @@
+type: flying
+lowAltitude: true
+flying: true
+name: Pulse
+description: Fires pairs of homing bullets at enemy targets.
+health: 2135
+armor: 10
+speed: 2.45
+accel: 0.08
+drag: 0.1
+hitSize: 15
+omniMovement: true
+outlineColor: 2d2f39
+engineSize: 4
+engineOffset: 8
+circleTarget: false
+faceTarget: true
+targetFlags: [
+reactor,
+battery,
+core
+]
+parts: [
+  {
+    type: HoverPart
+    x: 6
+    y: 3.5
+    mirror: true
+    radius: 8
+    phase: 140
+    stroke: 3
+    layerOffset: -0.001
+    color: bf92f9
+  }
+  {
+    type: HoverPart
+    x: 6.5
+    y: -6
+    mirror: true
+    radius: 8
+    phase: 140
+    stroke: 3
+    layerOffset: -0.001
+    color: bf92f9
+  }
+]
+abilities: [
+    {
+        type: ShieldRegenFieldAbility
+        reload: 80
+        range: 35
+        amount: 20
+        max: 120
+    }
+]
+shownPlanets: ["emelia"]
+weapons: [
+    {
+    name: pulse-weapon
+    shootSound: shootAvert
+    reload: 30
+    x: 7
+    y: -2
+    shootY: 5
+    recoil: 1
+    top: true
+    rotate: false
+    mirror: true
+    shootCone: 360
+    baseRotation: -35
+    shoot: {
+      type: ShootSpread
+      shots: 2
+      spread: 11
+    }
+    bullet: {
+        type: BasicBulletType
+        damage: 28
+        width: 7
+        height: 12
+        speed: 5
+        lifetime: 35
+        homingPower: 0.2
+        homingDelay: 4
+        shootEffect: sparkShoot
+        smokeEffect: shootBigSmoke
+        hitColor: bf92f9
+        frontColor: ffffff
+        backColor: bf92f9
+        trailColor: 8a73c6
+        fragOnDespawn: true
+        fragBullets: 2
+        trailWidth: 1.5
+        trailLength: 5
+        hitEffect: {
+            type: MultiEffect
+            effects: [
+                hitSquaresColor
+                squareWaveEffect
+            ]
+        }
+        despawnEffect: {
+            type: MultiEffect
+            effects: [
+                hitSquaresColor
+                squareWaveEffect
+            ]
+        }
+        fragBullet: {
+            type: BasicBulletType
+            damage: 18
+            width: 5
+            height: 8
+            speed: 3
+            lifetime: 16
+            fragVelocityMax: 1
+            fragVelocityMin: 0.7
+            hitColor: bf92f9
+            frontColor: ffffff
+            backColor: bf92f9
+            trailColor: 8a73c6
+            trailWidth: 1.2
+            trailLength: 4
+            hitEffect: hitBulletColor
+            despawnEffect: hitBulletColor
+        }
+    }
+}
+]
+
+researchCostMultiplier: 0.5
+category: units
+research: {
+parent: 10-01-unit-factory
+}

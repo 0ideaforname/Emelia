@@ -1,0 +1,86 @@
+type: missile
+controller: MissileAI
+flying: true
+useUnitCap: false
+physics: false
+playerControllable: false
+name: Surge Splitter Missile
+description: High close-range damage. Splits into 6 charged missiles on contact. Decently armored.
+speed: 4.4
+maxRange: 6
+lifetime: 120
+hitSize: 10
+outlineColor: 2d2f39
+engineColor: f7e97e
+trailColor: f7e97e
+engineLayer: 110
+engineSize: 3.1
+engineOffset: 10
+rotateSpeed: 0.25
+trailLength: 18
+missileAccelTime: 30
+lowAltitude: true
+loopSound: loopMissileTrail
+loopSoundVolume: 0.6
+deathSound: explosionMissile
+targetAir: false
+targetUnderBlocks: false
+fogRadius: 6
+health: 1080
+armor: 15
+
+weapons: [
+  {
+    shootCone: 360
+    rotate: true
+    rotationLimit: 0
+    rotateSpeed: 0
+    reload: 1
+    deathExplosionEffect: massiveExplosion
+    shootOnDeath: true
+    shake: 10
+    bullet: {
+      type: ExplosionBulletType
+      splashDamage: 1800
+      splashDamageRadius: 40
+      ammoMultiplier: 1
+      reloadMultiplier: 0.9
+      lightning: 14
+      lightningDamage: 65
+      lightningLength: 12
+      hitColor: f7e97e
+      shootEffect: {
+        type: MultiEffect
+        effects: [ massiveExplosion, scatheExplosionSmall ]
+      }
+      collidesAir: false
+      buildingDamageMultiplier: 0.8
+      fragLifeMin: 0.1
+      fragBullets: 6
+      fragRandomSpread: 0
+      fragSpread: 20
+      
+      fragBullet: {
+        type: BulletType
+        speed: 0
+        damage: 0
+        shootEffect: shootBig
+        smokeEffect: shootSmokeMissile
+        hitColor: f7e97e
+        ammoMultiplier: 1
+        spawnUnit: surge-missile-split
+      }
+    }
+  }
+]
+
+abilities: [
+  {
+    type: MoveEffectAbility
+    effect: missileTrailSmoke
+    rotation: 180
+    y: -9
+    color: f7e97e66
+    interval: 7
+  }
+]

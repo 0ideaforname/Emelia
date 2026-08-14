@@ -1,0 +1,9 @@
+type: material
+flammability: 0.0
+explosiveness: 0.0
+hardness: 7
+radioactivity: 0.5
+charge: 1.4
+color: "ffd287"
+shownPlanets: ["emelia"]
+research: 01-09-nano-alloy

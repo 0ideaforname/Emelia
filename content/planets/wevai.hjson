@@ -1,0 +1,120 @@
+localizedName: "Wevai"
+description: A barren, rocky moon orbiting Emelia. Features deep stone craters and scattered water seas.
+alwaysUnlocked: true
+sectorSeed: 8472
+sectorSize: 1 // Smaller sectors for a moon
+startSector: 0
+
+// Moon sizing (Emelia was 1.1, so this is significantly smaller)
+radius: 0.5
+minZoom: 1.1
+
+// --- ORBITAL MECHANICS ---
+// This is what makes it a moon instead of a new planet
+parent: emelia
+solarSystem: sun
+orbitRadius: 4 // Keep this small so it hugs Emelia
+orbitSpacing: 2
+orbitTime: 1500 // Moons usually orbit faster
+drawOrbit: true
+tidalLock: true
+
+// --- VISUALS ---
+hasAtmosphere: true
+atmosphereColor: 666b73
+atmosphereRadIn: 0.05
+atmosphereRadOut: 0.1
+iconColor: 7a7a7a
+updateLighting: false
+bloom: false
+visible: true
+
+mesh: [
+ {
+  // Layer 1: The Water (Base)
+  type: NoiseMesh
+  planet: wevai
+  seed: 12
+  divisions: 4
+  radius: 0.5
+  color1: 4b6894 // Dark blue/grey water
+  color2: 4b6894
+  octaves: 3
+  persistence: 0.8
+  scale: 1.2
+  mag: 0.5 // Keep it flat
+ }
+ {
+  // Layer 2: The Stone Landmasses
+  type: NoiseMesh
+  planet: wevai
+  seed: 45
+  divisions: 4
+  radius: 0.49 // Shouldn't be larger cuz fully covers i think
+  color1: 6b6b6b // Light stone
+  color2: 4a4a4a // Dark stone
+  octaves: 4
+  persistence: 0.7
+  scale: 1
+  mag: 1.15 // High magnitude makes the rock cover most of the water
+ }
+]
+
+cloudMesh: [
+ {
+  // Thin, greyish clouds
+  type: HexSkyMesh
+  planet: wevai
+  seed: 8
+  speed: 1
+  radius: 0.2
+  divisions: 4
+  color: a3aab580
+  octaves: 3
+  persistence: 0.5
+  scl: 1.2
+  thresh: 0.5
+ }
+]
+
+generator: {
+  octaves: 3
+  persistence: 0.52
+  scale: 22
+  mag: 0.721
+  thresh: 1.152
+  min: 100
+  max: 100
+  radMin: 220
+  radMax: 600
+  iceChance: 0.1
+  carbonChance: 0.1
+  berylChance: 0
+  ferricChance: 0.8
+}
+
+// --- GAMEPLAY ---
+accessible: true
+allowLaunchSchematics: true
+allowLaunchToNumbered: false
+allowLaunchLoadout: false
+allowWaves: true
+clearSectorOnLose: true
+prebuildBase: false
+defaultCore: core-anchor
+
+rules: {
+ waveTeam: crux
+ coreDestroyClear: true
+ enemyCoreSpawnReplace: false
+}
+
+launchCandidates: []
+itemWhitelist: [
+  selite
+  lunar-basalt
+  copper
+  ilmenite
+  coal
+  titanium
+]

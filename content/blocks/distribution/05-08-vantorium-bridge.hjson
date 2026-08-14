@@ -1,0 +1,17 @@
+name: Vantorium Bridge
+description: Transports small payloads across more terrain or structures. Configurable.
+type: ItemBridge
+category: distribution
+health: 280
+size: 1
+capacity: 12
+transportTime: 0.5
+range: 10
+research: 05-05-bridge-track
+researchCostMultiplier: 0.5
+requirements: [
+  01-05-cerebrium/10
+  tungsten/4
+  01-13-vantorium/6
+]
+shownPlanets: ["emelia"]

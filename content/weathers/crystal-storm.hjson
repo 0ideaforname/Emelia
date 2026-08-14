@@ -1,0 +1,17 @@
+type: ParticleWeather
+name: Crystal Storm
+color: 8a73c6
+noiseColor: 8a73c6
+drawNoise: true
+useWindVector: true
+status: shard-cut
+duration: 10800
+sound: wind
+opacityMultiplier: 0.65
+force: 0.1
+soundVol: 1
+attrs: {
+    light: -0.15
+    heat: 0.2
+    spores: -1
+}

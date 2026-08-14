@@ -1,0 +1,27 @@
+# Contains all resources avaible on Emelia.
+# Items:
+# Lenite, copper
+# Cryogen, lead
+# Liton, graph
+# Liton Nitride, oxide
+# Coal, flammabl
+# Graphite, cryo subst
+# Tungsten, tungsten lol
+# Cerebrium, silicon
+# Reinforced Glass, metaglass
+# Erbidium, anti-rad
+# Obsidian, for sharp sharp, like decons or drills
+# Thranil, bio chunk idk
+# Detonite, blast compound but good
+# Nano Alloy, carbide
+# Vantorium, reality bendor ahahahahahahahah... unfunny.
+# Thanite, the PF
+# Vonitte, thorium
+# Aerigium, thorium mk2
+
+# Fluids:
+# Nitrogen, elixir of emelia i guess
+# Cryofluid, coolant
+# Tra-Liquid, blood
+# Calyx, nanofluid
+# Noxinal Liquid, i forgot

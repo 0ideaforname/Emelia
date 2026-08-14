@@ -1,0 +1,72 @@
+type: crawl
+omniMovement: false
+name: Cesto
+description: Crushes enemy structures. Fires a small piercing laser blast.
+health: 2450
+armor: 12
+speed: 1.25
+hitSize: 16
+drawBody: false
+drawCell: false
+rotateToBuilding: false
+segments: 3
+segmentScl: 3
+segmentPhase: 5
+segmentMag: 0.7
+rotateSpeed: 5
+drag: 0.4
+outlineColor: 2d2f39
+crushDamage: 0.65
+controller: HugAI
+immunities: [
+burning
+melting
+freezing
+]
+weapons: [
+ {
+ name: 08-05-02-cesto-weapon
+x: 0
+y: -2
+top: true
+mirror: false
+rotate: true
+rotateSpeed: 2
+recoil: 1
+reload: 85
+shake: 2
+shootSound: shootLancer
+chargeSound: chargeLancer
+shoot: {
+  firstShotDelay: 60
+}
+bullet: {
+  type: LaserBulletType
+  damage: 115
+  armorMultiplier: 2
+  shootEffect: lancerLaserShoot
+  smokeEffect: none
+  length: 173
+  lifetime: 16
+  drawSize: 400
+  hitSize: 4
+  pierceCap: 2
+  chargeEffect: {
+    type: MultiEffect
+    followParent: true
+    rotWithParent: true
+    effects: [
+      lightningCharge
+      lancerLaserCharge
+      lancerLaserChargeBegin
+    ]
+  }
+}
+}
+]
+researchCostMultiplier: 0.65
+category: units
+research: {
+parent: 08-05-01-nema
+}
+shownPlanets: ["emelia"]

@@ -1,0 +1,72 @@
+type: missile
+controller: MissileAI
+flying: true
+useUnitCap: false
+physics: false
+playerControllable: false
+name: Surge Missile Split
+speed: 4.8
+maxRange: 6
+lifetime: 222
+outlineColor: 2d2f39
+engineColor: f7e97e
+trailColor: f7e97e
+engineLayer: 110
+engineSize: 2.2
+engineOffset: 8
+rotateSpeed: 1.4
+trailLength: 12
+lowAltitude: true
+loopSound: loopMissileTrail
+loopSoundVolume: 0.6
+deathSound: explosionMissile
+targetAir: true
+targetUnderBlocks: false
+fogRadius: 6
+health: 220
+weapons: [
+  {
+    shootCone: 360
+    mirror: false
+    reload: 1
+    deathExplosionEffect: massiveExplosion
+    shootOnDeath: true
+    shake: 10
+    bullet: {
+      type: ExplosionBulletType
+      splashDamage: 180
+      splashDamageRadius: 35
+      lightning: 4
+      lightningDamage: 25
+      lightningLength: 6
+      hitColor: f7e97e
+      shootEffect: {
+        type: MultiEffect
+        effects: [
+          massiveExplosion
+          scatheExplosionSmall
+          scatheLightSmall
+          {
+            type: WaveEffect
+            lifetime: 10
+            strokeFrom: 4
+            sizeTo: 100
+          }
+        ]
+      }
+      collidesAir: true
+      buildingDamageMultiplier: 0.6
+    }
+  }
+]
+
+abilities: [
+  {
+    type: MoveEffectAbility
+    effect: missileTrailSmoke
+    rotation: 180
+    y: -9
+    color: f7e97e66
+    interval: 7
+  }
+]

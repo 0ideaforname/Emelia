@@ -1,0 +1,75 @@
+type: mech
+name: Quark
+description: Fires salvos of bullets at enemy targets. Less efficient anti-building.
+hovering: true
+hoverable: true
+shadowElevation: 0.1
+mechFrontSway: 0
+mechSideSway: 0
+mechStride: 0
+drag: 0.08
+outlineColor: 2b2b2e
+speed: 1.6
+rotateSpeed: 5
+accel: 0.095
+groundLayer: 60
+health: 195
+armor: 0
+hitSize: 8
+canDrown: false
+researchCostMultiplier: 1.5
+moveSound: loopExtract
+moveSoundVolume: 0.25
+moveSoundPitchMin: 0.5
+moveSoundPitchMax: 1
+abilities: [
+  {
+    type: MoveEffectAbility
+    teamColor: true
+    effect: missileTrailShort
+    x: 0
+    y: -6.6
+    interval: 4
+    minVelocity: 0.6
+  }
+]
+engines: [
+  {
+    x: 0
+    y: -6.6
+    radius: 1.5
+  }
+]
+itemCapacity: 0
+useEngineElevation: false
+lowAltitude: true
+weapons: [
+  {
+    x: 2
+    y: 1
+    mirror: true
+    alternate: true
+    reload: 35
+    rotate: false
+    shootSound: shootDuo
+    shoot: {
+      shots: 3
+      shotDelay: 5
+    }
+    bullet: {
+        frontColor: ffffff
+        backColor: 91939b
+        trailColor: 6d6f76
+        type: BasicBulletType
+        width: 7
+        height: 9
+        speed: 4
+        lifetime: 35
+        collidesGround: true
+        collidesAir: true
+        ammoMultiplier: 2
+        damage: 9
+        buildingDamageMultiplier: 0.85
+    }
+  }
+]

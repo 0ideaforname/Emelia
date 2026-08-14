@@ -1,0 +1,19 @@
+type: status
+name: Blessing
+healthMultiplier: 1.6
+speedMultiplier: 1.5
+damageMultiplier: 1.4
+reloadMultiplier: 1.45
+damage: -1
+permanent: true
+color: d1efff
+effect: {
+    type: ParticleEffect
+    particles: 5
+    lifetime: 40
+    length: 12
+    colorFrom: d1efff
+    colorTo: 6f80e8
+    sizeFrom: 3
+    sizeTo: 0
+}

@@ -1,0 +1,105 @@
+type: missile
+controller: MissileAI
+flying: true
+useUnitCap: false
+physics: false
+playerControllable: false
+name: Carbidic Missile
+description: Quickest. High damage at any range. Highly armored.
+speed: 5
+maxRange: 6
+lifetime: 330
+hitSize: 10
+outlineColor: 2d2f39
+engineColor: ff7a7a
+trailColor: ff7a7a
+engineLayer: 110
+engineSize: 3.1
+engineOffset: 10
+rotateSpeed: 0.25
+trailLength: 18
+missileAccelTime: 50
+lowAltitude: true
+loopSound: loopMissileTrail
+loopSoundVolume: 0.6
+deathSound: explosionMissile
+targetAir: true
+targetUnderBlocks: false
+fogRadius: 6
+health: 1050
+armor: 20
+
+weapons: [
+  {
+    shootCone: 360
+    mirror: false
+    reload: 1
+    deathExplosionEffect: massiveExplosion
+    shootOnDeath: true
+    shake: 10
+    bullet: {
+      type: ExplosionBulletType
+      splashDamage: 1350
+      splashDamageRadius: 65
+      hitColor: ff7a7a
+      shootEffect: {
+        type: MultiEffect
+        effects: [
+          massiveExplosion
+          scatheExplosion
+          scatheLight
+          {
+            type: WaveEffect
+            lifetime: 10
+            strokeFrom: 4
+            sizeTo: 130
+          }
+        ]
+      }
+      collidesAir: true
+      buildingDamageMultiplier: 0.6
+      ammoMultiplier: 1
+      fragLifeMin: 0.1
+      fragBullets: 8
+      fragBullet: {
+        type: ArtilleryBulletType
+        speed: 4
+        damage: 80
+        buildingDamageMultiplier: 0.6
+        drag: 0.02
+        hitEffect: massiveExplosion
+        despawnEffect: scatheSlash
+        knockback: 0.8
+        lifetime: 23
+        width: 18
+        height: 18
+        collidesTiles: false
+        splashDamageRadius: 40
+        splashDamage: 100
+        backColor: ff7a7a
+        trailColor: ff7a7a
+        hitColor: ff7a7a
+        frontColor: ffffff
+        smokeEffect: shootBigSmoke2
+        despawnShake: 7
+        lightRadius: 30
+        lightColor: ff7a7a
+        lightOpacity: 0.5
+        trailLength: 20
+        trailWidth: 3.5
+        trailEffect: none
+      }
+    }
+  }
+]
+
+abilities: [
+  {
+    type: MoveEffectAbility
+    effect: missileTrailSmoke
+    rotation: 180
+    y: -9
+    color: ff7a7a66
+    interval: 7
+  }
+]

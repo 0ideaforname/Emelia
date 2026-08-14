@@ -1,0 +1,7 @@
+type: material
+name: Raw Iron
+description: Needs to be smelted.
+hardness: 3
+color: 4a4b53
+shownPlanets: [wevai]
+research: lunar-basalt

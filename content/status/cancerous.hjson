@@ -1,0 +1,15 @@
+type: status
+name: Cancerous
+description: Prolly replaced or resprited in future. Undone
+healthMultiplier: 0.95
+speedMultiplier: 0.85
+reloadMultiplier: 0.75
+damage: 1
+transitionDamage: 35
+color: ff3cff
+affinities: [
+    burning
+    melting
+    freezing
+    corroded
+]

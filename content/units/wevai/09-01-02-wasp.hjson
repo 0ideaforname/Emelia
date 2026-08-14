@@ -1,0 +1,56 @@
+type: mech
+name: Wasp
+description: Defends Core: Outpost. Builds structures and mines basic ores faster. Capable of flight.
+details: The second tier.
+hitsize: 9
+speed: 1
+stepSound: mechStepSmall
+stepSoundVolume: 0.5
+health: 260
+armor: 3
+flying: false
+canBoost: true
+boostMultiplier: 1.65
+mineFloors: true
+mineWalls: true
+mineHardnessScaling: false
+buildSpeed: 1
+mineTier: 2
+mineSpeed: 9
+outlineColor: 2b2b2e
+weapons: [
+    {
+        name: 09-01-02-wasp-stinger
+        x: 7
+        y: 0
+        reload: 60
+        mirror: true
+        alternate: true
+        rotate: false
+        ejectEffect: casing1
+        top: false
+        shootSound: energy-blade-launch
+        shoot: {
+            shots: 3
+            shotDelay: 5
+        }
+        bullet: {
+            type: LaserBulletType
+            damage: 18
+            length: 160
+            width: 4
+            sideAngle: 90
+            sideWidth: 2
+            despawnSound: shockBullet
+            hitSound: shockBullet
+        }
+    }
+]
+category: units
+research: {
+parent: 09-01-01-bee
+objectives: [
+core-outpost
+]
+}
+shownPlanets: ["wevai"]

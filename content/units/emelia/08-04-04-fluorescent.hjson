@@ -1,0 +1,206 @@
+legCount: 6
+legMoveSpace: 1
+legPairOffset: 3
+legLength: 30
+legExtension: -15
+legBaseOffset: 10
+stepShake: 1
+legLengthScl: 0.96
+rippleScale: 2
+legSpeed: 0.2
+legSplashDamage: 45
+legSplashRange: 30
+
+hovering: true
+type: legs
+name: Fluorescent
+description: Fires long-range plasma missiles at enemy targets.
+health: 15450
+armor: 20
+speed: 1
+rotateSpeed: 3
+hitSize: 25
+commands: [move, enterPayload, repair, mine, assist]
+buildSpeed: 2.85
+mineTier: 6
+mineSpeed: 10
+drownTimeMultiplier: 2
+isEnemy: false
+itemCapacity: 60
+alwaysUnlocked: false
+outlineColor: 313131
+abilities: [
+  {
+    type: EnergyFieldAbility
+    damage: 90
+    reload: 30
+    healPercent: 1
+    hitUnits: true
+    hitBuildings: true
+    maxTargets: 25
+    range: 200
+    x: 0
+    y: 0
+    effectRadius: 1
+    status: electrified
+  }
+]
+immunities: [
+  burning
+  melting
+  tarred
+  freezing
+  spore-slowed
+  shocked
+  blasted
+]
+parts: [
+    {
+      type: RegionPart
+      suffix: -glow
+      layer: -1
+      mirror: false
+      blending: additive
+      color: 9CF6A7
+      outline: false
+    }
+    {
+      type: FlarePart
+      y: -4
+      x: 0
+      followRotation: true
+      color1: 9CF6A7
+      color2: 84F491
+      stroke: 4
+      radius: 10
+    }
+    {
+        type: ShapePart
+        // the halo
+        color: 9CF6A7
+        circle: true
+        hollow: true
+        stroke: 1
+        strokeTo: 1
+        radius: 5
+        layer: 110
+        y: -4
+        rotateSpeed: 1.5
+    }
+    {
+        type: HaloPart
+        y: -4
+        x: 0
+        radius: 2
+        layer: 110
+        color: 84F491
+        haloRotateSpeed: 6
+        haloRadius: 6
+        haloRadiusTo: 7
+        stroke: 1
+        strokeTo: 2
+        shapes: 4
+    }
+]
+weapons: [
+  {
+    # WIP, for now Tecta weapon
+    name: 08-04-04-fluorescent-weapon
+    shootSound: shootMalign
+    mirror: true
+    top: false
+    layerOffset: -0.01
+    x: -14
+    y: 0
+    shootY: 11.75
+    recoil: 3
+    reload: 30
+    shake: 3
+    cooldownTime: 40
+    shoot: {
+      firstShotDelay: 10
+      shots: 3
+    }
+    inaccuracy: 3
+    velocityRnd: 0.33
+    bullet: {
+      type: MissileBulletType
+      speed: 4.2
+      damage: 64
+      homingPower: 0.2
+      weaveMag: 4
+      weaveScale: 4
+      lifetime: 55
+      shootEffect: shootBig2
+      smokeEffect: shootSmokeTitan
+      splashDamage: 80
+      splashDamageRadius: 30
+      frontColor: 98f58b
+      hitSound: none
+      width: 10
+      height: 10
+
+      lightColor: 98f58b
+      trailColor: 55d77d
+      backColor: 55d77d
+      lightRadius: 40
+      lightOpacity: 0.7
+
+      trailWidth: 2.8
+      trailLength: 20
+      trailChance: -1
+      despawnSound: explosionDull
+      despawnEffect: none
+
+      hitEffect: {
+        type: ExplosionEffect
+        lifetime: 20
+        waveStroke: 2
+        waveColor: 98f58b
+        sparkColor: 98f58b
+        waveRad: 12
+        smokeSize: 0
+        smokeSizeBase: 0
+        sparks: 10
+        sparkRad: 35
+        sparkLen: 4
+        sparkStroke: 1.5
+      }
+      chargeEffect: {
+        type: ParticleEffect
+        particles: 1
+        lifetime: 10
+        interp: pow2In
+        cone: 360
+        sizeFrom: 0
+        sizeTo: 0
+        baseLength: 0
+        length: 0
+        colorFrom: 98f58b400
+        colorTo: 98f58b
+      }
+    }
+  }
+  {
+    name: 08-04-04-fluorescent-repair-weapon
+    type: RepairBeamWeapon
+    x: 10
+    y: -4
+    mirror: true
+    alternate: false
+    rotate: true
+    rotateSpeed: 4
+    reload: 1
+    recoil: 0
+    shootY: 1
+    laserColor: 84F491
+    controllable: false
+    autoTarget: true
+    beamWidth: 1
+    repairSpeed: 4
+    speed: 100
+    maxRange: 400
+  }
+]
+research: 08-04-03-incandescent
+shownPlanets: ["emelia"]

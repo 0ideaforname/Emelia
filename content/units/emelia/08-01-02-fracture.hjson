@@ -1,0 +1,87 @@
+type: tank
+template: TankUnitType
+hitSize: 16
+speed: 1
+rotateSpeed: 2.6
+omniMovement: false
+health: 3100
+armor: 13
+itemCapacity: 0
+targetGround: true
+targetAir: true
+shownPlanets: ["emelia"]
+outlineColor: 2d2f39
+floorMultiplier: 0.75
+drownTimeMultiplier: 1.15
+tankMoveVolume: 0.55
+tankMoveSound: tankMove
+crushFragile: true
+treadRects: [
+  {
+    x: 8
+    y: -39
+    width: 19
+    height: 73
+  }
+]
+immunities: [
+  burning
+  freezing
+]
+weapons: [
+  {
+    name: 08-01-02-fracture-weapon
+    x: 0
+    y: 0
+    mirror: false
+    rotate: true
+    rotateSpeed: 4
+    cooldownTime: 30
+    shootY: 4
+    reload: 60
+    recoil: 0.4
+    inaccuracy: 2
+    shootSound: shootCleroi
+    shoot: {
+      shots: 3
+      shotDelay: 5
+    }
+    bullet: {
+      type: BasicBulletType
+      damage: 32
+      speed: 5
+      lifetime: 40
+      width: 9
+      height: 15
+      bulletInterval: 3
+      trailLength: 4
+      trailWidth: 2
+      frontColor: feab5f
+      hitColor: feab5f
+      backColor: e89255
+      trailColor: e89255
+      smokeEffect: colorSpark
+      despawnEffect: hitBulletColor
+      hitEffect: hitBulletColor
+      lightning: 3
+      lightningDamage: 13
+      lightningLength: 4
+      lightningColor: feab5f
+      intervalBullet: {
+        type: LightningBulletType
+        damage: 15
+        lightningLength: 3
+        lightningLengthRand: 4.5
+        lightningColor: feab5f
+        status: shocked
+      }
+      }
+  }
+]
+
+category: units
+research: {
+parent: 08-01-01-splinter
+}
+researchCostMultiplier: 0.65
+shownPlanets: ["emelia"]

@@ -1,0 +1,7 @@
+captureWave: 10
+difficulty: 1
+planet: emelia
+sector: 15
+research: {
+    parent: 11-01-core-vertex
+}

@@ -1,0 +1,12 @@
+type: material
+name: Lunar Basalt
+description: "Dense, dark volcanic rock found in lunar maria. Used in power technology."
+alwaysUnlocked: false
+flammability: 0.1
+explosiveness: 0.0
+hardness: 2
+radioactivity: 0.0
+charge: 0.25
+color: "5b5b5b"
+shownPlanets: ["wevai"]
+research: selite

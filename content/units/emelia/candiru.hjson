@@ -1,0 +1,131 @@
+type: legs
+legStraightness: 0.2
+allowLegStep: true
+legSpeed: 1.1
+legCount: 6
+legLength: 8
+lockLegBase: true
+legContinuousMove: true
+groundLayer: 74
+legExtension: -2
+legBaseOffset: 5
+legMaxLength: 1.05
+legLengthScl: 0.96
+legMinLength: 0.95
+legForwardScl: 1
+legGroupSize: 2
+rippleScale: 0.2
+legMoveSpace: 2
+allowLegStep: true
+legPhysicsLayer: false
+name: Candiru
+description: "Armoured legged unit that shoots light vibrating micromissiles and shells at enemy targets."
+health: 940
+armor: 7
+speed: 1.1
+rotateSpeed: 4
+hitSize: 8
+isEnemy: false
+itemCapacity: 20
+alwaysUnlocked: false
+outlineColor: 42413e
+weapons: [
+  {
+    name: candiru-weapon
+    x: 0
+    y: -4.1
+    reload: 100
+    mirror: false
+    alternate: false
+    rotate: true
+    ejectEffect: casing2
+    shootSound: "shootElude"
+    shoot: {
+      shots: 6
+      shotDelay: 5
+    }
+    bullet: {
+      type: MissileBulletType
+      speed: 3
+      lifetime: 47
+      damage: 8
+      splashDamage: 12
+      splashDamageRadius: 14
+      homingPower: 0.3
+      weaveMag: 6
+      weaveScale: 4
+      frontColor: 666666
+      backColor: 444444
+      trailColor: 666666
+      hitSound: none
+      despawnSound: dullExplosion
+      width: 5
+      height: 8
+      trailWidth: 1.8
+      trailLength: 16
+      trailChance: -1
+      despawnEffect: none
+      hitEffect: {
+        type: ExplosionEffect
+        lifetime: 25
+        waveStroke: 1
+        waveColor: 666666
+        sparkColor: 888888
+        waveRad: 8
+        smokeSize: 0
+        smokeSizeBase: 0
+        sparks: 4
+        sparkRad: 28
+        sparkLen: 4
+        sparkStroke: 1.5
+      }
+    }
+  }
+  {
+    x: -0.5
+    y: 4.1
+    reload: 70
+    mirror: false
+    alternate: false
+    rotate: false
+    ejectEffect: casing2
+    shootSound: lightfire
+    bullet: {
+      type: MissileBulletType
+      speed: 6
+      lifetime: 60
+      damage: 52
+      splashDamage: 10
+      splashDamageRadius: 28
+      homingPower: 0.2
+      weaveMag: 2
+      weaveScale: 1
+      frontColor: 888888
+      backColor: 444444
+      trailColor: 666666
+      hitSound: none
+      despawnSound: dullExplosion
+      width: 8
+      height: 12
+      trailWidth: 1.8
+      trailLength: 16
+      trailChance: -1
+      despawnEffect: none
+      hitEffect: {
+        type: ExplosionEffect
+        lifetime: 20
+        waveStroke: 1
+        waveColor: 888888
+        sparkColor: 666666
+        waveRad: 8
+        smokeSize: 0
+        smokeSizeBase: 0
+        sparks: 6
+        sparkRad: 25
+        sparkLen: 3
+        sparkStroke: 1.2
+      }
+    }
+  }
+]
+shownPlanets: [ "emelia" ]

@@ -1,0 +1,12 @@
+type: material
+name: Selite
+description: "A porous, flammable silver-grey regolith. Used in basic building and ammo."
+alwaysUnlocked: true
+flammability: 0.65
+explosiveness: 0.0
+hardness: 1
+radioactivity: 0.0
+charge: 0.0
+color: "b5b7c0"
+shownPlanets: ["wevai"]
+research: core-anchor

@@ -1,0 +1,15 @@
+name: Underflow Track
+description: Only outputs payloads to front if sides are blocked.
+type: OverflowDuct
+invert: true
+category: distribution
+health: 165
+size: 1
+research: 05-06-overflow-track
+researchCostMultiplier: 0.5
+requirements: [
+  01-01-lenite/2
+  graphite/3
+  01-03-liton/2
+]
+shownPlanets: ["emelia"]

@@ -1,0 +1,7 @@
+type: status
+name: Shard Cut
+description: Cut on the unit's plates induced by Obsidian during the Crystal Storm. Small obsidian shard cut basically
+healthMultiplier: 0.98
+speedMultiplier: 0.95
+damage: 0.3
+color: 38293d

@@ -1,0 +1,102 @@
+type: flying
+lowAltitude: true
+flying: true
+name: Flicker
+description: Fires small homing missiles. Capable of flight.
+health: 780
+armor: 4
+speed: 2.8
+accel: 0.1
+drag: 0.12
+hitSize: 12
+omniMovement: true
+outlineColor: 2d2f39
+engineSize: 4
+engineOffset: 8
+circleTarget: false
+faceTarget: false
+targetFlags: [
+reactor,
+battery,
+core
+]
+parts: [
+  {
+    type: HoverPart
+    x: 6
+    y: 3.5
+    mirror: true
+    radius: 5
+    phase: 100
+    stroke: 2
+    layerOffset: -0.001
+    color: bf92f9
+  }
+  {
+    type: HoverPart
+    x: 6.5
+    y: -6
+    mirror: true
+    radius: 5
+    phase: 100
+    stroke: 2
+    layerOffset: -0.001
+    color: bf92f9
+  }
+]
+shownPlanets: ["emelia"]
+weapons: [
+  {
+    name: flicker-weapon
+    x: 0
+    y: 0
+    reload: 30
+    rotate: true
+    rotateSpeed: 5
+    mirror: false
+    shootSound: shootElude
+    shootSoundVolume: 1.1
+    bullet: {
+      type: MissileBulletType
+      speed: 6
+      lifetime: 26
+      damage: 26
+      splashDamage: 10
+      splashDamageRadius: 6
+      homingPower: 0.1
+      weaveMag: 2
+      weaveScale: 1
+      frontColor: e66aff
+      backColor: 4a148c
+      trailColor: aa00ff
+      hitSound: none
+      despawnSound: dullExplosion
+      width: 5
+      height: 8
+      trailWidth: 1.4
+      trailLength: 3
+      trailChance: -1
+      despawnEffect: none
+      hitEffect: {
+        type: ExplosionEffect
+        lifetime: 25
+        waveStroke: 1
+        waveColor: d900cc
+        sparkColor: 8a0099
+        waveRad: 8
+        smokeSize: 0
+        smokeSizeBase: 0
+        sparks: 4
+        sparkRad: 28
+        sparkLen: 4
+        sparkStroke: 1.5
+      }
+    }
+  }
+]
+
+researchCostMultiplier: 0.5
+category: units
+research: {
+parent: 10-01b-aircraft-factory
+}

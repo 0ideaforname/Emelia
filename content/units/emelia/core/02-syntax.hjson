@@ -1,0 +1,94 @@
+type: payload
+flying: true
+template: ErekirUnitType
+name: Syntax
+description: Builds structures to defend the Isotope core. Repairs structures with a beam, capable of carrying 2x2 blocks.
+details: The second iteration.
+health: 710
+armor: 4
+coreUnitDock: true
+controller: BuilderAI
+isEnemy: false
+envDisabled: 0
+range: 60
+faceTarget: true
+targetPriority: -2
+lowAltitude: false
+mineWalls: true
+mineFloors: true
+mineHardnessScaling: false
+flying: true
+mineSpeed: 7
+mineTier: 3
+buildSpeed: 1.5
+drag: 0.09
+accel: 0.1
+speed: 5.75
+rotateSpeed: 5
+payloadCapacity: 256
+vulnerableWithPayloads: true
+fogRadius: 0
+targetable: false
+hittable: false
+waveTrailY: -3
+trailColor: bf92f9
+trailLength: 6
+itemCapacity: 35
+parts: [
+  {
+    type: HoverPart
+    x: 6
+    y: 4
+    mirror: true
+    radius: 5
+    phase: 100
+    stroke: 3
+    layerOffset: -0.001
+    color: bf92f9
+  }
+  {
+    type: HoverPart
+    x: 6
+    y: -6
+    mirror: true
+    radius: 5
+    phase: 100
+    stroke: 3
+    layerOffset: -0.001
+    color: bf92f9
+  }
+]
+weapons: [
+  {
+    type: RepairBeamWeapon
+    x: 0
+    y: 6.5
+    reload: 20
+    widthSinMag: 0.11
+    rotate: false
+    shootY: 0
+    repairSpeed: 4
+    fractionRepairSpeed: 0.08
+    aimDst: 0
+    shootCone: 15
+    mirror: false
+    targetUnits: false
+    targetBuildings: true
+    autoTarget: false
+    controllable: true
+    laserColor: bf92f9
+    healColor: 8a73c6
+    bullet: {
+      type: BulletType
+      maxRange: 65
+    }
+  }
+]
+category: units
+research: {
+  parent: 01-hash
+  objectives: [
+    11-02-core-isotope
+  ]
+}
+shownPlanets: ["emelia"]

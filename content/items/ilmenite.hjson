@@ -1,0 +1,12 @@
+type: material
+name: Ilmenite
+description: "Heavy, metallic black mineral. Primary source of titanium and oxygen on the moon."
+alwaysUnlocked: false
+flammability: 0.0
+explosiveness: 0.15
+hardness: 3
+radioactivity: 0.02
+charge: 0.0
+color: "494449"
+shownPlanets: ["wevai"]
+research: lunar-basalt

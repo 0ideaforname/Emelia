@@ -1,0 +1,19 @@
+# Contains all resources avaible on the moon, Wevai.
+# Items:
+# Selite, copper
+# Lunar Basalt, lead
+# Sand, for silicon
+# Silicon, silicon
+# Raw Iron, needs purify to iron
+# Iron, structural shit
+# Quartz, repair and units
+# Ilmenite, needs purify to titanium
+# Titanium, Titanium
+# Plastanium, plastics + heavy units
+# Uranium, thorium
+# Phase Fabric, t5 + late homing ammo
+
+# Fluids:
+# Water, duh
+# Oil, for plast
+# Hydrogen, for boosting stuff + t4-5

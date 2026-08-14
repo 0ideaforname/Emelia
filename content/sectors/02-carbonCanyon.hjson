@@ -1,0 +1,13 @@
+captureWave: 15
+difficulty: 3
+planet: emelia
+sector: 14
+research: {
+    parent: 01-enclosure
+    objectives: [
+        {
+            type: SectorComplete
+            preset: 01-enclosure
+        }
+    ]
+}

@@ -1,0 +1,7 @@
+type: material
+name: Iron
+description: Strong material used in construction, units and ammo.
+hardness: 3
+color: 989aa4
+shownPlanets: [wevai]
+research: raw-iron

@@ -1,0 +1,25 @@
+name: STTU
+description: Transports items forward. Doesn't accept non-track side inputs. Requires little power.
+details: Standard Track Transportation Unit.
+type: Duct
+armored: true
+category: distribution
+conductivePower: true
+hasPower: true
+health: 350
+armor: 12
+size: 1
+speed: 3
+junctionReplacement: 05-04-track-junction
+bridgeReplacement: 05-05-bridge-track
+research: 05-01-track
+researchCostMultiplier: 0.5
+consumes: {
+  power: 0.04
+}
+requirements: [
+  01-04-liton-nitride/1
+  01-05-cerebrium/2
+  tungsten/2
+]
+shownPlanets: ["emelia"]

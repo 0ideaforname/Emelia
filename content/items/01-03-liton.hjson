@@ -1,0 +1,9 @@
+type: material
+flammability: 0.0
+explosiveness: 0.0
+hardness: 2
+radioactivity: 0.0
+charge: 0.1
+color: "dce6ff"
+shownPlanets: [emelia]
+research: 01-01-lenite

@@ -1,0 +1,9 @@
+type: material
+flammability: 0.0
+explosiveness: 0.0
+hardness: 2
+radioactivity: 0.0
+charge: 0.0
+color: "a5b4f5"
+shownPlanets: [emelia]
+research: 01-03-liton

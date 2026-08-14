@@ -1,0 +1,108 @@
+type: legs
+name: Vitalis
+description: Automatically rebuilds allied structures. Repairs allied structures with a beam.
+legStraightness: 0.3
+stepShake: 0
+stepSound: walkerStepTiny
+stepSoundVolume: 1
+legCount: 6
+legLength: 10
+lockLegBase: true
+legContinuousMove: true
+legExtension: -2
+legBaseOffset: 4
+legMaxLength: 1.2
+legMinLength: 0.4
+legLengthScl: 0.96
+legForwardScl: 1.1
+legGroupSize: 3
+rippleScale: 0.2
+legMoveSpace: 1.3
+allowLegStep: true
+hovering: true
+legPhysicsLayer: false
+shadowElevation: 0.1
+health: 1640
+armor: 4
+speed: 1.25
+rotateSpeed: 4
+hitSize: 11
+controller: BuilderAI
+defaultCommand: rebuild
+buildSpeed: 0.75
+mineWalls: true
+mineFloor: true
+mineTier: 4
+mineSpeed: 5
+isEnemy: false
+itemCapacity: 20
+alwaysUnlocked: false
+outlineColor: 313131
+commands: [move, enterPayload, repair, mine, assist]
+weapons: [
+  {
+  type: RepairBeamWeapon
+  x: 0
+  y: 0
+  reload: 15
+  shootY: 0
+  shootCone: 15
+  mirror: false
+  rotate: false
+  targetBuildings: true
+  targetUnits: false
+  autoTarget: false
+  controllable: true
+  beamWidth: 0.8
+  repairSpeed: 2
+  fractionRepairSpeed: 0.15
+  laserColor: 98f58b
+    parts: [
+      {
+        type: FlarePart
+        y: 0
+        x: 0
+        followRotation: true
+        color1: 9CF6A7
+        color2: 84F491
+        stroke: 2
+        radius: 10
+        radiusTo: 10
+      }
+      {
+        type: ShapePart
+        hollow: true
+        circle: true
+        y: 0
+        layer: 110
+        color: 98f58bff
+        stroke: 1
+        strokeTo: 1
+        radiusTo: 4
+        radius: 3
+      }
+      {
+        type: HaloPart
+        y: 0
+        radius: 2
+        tri: true
+        layer: 110
+        color: 55dd77dff
+        haloRotateSpeed: -1
+        haloRadius: 3
+        haloRadiusTo: 3
+        stroke: 2
+        strokeTo: 3
+        shapes: 4
+        triLengthTo: 5
+        triLength: 4
+      }
+    ]
+bullet: {
+  type: BulletType
+  maxRange: 60
+    }
+  }
+]
+research: 08-04-01-lumen
+shownPlanets: ["emelia"]

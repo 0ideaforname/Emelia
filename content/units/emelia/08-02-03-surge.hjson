@@ -1,0 +1,100 @@
+type: flying
+flying: true
+name: Surge
+description: WIP
+health: 2640
+armor: 8
+speed: 4
+accel: 0.06
+drag: 0.03
+hitSize: 20
+outlineColor: 2d2f39
+faceTarget: false
+itemCapacity: 50
+engineSize: 6
+engineOffset: 10
+targetFlags: [
+reactor,
+battery,
+core
+]
+parts: [
+  {
+    type: HoverPart
+    x: 8
+    y: 5
+    mirror: true
+    radius: 8
+    phase: 100
+    stroke: 3
+    layerOffset: -0.001
+    color: bf92f9
+  }
+  {
+    type: HoverPart
+    x: 8
+    y: -8
+    mirror: true
+    radius: 8
+    phase: 100
+    stroke: 3
+    layerOffset: -0.001
+    color: bf92f9
+  }
+  {
+    type: ShapePart
+    mirror: false
+    under: false
+    color: bf92f9
+    blending: additive
+    circle: true
+    hollow: true
+    stroke: 2.5
+    strokeTo: 2.5
+    radius: 20
+    x: 0
+    y: 0
+    moveX: 0
+    moveY: 0
+  }
+  {
+    type: HaloPart
+    mirror: false
+    under: false
+    color: bf92f9
+    blending: additive
+    stroke: 4
+    haloRotateSpeed: -4
+    shapes: 5
+    triLength: 5
+    triLengthTo: 5
+    haloRadius: 20
+    tri: true
+    radius: 10
+    haloRotation: 45
+    x: 0
+    y: 0
+  }
+]
+weapons: [
+  {
+    name: lightning
+    x: 0
+    y: 0
+    reload: 10
+    rotate: true
+    rotateSpeed: 30
+    shootSound: shootArc
+    shootY: 20
+    bullet: {
+      type: LightningBulletType
+      damage: 24
+      lightningLength: 17
+      lightningColor: bf92f9
+    }
+  }
+]
+researchCostMultiplier: 0.65
+category: units
+research: 08-02-01-flicker
+shownPlanets: ["emelia"]

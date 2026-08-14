@@ -1,0 +1,126 @@
+type: missile
+controller: MissileAI
+flying: true
+useUnitCap: false
+physics: false
+playerControllable: false
+name: Phase Missile
+description: Slowest, low damage, largest radius. Very well armored.
+speed: 3.2
+maxRange: 6
+lifetime: 586.2
+hitSize: 10
+outlineColor: 2d2f39
+engineColor: ffd37f
+trailColor: ffd37f
+engineLayer: 110
+engineSize: 3.1
+engineOffset: 10
+rotateSpeed: 0.2
+trailLength: 18
+missileAccelTime: 50
+lowAltitude: true
+loopSound: loopMissileTrail
+loopSoundVolume: 0.6
+deathSound: explosionMissile
+targetAir: true
+targetUnderBlocks: false
+fogRadius: 6
+health: 1440
+armor: 20
+
+parts: [
+  {
+    type: ShapePart
+    color: ffd37f
+    sides: 6
+    radius: 3
+    rotateSpeed: 3
+    hollow: true
+    layer: 110
+    y: 1.8
+  }
+]
+
+weapons: [
+  {
+    shootCone: 360
+    mirror: false
+    reload: 1
+    deathExplosionEffect: massiveExplosion
+    shootOnDeath: true
+    shake: 10
+    bullet: {
+      type: ExplosionBulletType
+      splashDamage: 480
+      splashDamageRadius: 120
+      reloadMultiplier: 0.8
+      ammoMultiplier: 5
+      hitColor: ffd37f
+      shootEffect: {
+        type: MultiEffect
+        effects: [
+          massiveExplosion
+          scatheExplosion
+          scatheLight
+          {
+            type: WaveEffect
+            lifetime: 10
+            strokeFrom: 4
+            sizeTo: 130
+          }
+        ]
+      }
+      collidesAir: true
+      buildingDamageMultiplier: 0.9
+      fragLifeMin: 0.1
+      fragBullets: 7
+      fragBullet: {
+        type: ArtilleryBulletType
+        speed: 3.4
+        damage: 32
+        buildingDamageMultiplier: 0.8
+        drag: 0.02
+        hitEffect: massiveExplosion
+        despawnEffect: scatheSlash
+        knockback: 0.8
+        lifetime: 23
+        width: 18
+        height: 18
+        collidesTiles: false
+        splashDamageRadius: 56
+        splashDamage: 180
+        backColor: ffd37f
+        trailColor: ffd37f
+        hitColor: ffd37f
+        frontColor: ffffff
+        smokeEffect: shootBigSmoke2
+        despawnShake: 7
+        lightRadius: 30
+        lightColor: ffd37f
+        lightOpacity: 0.5
+        trailLength: 20
+        trailWidth: 3.5
+        trailEffect: none
+      }
+    }
+  }
+]
+
+abilities: [
+  {
+    type: MoveEffectAbility
+    effect: missileTrailSmoke
+    rotation: 180
+    y: -9
+    color: ffd37f66
+    interval: 15
+  }
+  {
+    type: ForceFieldAbility
+    radius: 120
+    regen: 0
+    max: 3000
+    cooldown: 999999999
+  }
+]

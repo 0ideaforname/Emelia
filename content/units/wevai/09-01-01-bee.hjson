@@ -1,0 +1,51 @@
+type: mech
+name: Bee
+description: Defends Core: Anchor. Builds structures, can mine basic ores. Capable of flight.
+details: The first tier.
+hitsize: 9
+speed: 0.85
+stepSound: mechStepSmall
+stepSoundVolume: 0.5
+health: 190
+armor: 1
+flying: false
+canBoost: true
+boostMultiplier: 1.7
+mineFloors: true
+mineWalls: true
+mineHardnessScaling: false
+buildSpeed: 0.7
+mineTier: 2
+mineSpeed: 6
+outlineColor: 2b2b2e
+weapons: [
+    {
+        name: 09-01-01-bee-stinger
+        x: 5
+        y: 0
+        reload: 70
+        mirror: true
+        alternate: true
+        rotate: false
+        ejectEffect: casing1
+        top: false
+        shootSound: energy-blade-launch
+        shoot: {
+            shots: 2
+            shotDelay: 12
+        }
+        bullet: {
+            type: LaserBulletType
+            damage: 14
+            length: 120
+            width: 2
+            sideAngle: 90
+            sideWidth: 1.5
+            despawnSound: shockBullet
+            hitSound: shockBullet
+        }
+    }
+]
+category: units
+research: core-anchor
+shownPlanets: ["wevai"]

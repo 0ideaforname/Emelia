@@ -1,0 +1,164 @@
+type: legs
+name: Incandescent
+legCount: 6
+legLength: 18
+legGroupSize: 3
+lockLegBase: true
+legContinuousMove: true
+legExtension: -3
+legBaseOffset: 7
+legMaxLength: 1.1
+legMinLength: 0.2
+legLengthScl: 0.95
+legForwardScl: 0.9
+legMoveSpace: 1
+shadowElevation: 0.2
+stepSound: walkerStep
+hovering: true
+description: Automatically rebuilds allied structures. Fires a continuous laser beam that damages enemy targets and repairs allied structures. Projects a weak directional shield.
+details: Now capable of combat.
+health: 6140
+armor: 12
+speed: 1.3
+rotateSpeed: 4
+hitSize: 18
+controller: RepairAI
+commands: [move, enterPayload, repair, mine, assist]
+defaultCommand: rebuild
+buildSpeed: 2.15
+mineTier: 5
+mineSpeed: 10
+isEnemy: false
+itemCapacity: 60
+alwaysUnlocked: false
+outlineColor: 313131
+parts: [
+    {
+        type: RegionPart
+        suffix: -glow
+        layer: -1
+        mirror: false
+        blending: additive
+        color: 9CF6A7
+        outline: false
+    }
+]
+abilities: [
+  {
+    type: ShieldArcAbility
+    max: 380
+    cooldown: 600
+    regen: 0.5
+    angle: 90
+    width: 4
+    x: 0
+    y: -7
+    radius: 20
+  }
+]
+weapons: [
+  {
+    x: 0
+    y: 4.1
+    reload: 70
+    mirror: false
+    alternate: false
+    rotate: false
+    recoil: 0
+    ejectEffect: none
+    smoothReloadSpeed: 0.15
+    shootWarmupSpeed: 0.05
+    continuous: true
+    top: true
+    shootSound: beamPlasma
+    shootStatus: slow
+    shootStatusDuration: 190
+    chargeSound: chargeVela
+    initialShootSound: shootBeamPlasma
+    parentizeEffects: true
+    shoot: {
+      firstShotDelay: 42
+    }
+    bullet: {
+      type: ContinuousLaserBulletType
+      damage: 50
+      damageInterval: 10
+      length: 165
+      width: 3
+      lifetime: 190
+      colors: [84f491, b6fbbe, e5fbe8, ffffff]
+      collidesTeam: true
+      healPercent: 1.5
+      incendChance: 0
+      incendAmount: 0
+      incendSpread: 0
+      chargeEffect: {
+        followParent: true
+        rotWithParent: true
+        type: multiEffect
+        lifetime: 70
+        effects: [
+          {
+            type: WaveEffect
+            lifetime: 65
+            sizeFrom: 20
+            sizeTo: 0
+            interp: pow5Out
+            strokeFrom: 0
+            strokeTo: 2
+            colorFrom: 84f491
+            colorTo: b6fbbe
+          }
+        ]
+      }
+    }
+    parts: [
+      {
+      type: FlarePart
+      y: -2
+      x: 0
+      followRotation: true
+      color1: 9CF6A7
+      color2: 84F491
+      stroke: 4
+      radius: 10
+      }
+      {
+        type: ShapePart
+        // the halo
+        color: 9CF6A7
+        circle: true
+        hollow: true
+        stroke: 1
+        strokeTo: 1
+        radius: 5
+        layer: 110
+        y: -2
+        rotateSpeed: 1.5
+      }
+      {
+        type: HaloPart
+        y: -2
+        x: 0
+        radius: 2
+        layer: 110
+        color: 84F491
+        haloRotateSpeed: 6
+        haloRadius: 6
+        haloRadiusTo: 7
+        stroke: 1
+        strokeTo: 2
+        shapes: 4
+      }
+    ]
+  }
+]
+
+immunities: [
+  burning
+  freezing
+  shocked
+  shard-cut
+]
+research: 08-04-02-smth
+shownPlanets: ["emelia"]

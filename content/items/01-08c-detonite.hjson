@@ -1,0 +1,9 @@
+type: material
+flammability: 0
+explosiveness: 2
+hardness: 5
+radioactivity: 0.65
+charge: 0
+color: "feb380"
+shownPlanets: [emelia]
+research: 01-08-thranil
