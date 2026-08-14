@@ -1,0 +1,28 @@
+type: CoreBlock
+name: Core: Fort
+description: Core of the base. Well Armored. Once destroyed, the sector is lost.
+details: The third and final tier.
+category: effect
+health: 8500
+armor: 10
+size: 5
+
+itemCapacity: 11000
+unitCapModifier: 20
+unitType: 09-01-01-bee
+incinerateNonBuildable: true
+isFirstTier: false
+alwaysUnlocked: false
+squareSprite: false
+thrusterLength: 3.5
+
+requirements: [
+    silicon/8000
+    iron/8000
+    titanium/6000
+    plastanium/5500
+    01-04c-quartz/4000
+]
+
+research: core-outpost
+researchCostMultiplier: 0.65

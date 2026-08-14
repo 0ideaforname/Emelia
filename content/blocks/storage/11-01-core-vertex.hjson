@@ -1,0 +1,31 @@
+type: CoreBlock
+name: Core: Vertex
+description: Core of the base. Well armoured. Stores moderate amount of resources.
+category: effect
+health: 5280
+armor: 8
+size: 4
+thrusterLength: 8.5
+
+itemCapacity: 3000
+unitCapModifier: 8
+unitType: 01-hash
+incinerateNonBuildable: true
+isFirstTier: true
+alwaysUnlocked: true
+squareSprite: false
+underBullets: false
+teamPassable: false
+
+requirements: [
+    01-01-lenite/1600
+    01-02-cryogen/2500
+    01-03-liton/1500
+]
+
+research: {
+    planet: emelia
+    root: true
+    name: WIP
+    requiresUnlock: false
+}

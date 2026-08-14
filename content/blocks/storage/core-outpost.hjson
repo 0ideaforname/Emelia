@@ -1,0 +1,27 @@
+type: CoreBlock
+name: Core: Outpost
+description: Core of the base. Armored. Once destroyed, the sector is lost.
+details: The second tier.
+category: effect
+health: 3600
+armor: 3
+size: 4
+
+itemCapacity: 6000
+unitCapModifier: 15
+unitType: 09-01-02-wasp
+incinerateNonBuildable: true
+isFirstTier: false
+alwaysUnlocked: false
+squareSprite: false
+thrusterLength: 3.5
+
+requirements: [
+    selite/3000
+    lunar-basalt/4000
+    silicon/2000
+    iron/1500
+]
+
+research: core-anchor
+researchCostMultiplier: 0.5

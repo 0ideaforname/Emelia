@@ -1,0 +1,76 @@
+name: Crystallizing Reactor
+description: Creates thanite from phase fabric, carbide, oxide and heat. 
+type: HeatCrafter
+category: crafting
+health: 1840
+size: 4
+hasLiquids: false
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawRegion
+      suffix: -bottom
+    }
+    {
+      type: DrawDefault
+    }
+    {
+      type: DrawCrucibleFlame
+      color: ffd281ff
+      midColor: c29b62
+      flameRad: 4
+      particleSize: 5
+      particleRad: 11
+      particles: 43
+      particleLife: 70
+    }
+    {
+      type: DrawCrucibleFlame
+      particleSize: 5
+      particleRad: 18
+      particles: 43
+      particleLife: 70
+    }
+  ]
+}
+research: phase-synthesizer
+requirements: [
+    silicon/310
+    oxide/95
+    carbide/140
+    surge-alloy/60
+    phase-fabric/90
+]
+researchCostMultiplier: 1
+itemCapacity: 40
+heatRequirement: 70
+consumes: {
+power: 19
+items: [
+    oxide/2
+    phase-fabric/2
+    carbide/2
+]
+}
+outputItem: 01-10-thanite/3
+craftTime: 200
+craftEffect: {
+  type: MultiEffect
+  effects: [
+    {
+      type: MultiEffect
+      effects: [bigShockwave, massiveExplosion]
+    }
+    {
+      type: RadialEffect
+      effect: {
+        type: MultiEffect
+        effects: [colorSparkBig]
+      }
+      lengthOffset: 3
+      amount: 4
+    }
+  ]
+}
+shownPlanets: ["emelia"]

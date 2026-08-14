@@ -1,0 +1,29 @@
+type: HeatProducer
+name: Electrical Heater
+description: Basic electrical heater. Requires power.
+health: 640
+size: 2
+category: crafting
+heatOutput: 2
+squareSprite: false
+research: 09-01-cerebrium-arc-furnace
+researchCostMultiplier: 0.5
+requirements: [
+    01-04-liton-nitride/25
+    01-04c-quartz/15
+    01-05-cerebrium/40
+]
+drawer: {
+    type: DrawMulti
+    drawers: [
+        {
+            type: DrawDefault
+        }
+        {
+            type: DrawHeatOutput
+        }
+    ]
+}
+consumes: {
+    power: 2
+}

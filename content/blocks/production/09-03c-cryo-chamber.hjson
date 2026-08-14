@@ -1,0 +1,73 @@
+name: Cryo Chamber
+description: Creates Cryofluid from Tra-Liquid and Titanium constituents in Cryogen.
+type: GenericCrafter
+category: crafting
+health: 1350
+squareSprite: false
+size: 3
+rotate: false
+hasItems: true
+hasLiquids: true
+liquidCapacity: 85
+outputsLiquids: true
+itemCapacity: 15
+research: 09-03-calyx-condenser
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawRegion
+      suffix: -bottom
+    }
+    {
+      type: DrawLiquidRegion
+      drawLiquid: 02-01-tralian-liquid
+    }
+    {
+      type: DrawLiquidTile
+      padding: 3
+      drawLiquid: cryofluid
+      alpha: 0.7
+    }
+    {
+      type: DrawBubbles
+      color: c0ecff
+      amount: 14
+      spread: 4
+      radius: 5
+    }
+    {
+      type: DrawCircles
+      color: c0ecff
+      strokeMax: 2.1
+      radius: 10
+      amount: 3
+    }
+    {
+      type: DrawDefault
+    }
+  ]
+}
+requirements: [
+  01-04c-quartz/60
+  tungsten/260
+  01-06-reinforced-glass/120
+  01-05-cerebrium/115
+]
+researchCostMultiplier: 0.65
+consumes: {
+power: 2.5
+liquids: [
+  02-01-tralian-liquid/0.25
+]
+items: [
+    01-02-cryogen/1
+]
+}
+outputLiquids: [
+    cryofluid/0.5
+]
+craftTime: 45
+ambientSound: loopElectricHum
+ambientSoundVolume: 0.5
+shownPlanets: ["emelia"]

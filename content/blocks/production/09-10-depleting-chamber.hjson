@@ -1,0 +1,57 @@
+type: HeatProducer
+name: Depletion Chamber
+description: Produces Aerigium by depleting Vonitte. Requires Noxinal Liquid. Emits heat as by-product.
+category: crafting
+hasItems: trues
+hasLiquids: true
+health: 3800
+squareSprite: false
+size: 4
+regionRotated1: 2
+rotateDraw: false
+heatOutput: 25
+research: 09-09-particle-accelerator
+researchCostMultiplier: 0.5
+requirements: [
+  tungsten/520
+  01-07-erbidium/600
+  01-11-vonitte/280
+  01-05-cerebrium/400
+]
+itemCapacity: 25
+consumes: {
+  power: 24
+  items: [
+  01-11-vonitte/5
+  ]
+  liquids: [
+    02-02-noxinal-liquid/0.15
+  ]
+}
+outputItem: 01-12-aerigium/4
+craftTime: 280
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawRegion
+      suffix: -bottom
+    }
+    {
+      type: DrawDefault
+    }
+    {
+      type: DrawHeatOutput
+    }
+    {
+      type: DrawPulseShape
+      color: 96ff82
+      square: false
+      stroke: 0.8
+      minStroke: 0.2
+    }
+  ]
+}
+ambientSound: loopExtract
+ambientSoundVolume: 2
+shownPlanets: ["emelia"]

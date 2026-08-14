@@ -1,0 +1,92 @@
+name: Nano Mixer
+description: Creates Nano Alloys from Liton Nitride, Erbidium, and Calyx. Requires heat.
+type: HeatCrafter
+category: crafting
+health: 1400
+squareSprite: false
+size: 3
+hasLiquids: true
+liquidCapacity: 160
+heatRequirement: 45
+overheatScale: 1.0
+maxEfficiency: 1.0
+drawer: {
+    type: DrawMulti
+    drawers: [
+        {
+            type: DrawRegion
+            suffix: -bottom
+        }
+        {
+            type: DrawLiquidRegion
+            drawLiquid: 02-03-calyx
+        }
+        {
+            type: DrawDefault
+        }
+        {
+            type: DrawRegion
+            suffix: -wheel
+            x: 7
+            y: 7
+            spinSprite: true
+            rotateSpeed: 3
+        }
+        {
+            type: DrawRegion
+            suffix: -wheel
+            x: -7
+            y: 7
+            spinSprite: true
+            rotateSpeed: -3
+        }
+        {
+            type: DrawRegion
+            suffix: -wheel
+            x: 7
+            y: -7
+            spinSprite: true
+            rotateSpeed: 3
+        }
+        {
+            type: DrawRegion
+            suffix: -wheel
+            x: -7
+            y: -7
+            spinSprite: true
+            rotateSpeed: -3
+        }
+        {
+            type: DrawCrucibleFlame
+            flameRad: 1.2
+            flameRadiusScl: 12
+            flameRadiusMag: 0.7
+            particles: 40
+            rotateScl: 1.7
+        }
+    ]
+}
+research: 09-04c-detonite-mixer
+researchCostMultiplier: 0.7
+requirements: [
+    01-04-liton-nitride/100
+    01-08c-detonite/200
+    01-07c-obsidian/160
+    01-05-cerebrium/350
+]
+itemCapacity: 40
+consumes: {
+power: 10
+items: [
+    01-04-liton-nitride/2
+    01-07-erbidium/2
+]
+liquids: [
+    02-03-calyx/0.45
+]
+}
+outputItem: 01-09-nano-alloy/1
+craftTime: 50
+ambientSound: loopSmelter
+ambientSoundVolume: 0.2
+shownPlanets: ["emelia"]

@@ -1,0 +1,37 @@
+type: HeatProducer
+name: Friction Heater
+description: Burns coal to produce heat.
+health: 780
+size: 2
+category: crafting
+heatOutput: 5
+craftTime: 80
+squareSprite: false
+research: 09-12-electric-heater
+researchCostMultiplier: 0.5
+requirements: [
+    01-04-liton-nitride/30
+    01-04c-quartz/35
+    tungsten/60
+    01-05-cerebrium/50
+]
+drawer: {
+    type: DrawMulti
+    drawers: [
+        {
+            type: DrawDefault
+        }
+        {
+            type: DrawHeatOutput
+        }
+        {
+            type: DrawCrucibleFlame
+        }
+    ]
+}
+consumes: {
+    power: 0.3
+    items: [
+        coal/1
+    ]
+}

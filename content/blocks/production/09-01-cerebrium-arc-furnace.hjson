@@ -1,0 +1,46 @@
+name: Cerebrium Arc Furnace
+description: Refines cerebrium from graphite and lenite. Requires power.
+type: GenericCrafter
+category: crafting
+health: 640
+squareSprite: false
+size: 3
+drawer: {
+    type: DrawMulti
+    drawers: [
+    {
+        type: DrawDefault
+    }
+    {
+        type: DrawArcSmelt
+    }
+    ]
+}
+requirements: [
+    01-01-lenite/150
+    01-02-cryogen/95
+    graphite/65
+]
+researchCostMultiplier: 0.5
+itemCapacity: 30
+consumes: {
+power: 5
+items: [
+    graphite/2
+    01-01-lenite/2
+]
+}
+outputItem: 01-05-cerebrium/3
+craftTime: 60
+ambientSound: loopSmelter
+ambientSoundVolume: 0.3
+shownPlanets: ["emelia"]
+research: {
+    parent: 09-01b-cryogenic-crusher
+    objectives: [
+        {
+            type: OnSector
+            preset: 02-carbonCanyon
+        }
+    ]
+}

@@ -1,0 +1,26 @@
+name: Coal Extractor
+description: Creates coal when no surface coal is detected.
+type: GenericCrafter
+category: crafting
+health: 200
+size: 1
+shownPlanets: ["serpulo"]
+
+research: {
+parent: pulveriser
+requirements: [
+{ item: copper, amount: 8000}
+]
+}
+
+requirements: [
+{ item: lead, amount: 12},
+{ item: copper, amount: 25}
+]
+
+itemCapacity: 20
+consumes: {
+power: 1
+}
+outputItem: { item: "coal", amount: 1}
+craftTime: 40

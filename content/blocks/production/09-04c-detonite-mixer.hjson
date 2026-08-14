@@ -1,0 +1,75 @@
+name: Detonite Mixer
+description: Creates versatile Detonite alloys from Thranil, Tra-Liquid, Quartz and Tungsten. Requires heat.
+type: HeatCrafter
+category: crafting
+health: 1650
+size: 3
+research: 09-04-liton-oxidator
+heatRequirement: 45
+overheatScale: 1.0
+maxEfficiency: 1.0
+hasLiquids: true
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawRegion
+      suffix: -bottom
+    }
+    {
+      type: DrawLiquidRegion
+      drawLiquid: 02-01-tralian-liquid
+    }
+    {
+      type: DrawBubbles
+      color: f58b2f
+      amount: 14
+      spread: 4
+      radius: 5
+    }
+    {
+      type: DrawCircles
+      color: feab5f
+      strokeMax: 2.1
+      radius: 10
+      amount: 3
+    }
+    {
+      type: DrawRegion
+      suffix: -spinner
+      rotateSpeed: 2
+      spinSprite: true
+    }
+    {
+      type: DrawDefault
+    }
+    {
+      type: DrawCrucibleFlame
+    }
+  ]
+}
+requirements: [
+    01-04-liton-nitride/100
+    tungsten/200
+    01-07c-obsidian/260
+    01-05-cerebrium/350
+]
+researchCostMultiplier: 0.7
+liquidCapacity: 100
+itemCapacity: 40
+consumes: {
+power: 10
+items: [
+  01-08-thranil/2
+  01-04c-quartz/2
+  tungsten/1
+]
+liquids: [
+    02-01-tralian-liquid/0.25
+]
+}
+craftTime: 35
+outputItem: 01-08c-detonite/1
+ambientSound: loopGrind
+ambientSoundVolume: 0.3
+shownPlanets: ["emelia"]

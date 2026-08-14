@@ -1,0 +1,64 @@
+type: HeatCrafter
+description: Refines Cerebrium vastly more efficiently, requires Calyx and Heat.
+category: crafting
+health: 1350
+squareSprite: false
+size: 4
+drawer: {
+    type: DrawMulti
+    drawers: [
+    {
+        type: DrawDefault
+    }
+    {
+        type: DrawArcSmelt
+        flameRad: 1.5
+        circleSpace: 3
+        flameRadiusScl: 4.5
+        flameRadiusMag: 0.45
+        circleStroke: 2.25
+        particles: 40
+        particleLife: 60
+        particleRad: 9
+        particleLen: 3
+    }
+    {
+        type: DrawCrucibleFlame
+    }
+  ]
+}
+requirements: [
+  01-04-liton-nitride/85
+  01-04c-quartz/100
+  tungsten/140
+  01-05-cerebrium/200
+]
+researchCostMultiplier: 0.65
+
+heatRequirement: 30
+overheatScale: 1.0
+maxEfficiency: 1.0
+
+itemCapacity: 45
+consumes: {
+  power: 8
+  items: [
+    graphite/3
+    01-01-lenite/3
+  ]
+  liquids: [
+    02-03-calyx/0.075
+  ]
+}
+outputItem: 01-05-cerebrium/5
+craftTime: 40
+ambientSound: beamLustre
+ambientSoundVolume: 0.45
+shownPlanets: ["emelia"]
+research: {
+    parent: 09-01-cerebrium-arc-furnace
+    objectives: [
+      01-04c-quartz,
+      01-04-liton-nitride
+    ]
+}

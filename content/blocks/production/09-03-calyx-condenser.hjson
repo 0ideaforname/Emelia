@@ -1,0 +1,74 @@
+name: Calyx Condenser
+description: Synthesises Calyx from nitrogen, lenite and liton.
+type: GenericCrafter
+category: crafting
+health: 1350
+squareSprite: false
+size: 3
+rotate: false
+hasItems: true
+hasLiquids: true
+liquidCapacity: 85
+outputsLiquids: true
+itemCapacity: 15
+research: 09-02-reinforced-kiln
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawRegion
+      suffix: -bottom
+    }
+    {
+      type: DrawLiquidRegion
+      drawLiquid: nitrogen
+    }
+    {
+      type: DrawLiquidTile
+      padding: 3
+      drawLiquid: 02-03-calyx
+      alpha: 0.7
+    }
+    {    
+      type: DrawBubbles
+      color: 656563
+      amount: 14
+      spread: 4
+      radius: 5
+    }
+    {
+      type: DrawCircles
+      color: 656563
+      strokeMax: 2.1
+      radius: 10
+      amount: 3
+    }
+    {
+      type: DrawDefault
+    }
+  ]
+}
+requirements: [
+    01-03-liton/95
+    tungsten/60
+    01-06-reinforced-glass/100
+    01-05-cerebrium/120
+]
+researchCostMultiplier: 0.5
+consumes: {
+power: 2
+liquids: [
+  nitrogen/0.2
+]
+items: [
+    01-01-lenite/2
+    01-03-liton/3
+]
+}
+outputLiquids: [
+    02-03-calyx/0.15
+]
+craftTime: 90
+ambientSound: loopElectricHum
+ambientSoundVolume: 0.5
+shownPlanets: ["emelia"]

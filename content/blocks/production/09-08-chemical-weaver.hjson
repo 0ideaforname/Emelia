@@ -1,0 +1,81 @@
+name: Chemical Weaver
+description: Synthesises highly charged Thanite from Vantorium and Vitracite Sand. Requires extensive heating.
+type: HeatCrafter
+category: crafting
+health: 2150
+squareSprite: false
+size: 3
+heatRequirement: 65
+overheatScale: 1.0
+maxEfficiency: 1.0
+drawer: {
+type: DrawMulti
+drawers: [
+    {
+        type: DrawRegion
+        suffix: -bottom
+    }
+    {
+        type: DrawCircles
+        color: ffc073
+        strokeMax: 1.2
+        radius: 10
+        amount: 3
+    }
+    {
+        type: DrawSpikes
+        color: ffd281
+        stroke: 2.5
+        layers: 2
+        radius: 6
+        length: 3
+        amount: 8
+        rotateSpeed: 1
+        layerSpeed: -0.9
+    }
+    {
+        type: DrawDefault
+    }
+    {
+        type: DrawHeatInput
+    }
+    {
+        type: DrawHeatRegion
+        suffix: -vents
+        color: ffd281
+    }
+    {
+        type: DrawGlowRegion
+        suffix: -glow
+        color: ffef9980
+        alpha: 0.9
+        glowIntensity: 0.6
+    }
+    {
+        type: DrawMultiWeave
+        glowColor: ffd59e
+    }
+    ]
+}
+research: 09-07-nano-mixer
+researchCostMultiplier: 0.5
+requirements: [
+    01-04-liton-nitride/130
+    01-06-reinforced-glass/200
+    01-07-erbidium/250
+    01-09-nano-alloy/150
+    01-13-vantorium/60
+]
+itemCapacity: 45
+consumes: {
+power: 25.5
+items: [
+    01-03c-vitracite-sand/8
+    01-13-vantorium/5
+]
+}
+outputItem: { item: "01-10-thanite", amount: 2}
+craftTime: 95
+ambientSound: loopTech
+ambientSoundVolume: 0.2
+planet: emelia

@@ -1,0 +1,63 @@
+name: Reinforced Furnace
+description: "Refines Reinforced Glass much more efficiently, but uses [#c0ecff]Cryogen []instead. Requires [#656563]Calyx."
+type: GenericCrafter
+category: crafting
+health: 1200
+squareSprite: false
+size: 3
+drawer: {
+    type: DrawMulti
+    drawers: [
+    {
+      type: DrawRegion
+      suffix: -bottom
+    }
+    {
+      type: DrawLiquidRegion
+      drawLiquid: 02-03-calyx
+    }
+    {
+      type: DrawDefault
+    }
+    {
+      type: DrawCrucibleFlame
+      flameRad: 1.2
+      flameRadiusScl: 12
+      flameRadiusMag: 0.7
+      particles: 40
+      rotateScl: 1.7
+    }
+  ]
+}
+research: {
+    parent: 09-02-reinforced-kiln
+    objectives: [
+    01-07-erbidium
+    ]
+}
+requirements: [
+    graphite/160
+    01-05-cerebrium/120
+    01-07-erbidium/60
+    tungsten/120
+]
+researchCostMultiplier: 0.7
+itemCapacity: 40
+consumes: {
+    power: 6
+    items: [
+        01-02-cryogen/2
+        01-03c-vitracite-sand/3
+    ]
+    liquids: [
+    02-03-calyx/0.075
+    ]
+}
+hasLiquids: true
+liquidCapacity: 40
+outputItem: 01-06-reinforced-glass/5
+craftTime: 60
+craftEffect: smeltsmoke
+ambientSound: loopSmelter
+ambientSoundVolume: 0.2
+shownPlanets: ["emelia"]

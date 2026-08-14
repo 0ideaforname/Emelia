@@ -1,0 +1,39 @@
+type: HeatProducer
+name: Thranil Heater
+description: Burns highly flammable thranil to produce lots of heat.
+health: 1400
+size: 3
+category: crafting
+heatOutput: 12
+craftTime: 75
+squareSprite: false
+research: 09-12c-friction-heater
+researchCostMultiplier: 0.5
+requirements: [
+    01-04-liton-nitride/35
+    01-07-erbidium/50
+    01-05-cerebrium/70
+]
+drawer: {
+    type: DrawMulti
+    drawers: [
+        {
+            type: DrawDefault
+        }
+        {
+            type: DrawHeatOutput
+        }
+        {
+            type: DrawCrucibleFlame
+        }
+        {
+            type: DrawArcSmelt
+        }
+    ]
+}
+consumes: {
+    power: 1.2
+    items: [
+        01-08-thranil/2
+    ]
+}

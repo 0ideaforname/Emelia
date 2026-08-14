@@ -1,0 +1,57 @@
+name: Liton Oxidator
+description: Converts liton and nitrogen into liton nitride.
+type: GenericCrafter
+category: crafting
+health: 1800
+squareSprite: false
+size: 3
+research: 09-02-reinforced-kiln
+hasLiquids: true
+requirements: [
+    01-04c-quartz/80
+    tungsten/200
+    01-06-reinforced-glass/120
+    01-05-cerebrium/150
+]
+researchCostMultiplier: 0.5
+itemCapacity: 10
+consumes: {
+power: 2
+liquids: [
+    nitrogen/0.25
+]
+items: [
+    01-03-liton/3
+]
+}
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawRegion
+      suffix: -bottom
+    }
+    {
+      type: DrawLiquidRegion
+      drawLiquid: nitrogen
+    }
+    {    
+      type: DrawBubbles
+    }
+    {
+      type: DrawCircles
+      color: 3d7c78
+      strokeMax: 2.1
+      radius: 10
+      amount: 3
+    }
+    {
+      type: DrawDefault
+    }
+  ]
+}
+outputItem: { item: "01-04-liton-nitride", amount: 3}
+craftTime: 120
+ambientSound: loopExtract
+ambientSoundVolume: 1
+shownPlanets: ["emelia"]

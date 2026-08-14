@@ -1,0 +1,36 @@
+name: Cryogenic Crusher
+description: "Presses [#95acd8]Cryogenic Scrap[] into [#c0ecff]Cryogen."
+type: GenericCrafter
+category: crafting
+health: 360
+squareSprite: false
+size: 2
+drawer: {
+    type: DrawMulti
+    drawers: [
+    {
+        type: DrawRegion
+        suffix: -bottom
+    }
+    {
+        type: DrawDefault
+    }
+    ]
+}
+research: 11-01-core-vertex
+requirements: [
+    01-01-lenite/35
+    01-03-liton/20
+]
+researchCostMultiplier: 0.05
+itemCapacity: 12
+consumes: {
+    power: 0.5
+    items: [
+        01-02b-cryogenic-scrap/2
+    ]
+}
+outputItem: 01-02-cryogen/1
+craftTime: 90
+craftEffect: pulverizeMedium
+shownPlanets: ["emelia"]

@@ -1,0 +1,25 @@
+type: CoreBlock
+name: Core: Isotope
+description: Core of the base. Very well armoured. Stores moderate amount of resources.
+category: effect
+health: 14500
+armor: 14
+size: 5
+thrusterLength: 10
+requiresCoreZone: true
+
+itemCapacity: 6000
+unitCapModifier: 12
+unitType: 02-syntax
+incinerateNonBuildable: true
+squareSprite: false
+
+requirements: [
+    tungsten/4000
+    01-04-liton-nitride/3500
+    01-02-cryogen/5000
+    01-05-cerebrium/4500
+]
+research: 11-01-core-vertex
+researchCostMultiplier: 0.2
+shownPlanets: ["emelia"]

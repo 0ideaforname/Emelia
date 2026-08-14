@@ -1,0 +1,27 @@
+type: CoreBlock
+name: Core: Anchor
+description: Core of the base. Once destroyed, the sector is lost.
+category: effect
+health: 1250
+size: 3
+
+itemCapacity: 3200
+unitCapModifier: 10
+unitType: 09-01-01-bee
+incinerateNonBuildable: true
+isFirstTier: true
+alwaysUnlocked: true
+squareSprite: false
+thrusterLength: 3.5
+
+requirements: [
+    selite/1200
+    lunar-basalt/1400
+]
+
+research: {
+    planet: wevai
+    root: true
+    name: Wevai
+    requiresUnlock: false
+}

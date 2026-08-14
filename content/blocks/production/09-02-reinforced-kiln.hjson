@@ -1,0 +1,47 @@
+name: Reinforced Kiln
+description: Refines Reinforced Glass from Vitracite Sand and Cryogenic Scrap.
+type: GenericCrafter
+category: crafting
+health: 360
+squareSprite: false
+size: 2
+drawer: {
+    type: DrawMulti
+    drawers: [
+    {
+        type: DrawDefault
+    }
+    {
+        type: DrawArcSmelt
+    }
+    ]
+}
+research: {
+    parent: 09-01-cerebrium-arc-furnace
+    objectives: [
+        {
+            type: OnSector
+            preset: 03-basaltTrench
+        }
+    ]
+}
+requirements: [
+    01-03-liton/40
+    graphite/35
+    01-05-cerebrium/30
+]
+researchCostMultiplier: 0.5
+itemCapacity: 12
+consumes: {
+    power: 2
+    items: [
+        01-02b-cryogenic-scrap/2
+        01-03c-vitracite-sand/2
+    ]
+}
+outputItem: 01-06-reinforced-glass/2
+craftTime: 75
+craftEffect: smeltsmoke
+ambientSound: loopSmelter
+ambientSoundVolume: 0.1
+shownPlanets: ["emelia"]

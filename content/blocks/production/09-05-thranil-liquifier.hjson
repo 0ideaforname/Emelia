@@ -1,0 +1,63 @@
+name: Thranil Liquifier
+description: Melts thranil into Tra-Liquid. Requires heat and nitrogen.
+type: HeatCrafter
+category: crafting
+health: 1280
+squareSprite: false
+size: 3
+research: 09-04-liton-oxidator
+researchCostMultiplier: 0.5
+requirements: [
+  01-04-liton-nitride/65
+  01-06-reinforced-glass/150
+  01-07-erbidium/160
+  01-05-cerebrium/80
+]
+itemCapacity: 15
+consumes: {
+power: 4
+liquids: [
+    nitrogen/0.2
+]
+items: [
+    01-08-thranil/1
+]
+}
+outputLiquids: [
+    02-01-tralian-liquid/0.25
+]
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawRegion
+      suffix: -bottom
+    }
+    {
+      type: DrawDefault
+    }
+    {
+      type: DrawSoftParticles
+      color1: ff39ff
+      color2: c02cc0
+      alpha: 0.85
+      particleSize: 1.6
+      particles: 40
+      particleRad: 10
+      particleLife: 60
+      layer: -0.5
+      blending: additive
+    }
+    {
+      type: DrawFlame
+      flameColor: ff39ff
+    }
+  ]
+}
+craftTime: 60
+heatRequirement: 15.0
+overheatScale: 1.0
+maxEfficiency: 1.0
+ambientSound: loopSmelter
+ambientSoundVolume: 0.5
+shownPlanets: ["emelia"]

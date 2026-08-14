@@ -1,0 +1,79 @@
+name: Liquid Purifier
+description: Purifies and splits Tra-Liquid, Liton and Calyx into Noxinal Liquid.
+type: GenericCrafter
+category: crafting
+health: 640
+squareSprite: false
+size: 2
+hasItems: true
+group: liquids
+
+hasLiquids: true
+outputsLiquids: true
+liquidCapacity: 80
+itemCapacity: 15
+research: 09-05-thranil-liquifier
+researchCostMultiplier: 0.5
+requirements: [
+  01-04-liton-nitride/35
+  01-06-reinforced-glass/40
+  01-07-erbidium/65
+  01-05-cerebrium/40
+]
+consumes: {
+power: 8
+liquids: [
+    02-01-tralian-liquid/0.3
+    02-03-calyx/0.15
+]
+items: [
+    01-03-liton/3
+]
+}
+outputLiquids: [
+    02-02-noxinal-liquid/0.15
+]
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawRegion
+      suffix: -bottom
+    }
+    {
+      type: DrawLiquidRegion
+      drawLiquid: 02-01-tralian-liquid
+    }
+    {
+      type: DrawLiquidRegion
+      drawLiquid: 02-03-calyx
+    }
+    {
+      type: DrawLiquidTile
+      padding: 3
+      drawLiquid: 02-02-noxinal-liquid
+      alpha: 0.7
+    }
+    {
+      type: DrawWeave
+    }
+    {
+      type: DrawPulseShape
+      color: 96ff82
+      square: false
+      stroke: 0.8
+      minStroke: 0.2
+    }
+    {
+      Type: DrawDefault
+    }
+    {
+      type: DrawRegion
+      suffix: -top
+    }
+  ]
+}
+craftTime: 90
+ambientSound: beamParallax
+ambientSoundVolume: 0.15
+shownPlanets: ["emelia"]
