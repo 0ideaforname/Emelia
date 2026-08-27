@@ -1,7 +1,1 @@
-# Planet has unique gas.
-# Noxin, a substitute for Oxygen abundant in the planet's atmosphere. Pink in nature, this gas is the primary colorant of Emelia's atmosphere.
-# Notably, most abundant vent gases are hydrogen and nitrogen, which are very useful.
-# Planet has alien "Tralian" Creatures infestation.
-# While the conditions are harsher due to freezing conditions, and water being extremely scarce.
-# However any form of life could exist upon it.
-# First few sectors of the campaign are highly isolated, never having life.
+# Here was supposed to be a piece of lore.
