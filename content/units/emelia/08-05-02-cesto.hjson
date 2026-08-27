@@ -38,7 +38,7 @@ shake: 2
 shootSound: shootLancer
 chargeSound: chargeLancer
 shoot: {
-  firstShotDelay: 60
+  firstShotDelay: 50
 }
 bullet: {
   type: LaserBulletType
