@@ -14,7 +14,7 @@ legSplashRange: 30
 hovering: true
 type: legs
 name: Fluorescent
-description: Fires long-range plasma missiles at enemy targets.
+description: Fires long-range plasma missiles and shocks enemy targets. Repairs all allies that enter it's energy field.
 health: 15450
 armor: 20
 speed: 1
@@ -104,7 +104,6 @@ parts: [
 ]
 weapons: [
   {
-    # WIP, for now Tecta weapon
     name: 08-04-04-fluorescent-weapon
     shootSound: shootMalign
     mirror: true
@@ -139,6 +138,9 @@ weapons: [
       hitSound: none
       width: 10
       height: 10
+
+      collidesTeam: true
+      healPercent: 2
 
       lightColor: 98f58b
       trailColor: 55d77d
@@ -197,10 +199,11 @@ weapons: [
     controllable: false
     autoTarget: true
     beamWidth: 1
-    repairSpeed: 4
+    repairSpeed: 3
     speed: 100
     maxRange: 400
   }
 ]
 research: 08-04-03-incandescent
+researchCostMultiplier: 0.8
 shownPlanets: ["emelia"]
