@@ -2,7 +2,7 @@ name: Proteus
 template: ErekirUnitType
 type: naval
 flying: false
-description: WIP
+description: Fires alternating lasers and missiles at enemy targets. Can operate on any bodies of liquids.
 health: 3540
 hitSize: 20
 armor: 15
